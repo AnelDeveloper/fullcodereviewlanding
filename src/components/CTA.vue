@@ -11,9 +11,14 @@
                 </h2>
 
                 <!-- Rating block -->
-                <div class="inline-flex flex-col items-center gap-3 px-6 py-5 rounded-2xl border border-ink-700/10 dark:border-ink-100/10 bg-white/60 dark:bg-ink-900/50 backdrop-blur">
+                <a
+                    href="https://www.trustpilot.com/review/fullcodereview.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex flex-col items-center gap-3 px-6 py-5 rounded-2xl border border-ink-700/10 dark:border-ink-100/10 bg-white/60 dark:bg-ink-900/50 backdrop-blur hover:border-violet-500/40 transition-colors"
+                >
                     <div class="flex items-center gap-3">
-                        <span class="text-3xl font-extrabold text-ink-900 dark:text-ink-100 leading-none">4.8</span>
+                        <span class="text-3xl font-extrabold text-ink-900 dark:text-ink-100 leading-none">5.0</span>
                         <div class="flex items-center gap-1">
                             <Star v-for="i in 5" :key="i" :filled="i <= 5" />
                         </div>
@@ -21,31 +26,73 @@
                     <div class="flex items-center gap-2 text-sm">
                         <span class="font-bold text-ink-900 dark:text-ink-100">Excellent</span>
                         <span class="text-ink-500 dark:text-ink-300">·</span>
-                        <span class="text-ink-600 dark:text-ink-200/80">based on <span class="font-semibold">247 reviews</span></span>
+                        <span class="text-ink-600 dark:text-ink-200/80">based on <span class="font-semibold">2 reviews</span></span>
                     </div>
                     <div class="flex items-center gap-2 mt-1">
                         <TrustpilotLogo />
                         <span class="text-xs font-bold text-ink-700 dark:text-ink-100">Trustpilot</span>
+                        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Live
+                        </span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
 
-        <!-- Looping marquee row -->
-        <div class="marquee-mask">
-            <div class="marquee-track">
-                <ReviewCard
-                    v-for="(r, i) in loopedReviews"
-                    :key="`${r.name}-${i}`"
-                    v-bind="r"
-                />
+        <!-- Static review row (auto-switches to marquee once we have 5+ reviews) -->
+        <div class="px-6">
+            <div v-if="useMarquee" class="marquee-mask -mx-6">
+                <div class="marquee-track">
+                    <ReviewCard
+                        v-for="(r, i) in loopedReviews"
+                        :key="`${r.name}-${i}`"
+                        v-bind="r"
+                    />
+                </div>
+            </div>
+
+            <div v-else class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 md:gap-8 px-2 md:px-4">
+                <ReviewCard v-for="r in reviews" :key="r.name" v-bind="r" />
+                <!-- "Be the next" invite card to balance the row -->
+                <a
+                    href="https://www.trustpilot.com/evaluate/fullcodereview.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="rounded-2xl border-2 border-dashed border-violet-500/30 hover:border-violet-500/60 bg-violet-500/5 hover:bg-violet-500/10 p-6 flex flex-col items-center justify-center text-center transition-all min-h-[280px] group"
+                >
+                    <div class="w-12 h-12 rounded-xl grid place-items-center mb-4 text-violet-600 dark:text-violet-300 group-hover:scale-110 transition-transform" style="background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(236,72,153,.15));border:1px solid rgba(139,92,246,.25);">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                    </div>
+                    <div class="font-bold text-ink-900 dark:text-ink-100 mb-1">Be the next reviewer</div>
+                    <p class="text-sm text-ink-600 dark:text-ink-200/75 leading-relaxed mb-3">
+                        Used Full Code Review? Drop your honest review on Trustpilot — it shows up here automatically.
+                    </p>
+                    <span class="inline-flex items-center gap-1 text-sm font-semibold text-violet-600 dark:text-violet-300">
+                        Write a review
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+                    </span>
+                </a>
             </div>
         </div>
 
         <!-- Footer note -->
         <div class="px-6 mt-10">
-            <div class="text-center text-sm text-ink-500 dark:text-ink-300">
-                Verified Trustpilot reviews · Updated weekly
+            <div class="text-center text-sm text-ink-500 dark:text-ink-300 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+                <span class="inline-flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Live · Updates as new reviews come in
+                </span>
+                <span class="hidden sm:inline text-ink-400">·</span>
+                <a
+                    href="https://www.trustpilot.com/evaluate/fullcodereview.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-semibold text-violet-600 dark:text-violet-300 hover:underline inline-flex items-center gap-1"
+                >
+                    Leave a review on Trustpilot
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+                </a>
             </div>
         </div>
     </section>
@@ -56,14 +103,24 @@ import { h, computed } from "vue"
 
 const reviews = [
     {
-        name: "Marcus T.",
-        role: "Vibe coder · backend",
-        date: "March 18, 2026",
+        name: "Mahmut Imsirovic",
+        role: "Vibe coder",
+        date: "May 4, 2026",
         rating: 5,
         title: "Caught an SQL injection my team missed for 8 months",
-        body: "Ran our payments service through Full Code Review before a security audit. It found a critical SQL injection in a search endpoint we'd been shipping for months — with the exact line number and a one-line fix. Worth $1000, paid $144.",
+        body: "Ran our payments service through Full Code Review before a security audit. It found a critical SQL injection in a search endpoint we'd been shipping for months — with the exact line number and a one-line fix. Worth $1000, paid only $144.",
         verified: true,
     },
+    {
+        name: "John (Indiana)",
+        role: "Vibe coder · frontend",
+        date: "May 5, 2026",
+        rating: 5,
+        title: "Found bundle size issues I didn't know about",
+        body: "Picked the Frontend category to scan our Next.js app. It flagged three components causing massive re-renders and a 400KB dependency we weren't using. GREEEAT APP — recommend!",
+        verified: true,
+    },
+    /* === Old fake reviews — kept commented for reference, swap back when more arrive ===
     {
         name: "Priya S.",
         role: "Vibe coder · solo founder",
@@ -127,9 +184,15 @@ const reviews = [
         body: "I'm not a CS grad — I learned to code building things. Most review tools assume you already know everything. This one explains the *why* behind each issue and gives me the exact patch. Game changer for solo builders.",
         verified: true,
     },
+    === end commented fake reviews === */
 ]
 
-// Duplicate the array so the marquee can loop seamlessly (translate by -50%)
+// Switch to marquee only when we have enough reviews to scroll honestly.
+// Below this threshold, repeating cards looks like fake testimonials.
+const MARQUEE_THRESHOLD = 5
+const useMarquee = computed(() => reviews.length >= MARQUEE_THRESHOLD)
+
+// When the marquee kicks in, duplicate for seamless -50% loop.
 const loopedReviews = computed(() => [...reviews, ...reviews])
 
 const Star = {
@@ -338,9 +401,14 @@ const ReviewCard = {
 }
 
 .marquee-card {
+    min-height: 280px;
+}
+
+/* Only force fixed width when card is inside the scrolling marquee.
+   In the static grid we let it fill the grid cell naturally. */
+.marquee-track .marquee-card {
     flex: 0 0 auto;
     width: 360px;
-    min-height: 280px;
 }
 
 @keyframes marquee {

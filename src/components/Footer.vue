@@ -2,12 +2,13 @@
     <footer class="border-t border-ink-700/10 dark:border-ink-100/5 py-12 px-6">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div class="flex items-center gap-3">
-                <span class="brand-mark">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="16 18 22 12 16 6" />
-                        <polyline points="8 6 2 12 8 18" />
-                    </svg>
-                </span>
+                <img
+                    src="/logo.png"
+                    alt="Full Code Review"
+                    class="w-9 h-9 rounded-[10px] object-cover shadow-md"
+                    width="36"
+                    height="36"
+                />
                 <div>
                     <div class="font-bold text-ink-900 dark:text-ink-100">Full Code Review</div>
                     <div class="text-xs text-ink-500 dark:text-ink-300/70">Helping vibe coders ship secure, proven apps.</div>

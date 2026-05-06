@@ -256,18 +256,18 @@ const IssueCard = {
                 "div",
                 {
                     class: [
-                        "rounded-xl border bg-white/70 dark:bg-ink-900/60 border-l-4 mb-3 p-4 md:p-5",
+                        "rounded-xl border bg-white/70 dark:bg-ink-900/60 border-l-4 mb-3 p-4 md:p-5 overflow-hidden",
                         "border-ink-700/10 dark:border-ink-100/10",
                         s.accent,
                     ],
                 },
                 [
-                    h("div", { class: "flex items-center gap-2 mb-2" }, [
+                    h("div", { class: "flex items-center gap-2 mb-2 flex-wrap min-w-0" }, [
                         h(
                             "span",
                             {
                                 class: [
-                                    "inline-flex items-center gap-1.5 text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full font-extrabold border",
+                                    "inline-flex items-center gap-1.5 text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full font-extrabold border flex-shrink-0",
                                     s.bg,
                                     s.text,
                                     s.border,
@@ -275,7 +275,7 @@ const IssueCard = {
                             },
                             [h("span", { class: ["w-1.5 h-1.5 rounded-full", s.dot] }), props.severity]
                         ),
-                        h("span", { class: "text-[11px] font-mono text-ink-500 dark:text-ink-300 truncate" }, props.file),
+                        h("span", { class: "text-[11px] font-mono text-ink-500 dark:text-ink-300 truncate min-w-0 flex-1", title: props.file }, props.file),
                     ]),
                     h("div", { class: "font-bold text-ink-900 dark:text-ink-100 mb-2" }, props.title),
                     h(

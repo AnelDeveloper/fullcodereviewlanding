@@ -9,6 +9,11 @@
                 <p class="mt-5 text-lg text-ink-600 dark:text-ink-200/80">
                     Starting from <span class="font-bold text-ink-900 dark:text-ink-100">$20</span> — choose any combination. The more you stack, the bigger the discount.
                 </p>
+                <!-- Founders' offer reminder -->
+                <div class="mt-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold border border-orange-500/30 bg-orange-500/10 text-orange-700 dark:text-orange-300">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
+                    Founders' offer · First 100 sign-ups stack an extra 25% on top → up to 40% off
+                </div>
             </div>
 
             <!-- Discount tier banner -->

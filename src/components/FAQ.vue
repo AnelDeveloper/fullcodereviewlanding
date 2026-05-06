@@ -9,6 +9,18 @@
             </div>
 
             <div class="space-y-3">
+                <Item q="Can Full Code Review change my code?">
+                    No. We use read-only GitHub access. We cannot push commits, edit files, delete files, or change your repository in any way.
+                </Item>
+                <Item q="Can you access all my repositories?">
+                    No. During GitHub App installation, you choose exactly which repositories Full Code Review can access. You can grant access to a single repo and nothing else.
+                </Item>
+                <Item q="Can you see my GitHub Secrets?">
+                    No. We do not request access to GitHub Secrets, environment variables stored in GitHub, or repository settings. We only request what's needed to read your code.
+                </Item>
+                <Item q="Can I remove access later?">
+                    Yes — anytime. From GitHub <span class="font-semibold">Settings → Applications → Installed GitHub Apps</span>, you can revoke our access in two clicks. We're also notified and stop scanning immediately.
+                </Item>
                 <Item q="Will it work on AI-generated code (Cursor, Claude, v0, Lovable, Bolt)?">
                     That's literally what it's built for. Vibe-coded apps tend to have specific blind spots — missing auth checks on admin routes, unsafe DB queries, exposed env keys, hallucinated APIs. We're tuned to find them.
                 </Item>
