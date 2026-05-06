@@ -8,7 +8,7 @@
                         <polyline points="8 6 2 12 8 18" />
                     </svg>
                 </span>
-                <span class="font-bold text-lg tracking-tight">Code Review</span>
+                <span class="font-bold text-lg tracking-tight">Full Code Review</span>
             </a>
 
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-600 dark:text-ink-200/80">

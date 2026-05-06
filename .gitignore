@@ -1,6 +1,12 @@
 node_modules
 dist
+dist-ssr
 .DS_Store
 *.local
 .env
-.env.local
+.env.*
+!.env.example
+.vercel
+.vscode/*
+!.vscode/extensions.json
+.idea

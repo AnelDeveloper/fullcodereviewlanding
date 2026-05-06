@@ -9,8 +9,8 @@
                     </svg>
                 </span>
                 <div>
-                    <div class="font-bold text-ink-900 dark:text-ink-100">Code Review</div>
-                    <div class="text-xs text-ink-500 dark:text-ink-300/70">Catch what your AI missed. Built for vibe coders.</div>
+                    <div class="font-bold text-ink-900 dark:text-ink-100">Full Code Review</div>
+                    <div class="text-xs text-ink-500 dark:text-ink-300/70">Helping vibe coders ship secure, proven apps.</div>
                 </div>
             </div>
 
