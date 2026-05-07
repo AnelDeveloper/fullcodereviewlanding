@@ -26,7 +26,7 @@
                     <div class="flex items-center gap-2 text-sm">
                         <span class="font-bold text-ink-900 dark:text-ink-100">Excellent</span>
                         <span class="text-ink-500 dark:text-ink-300">·</span>
-                        <span class="text-ink-600 dark:text-ink-200/80">based on <span class="font-semibold">2 reviews</span></span>
+                        <span class="text-ink-600 dark:text-ink-200/80">based on <span class="font-semibold">{{ reviews.length }} reviews</span></span>
                     </div>
                     <div class="flex items-center gap-2 mt-1">
                         <TrustpilotLogo />
@@ -101,23 +101,51 @@
 <script setup>
 import { h, computed } from "vue"
 
+// Real Trustpilot reviews. Newest first.
 const reviews = [
     {
-        name: "Mahmut Imsirovic",
+        name: "Ajsela Felic",
         role: "Vibe coder",
-        date: "May 4, 2026",
+        date: "May 6, 2026",
         rating: 5,
-        title: "Caught an SQL injection my team missed for 8 months",
-        body: "Ran our payments service through Full Code Review before a security audit. It found a critical SQL injection in a search endpoint we'd been shipping for months — with the exact line number and a one-line fix. Worth $1000, paid only $144.",
+        title: "Worth trying",
+        body: "Worth trying! I'm very satisfied.",
         verified: true,
     },
     {
-        name: "John (Indiana)",
-        role: "Vibe coder · frontend",
+        name: "Emerald Podbićanin",
+        role: "Vibe coder",
         date: "May 5, 2026",
         rating: 5,
-        title: "Found bundle size issues I didn't know about",
-        body: "Picked the Frontend category to scan our Next.js app. It flagged three components causing massive re-renders and a 400KB dependency we weren't using. GREEEAT APP — recommend!",
+        title: "Definitely worth trying if you want to level up your coding skills",
+        body: "I've used FullCodeReview.com and had a really positive experience. The platform is clean, easy to use, and focused on what actually matters → getting high-quality feedback on your code. The reviews are clear, concise, and genuinely useful, without unnecessary fluff. The suggestions are practical and easy to apply, helping you improve your code quickly while understanding the reasoning behind changes.",
+        verified: true,
+    },
+    {
+        name: "Benjamin",
+        role: "Vibe coder",
+        date: "May 5, 2026",
+        rating: 5,
+        title: "Tried it once — catches major issues",
+        body: "I tried it once, and it's great — it catches major issues.",
+        verified: true,
+    },
+    {
+        name: "Mido Abdicevic",
+        role: "Vibe coder",
+        date: "May 5, 2026",
+        rating: 5,
+        title: "Reliable and professional service",
+        body: "Everything went well from start to finish. They were responsive, easy to work with, and delivered quality work.",
+        verified: true,
+    },
+    {
+        name: "Mahmut Imsirovic",
+        role: "Vibe coder",
+        date: "May 5, 2026",
+        rating: 5,
+        title: "Caught an SQL injection my team missed for 8 months",
+        body: "Ran our payments service through Full Code Review before a security audit. It found a critical SQL injection in a search endpoint we'd been shipping for months — with the exact line number and a one-line fix. Worth $1000, paid only $144.",
         verified: true,
     },
     /* === Old fake reviews — kept commented for reference, swap back when more arrive ===
