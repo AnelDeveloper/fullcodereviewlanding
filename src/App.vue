@@ -11,6 +11,7 @@
             <Security />
             <Pricing />
             <FAQ />
+            <Community />
             <CTA />
         </main>
 
@@ -29,6 +30,7 @@ import Founder from "./components/Founder.vue"
 import Security from "./components/Security.vue"
 import Pricing from "./components/Pricing.vue"
 import FAQ from "./components/FAQ.vue"
+import Community from "./components/Community.vue"
 import CTA from "./components/CTA.vue"
 import Footer from "./components/Footer.vue"
 import { initTheme } from "./composables/useTheme.js"
