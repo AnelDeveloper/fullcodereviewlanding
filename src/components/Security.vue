@@ -11,7 +11,7 @@
                     Secure <span class="gradient-text">GitHub access.</span>
                 </h2>
                 <p class="mt-5 text-lg text-ink-600 dark:text-ink-200/80 leading-relaxed">
-                    Full Code Review connects through a read-only GitHub App. You choose exactly which repository to review, and we only request the permissions needed to analyze your code.
+                    Full Code Review connects through a read-only GitHub App. You choose exactly which repository to review, and we only request the permissions needed to analyze your code. Your repository stays private. Your code is never used for AI training. You can revoke access in two clicks.
                 </p>
             </div>
 
@@ -22,6 +22,8 @@
                 <Badge :icon="iconLock">No code changes</Badge>
                 <Badge :icon="iconRevoke">Revoke anytime</Badge>
                 <Badge :icon="iconShield">Private reports</Badge>
+                <Badge :icon="iconNoAI">No AI training</Badge>
+                <Badge :icon="iconNDA">NDA available</Badge>
             </div>
 
             <!-- Two cards: can / cannot -->
@@ -41,11 +43,15 @@
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <CheckIcon />
-                            <span>Analyze security, backend, database, and frontend issues</span>
+                            <span>Analyze security, infrastructure, database, backend, and frontend</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <CheckIcon />
-                            <span>Generate a private review report</span>
+                            <span>Generate a private, encrypted review report (you only)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
+                            <CheckIcon />
+                            <span>Sign an NDA before scanning (on request)</span>
                         </li>
                     </ul>
                 </div>
@@ -61,23 +67,27 @@
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <XIcon />
-                            <span>Push or edit code</span>
+                            <span>Push, edit, or delete any code</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <XIcon />
-                            <span>Delete files or repositories</span>
+                            <span>Access GitHub Secrets or env vars</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <XIcon />
-                            <span>Access GitHub Secrets</span>
+                            <span>Change GitHub repository settings</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <XIcon />
-                            <span>Change GitHub settings</span>
+                            <span>Use your code to train any AI model — ours or anyone else's</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <XIcon />
-                            <span>Use your code to train public AI models</span>
+                            <span>Share your repo, findings, or report with third parties</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
+                            <XIcon />
+                            <span>Retain your code after the audit completes (purged within 24h)</span>
                         </li>
                     </ul>
                 </div>
@@ -124,6 +134,8 @@ const iconFolder = () => svgPaths(`<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2
 const iconLock = () => svgPaths(`<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>`)
 const iconRevoke = () => svgPaths(`<polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>`)
 const iconShield = () => svgPaths(`<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>`)
+const iconNoAI = () => svgPaths(`<circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>`)
+const iconNDA = () => svgPaths(`<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/>`)
 
 const Badge = {
     props: ["icon"],

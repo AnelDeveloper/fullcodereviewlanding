@@ -86,10 +86,11 @@ const mobileMenuOpen = ref(false)
 const closeMenu = () => (mobileMenuOpen.value = false)
 
 const links = [
-    { href: "#features", label: "Features" },
+    { href: "#features", label: "Audit dimensions" },
     { href: "#how", label: "How it works" },
     { href: "#security", label: "Security" },
     { href: "#pricing", label: "Pricing" },
+    { href: "#community", label: "Discord" },
     { href: "#faq", label: "FAQ" },
 ]
 

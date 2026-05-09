@@ -3,16 +3,16 @@
         <div class="max-w-5xl mx-auto text-center">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border border-violet-500/30 bg-violet-500/10 text-violet-700 dark:text-violet-200 mb-6 animate-fade-in-up">
                 <span class="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
-                Built for vibe coders · Works with Claude, Cursor, v0, Lovable
+                AI-assisted audits · Verified by senior engineers
             </div>
 
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6 animate-fade-in-up text-ink-900 dark:text-ink-100" style="animation-delay:.05s">
-                Catch what your AI missed.
-                <span class="block gradient-text">Before users do.</span>
+                Production-ready code.
+                <span class="block gradient-text">Verified by real engineers.</span>
             </h1>
 
             <p class="text-base sm:text-lg md:text-xl text-ink-600 dark:text-ink-200/80 max-w-2xl mx-auto leading-relaxed mb-8 animate-fade-in-up" style="animation-delay:.1s">
-                You vibe-coded an app. We do a senior-level review — security, database, backend, frontend — and tell you exactly what to fix. No fluff, no judgment.
+                Identify security, scalability, and infrastructure risks <span class="font-semibold text-ink-800 dark:text-ink-100">before they impact production.</span> Every audit combines AI-powered analysis with senior-engineer verification — built for SaaS founders, agencies, CTOs, and AI-assisted dev teams.
             </p>
 
             <!-- Social proof badge -->
@@ -68,10 +68,10 @@
             </div>
 
             <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-ink-500 dark:text-ink-300/70 animate-fade-in-up" style="animation-delay:.2s">
-                <span class="inline-flex items-center gap-1.5"><Dot/>~60 second turnaround</span>
-                <span class="inline-flex items-center gap-1.5"><Dot/>One-time payment</span>
-                <span class="inline-flex items-center gap-1.5"><Dot/>Private repos supported</span>
-                <span class="inline-flex items-center gap-1.5"><Dot/>Fix every issue</span>
+                <span class="inline-flex items-center gap-1.5"><Dot/>Read-only GitHub access</span>
+                <span class="inline-flex items-center gap-1.5"><Dot/>NDA available</span>
+                <span class="inline-flex items-center gap-1.5"><Dot/>No AI training on your code</span>
+                <span class="inline-flex items-center gap-1.5"><Dot/>Senior-engineer verified</span>
             </div>
         </div>
 
@@ -89,10 +89,16 @@
                             <div class="font-mono text-sm text-ink-900 dark:text-ink-100 truncate">yourname / saas-mvp</div>
                         </div>
                     </div>
-                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                        Scan complete · 23 issues
-                    </span>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Scan complete · 23 issues
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-700 dark:text-violet-300 text-xs font-bold">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Engineer-verified
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Big overall score + bar -->
