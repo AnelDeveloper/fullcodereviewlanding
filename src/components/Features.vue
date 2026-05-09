@@ -15,12 +15,11 @@
                 <div
                     v-for="cat in cats"
                     :key="cat.title"
-                    class="glass p-6 transition-all hover:-translate-y-1 hover:shadow-[0_30px_70px_-20px_rgba(139,92,246,0.4)] flex flex-col"
+                    class="glass p-6 transition-colors hover:border-ink-700/20 dark:hover:border-ink-100/20 flex flex-col"
                 >
                     <div class="flex items-start justify-between mb-5">
                         <div
-                            class="w-11 h-11 rounded-xl grid place-items-center text-violet-600 dark:text-violet-300"
-                            style="background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(236,72,153,.15));border:1px solid rgba(139,92,246,.25);"
+                            class="w-10 h-10 rounded-lg grid place-items-center text-violet-600 dark:text-violet-300 bg-violet-500/10"
                             v-html="iconSvg[cat.icon]"
                         ></div>
                         <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 py-1 rounded-full bg-violet-500/10 text-violet-700 dark:text-violet-300 border border-violet-500/20">

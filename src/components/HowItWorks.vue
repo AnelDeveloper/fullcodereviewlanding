@@ -13,10 +13,7 @@
 
             <!-- Connector line behind cards (desktop only) -->
             <div class="relative">
-                <div
-                    class="hidden md:block absolute top-[68px] left-[12%] right-[12%] h-px"
-                    style="background: linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.4) 20%, rgba(236,72,153,0.4) 50%, rgba(6,182,212,0.4) 80%, transparent 100%);"
-                ></div>
+                <div class="hidden md:block absolute top-[68px] left-[12%] right-[12%] h-px bg-ink-700/15 dark:bg-ink-100/15"></div>
 
                 <div class="grid md:grid-cols-3 gap-5 relative">
                     <Step
@@ -95,7 +92,7 @@ const Step = {
                 "div",
                 {
                     class:
-                        "relative glass p-7 transition-all hover:-translate-y-1 hover:shadow-[0_30px_70px_-20px_rgba(139,92,246,0.45)] group",
+                        "relative glass p-7 transition-colors hover:border-ink-700/20 dark:hover:border-ink-100/20 group",
                 },
                 [
                     // Numbered bubble (sits on the connector line)
@@ -103,8 +100,7 @@ const Step = {
                         "div",
                         {
                             class:
-                                "absolute -top-4 left-7 inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold tracking-wider uppercase text-white shadow-lg",
-                            style: "background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);",
+                                "absolute -top-4 left-7 inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold tracking-wider uppercase text-white bg-violet-600",
                         },
                         [`Step ${props.number}`]
                     ),
@@ -114,9 +110,7 @@ const Step = {
                         "div",
                         {
                             class:
-                                "w-12 h-12 rounded-xl grid place-items-center mb-5 mt-2 text-violet-600 dark:text-violet-300 transition-transform group-hover:scale-110",
-                            style:
-                                "background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(236,72,153,.15));border:1px solid rgba(139,92,246,.25);",
+                                "w-10 h-10 rounded-lg grid place-items-center mb-5 mt-2 text-violet-600 dark:text-violet-300 bg-violet-500/10",
                         },
                         [props.icon()]
                     ),

@@ -35,10 +35,9 @@
 
             <!-- Founders' offer promo banner -->
             <div class="max-w-2xl mx-auto mb-8 animate-fade-in-up px-1" style="animation-delay:.13s">
-                <div class="glass p-3 sm:p-4 md:p-5 relative overflow-hidden text-left" style="border-color:rgba(249,115,22,0.35);">
-                    <div class="absolute -top-16 -right-12 w-40 h-40 rounded-full blur-3xl opacity-50" style="background:#F97316;"></div>
-                    <div class="relative flex items-center gap-3 md:gap-4">
-                        <span class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl grid place-items-center text-white shadow-lg" style="background:linear-gradient(135deg,#F97316 0%,#EC4899 100%);">
+                <div class="glass p-3 sm:p-4 md:p-5 text-left" style="border-color:rgba(249,115,22,0.35);">
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <span class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl grid place-items-center text-white bg-orange-500">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14a8 8 0 0 0 16 0C20 9.79 17.99 6.04 14.7 3.34c-.4-.34-.99-.18-1.2.33z"/></svg>
                         </span>
                         <div class="flex-1 min-w-0">

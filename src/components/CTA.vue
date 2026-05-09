@@ -61,7 +61,7 @@
                     rel="noopener noreferrer"
                     class="rounded-2xl border-2 border-dashed border-violet-500/30 hover:border-violet-500/60 bg-violet-500/5 hover:bg-violet-500/10 p-6 flex flex-col items-center justify-center text-center transition-all min-h-[280px] group"
                 >
-                    <div class="w-12 h-12 rounded-xl grid place-items-center mb-4 text-violet-600 dark:text-violet-300 group-hover:scale-110 transition-transform" style="background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(236,72,153,.15));border:1px solid rgba(139,92,246,.25);">
+                    <div class="w-10 h-10 rounded-lg grid place-items-center mb-4 text-violet-600 dark:text-violet-300 bg-violet-500/10 transition-transform group-hover:scale-105">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
                     </div>
                     <div class="font-bold text-ink-900 dark:text-ink-100 mb-1">Be the next reviewer</div>
@@ -306,7 +306,7 @@ const ReviewCard = {
                 "article",
                 {
                     class:
-                        "marquee-card glass p-6 flex flex-col transition-shadow hover:shadow-[0_30px_70px_-20px_rgba(139,92,246,0.4)]",
+                        "marquee-card glass p-6 flex flex-col transition-colors hover:border-ink-700/20 dark:hover:border-ink-100/20",
                 },
                 [
                     h("div", { class: "flex items-center justify-between mb-4" }, [
@@ -350,9 +350,7 @@ const ReviewCard = {
                                 "div",
                                 {
                                     class:
-                                        "w-9 h-9 rounded-full grid place-items-center text-xs font-bold text-white flex-shrink-0",
-                                    style:
-                                        "background:linear-gradient(135deg,#8B5CF6 0%,#EC4899 100%);",
+                                        "w-9 h-9 rounded-full grid place-items-center text-xs font-bold text-white flex-shrink-0 bg-violet-600",
                                 },
                                 initials
                             ),

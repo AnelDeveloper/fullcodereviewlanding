@@ -1,18 +1,11 @@
 <template>
     <section class="py-20 px-6">
         <div class="max-w-4xl mx-auto">
-            <div class="glass p-8 md:p-12 relative overflow-hidden">
-                <!-- Soft accent -->
-                <div class="absolute -top-24 -right-24 w-64 h-64 rounded-full blur-[80px] opacity-30" style="background:#8B5CF6"></div>
-                <div class="absolute -bottom-24 -left-24 w-64 h-64 rounded-full blur-[80px] opacity-20" style="background:#EC4899"></div>
-
-                <div class="relative grid md:grid-cols-[auto,1fr] gap-8 items-start">
+            <div class="glass p-8 md:p-12">
+                <div class="grid md:grid-cols-[auto,1fr] gap-8 items-start">
                     <!-- Avatar -->
                     <div class="flex md:block items-center gap-4">
-                        <div
-                            class="w-24 h-24 md:w-28 md:h-28 rounded-2xl grid place-items-center text-white text-3xl md:text-4xl font-extrabold shadow-2xl flex-shrink-0"
-                            style="background:linear-gradient(135deg,#8B5CF6 0%,#EC4899 100%);"
-                        >
+                        <div class="w-24 h-24 md:w-28 md:h-28 rounded-2xl grid place-items-center text-white text-3xl md:text-4xl font-extrabold flex-shrink-0 bg-violet-600">
                             AK
                         </div>
                         <div class="md:hidden">

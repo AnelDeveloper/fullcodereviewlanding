@@ -40,15 +40,13 @@
 
                 <!-- Sticky total -->
                 <div class="lg:col-span-1">
-                    <div class="glass p-7 relative overflow-hidden lg:sticky lg:top-24">
-                        <div class="absolute -top-20 -right-20 w-48 h-48 rounded-full blur-3xl opacity-30" style="background:#EC4899"></div>
-
-                        <div class="relative">
+                    <div class="glass p-7 lg:sticky lg:top-24">
+                        <div>
                             <div class="flex items-center justify-between mb-2">
                                 <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300">Your review</div>
                                 <span
                                     v-if="discountPct > 0"
-                                    class="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-gradient-to-r from-violet-500 to-pink-500 text-white shadow-lg"
+                                    class="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-violet-600 text-white"
                                 >Save {{ discountPct }}%</span>
                             </div>
 
@@ -276,7 +274,7 @@ const TierBadge = {
                     class: [
                         "flex-1 text-center px-3 py-2.5 rounded-xl transition-all",
                         props.highlight
-                            ? "bg-gradient-to-r from-violet-500 to-pink-500 text-white shadow-lg scale-[1.02]"
+                            ? "bg-violet-600 text-white"
                             : props.active
                                 ? "bg-violet-500/10 text-violet-700 dark:text-violet-200"
                                 : "text-ink-500 dark:text-ink-300/70",
@@ -323,8 +321,7 @@ const CategoryCard = {
                         h(
                             "div",
                             {
-                                class: "w-11 h-11 rounded-xl grid place-items-center flex-shrink-0",
-                                style: "background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(236,72,153,.15));border:1px solid rgba(139,92,246,.25);",
+                                class: "w-10 h-10 rounded-lg grid place-items-center flex-shrink-0 bg-violet-500/10",
                             },
                             [
                                 h("svg", {

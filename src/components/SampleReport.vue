@@ -192,9 +192,7 @@ const Benefit = {
                 h(
                     "span",
                     {
-                        class: "flex-shrink-0 w-10 h-10 rounded-xl grid place-items-center font-mono text-sm font-bold text-violet-600 dark:text-violet-300",
-                        style:
-                            "background:linear-gradient(135deg,rgba(139,92,246,.12),rgba(236,72,153,.12));border:1px solid rgba(139,92,246,.25);",
+                        class: "flex-shrink-0 w-10 h-10 rounded-lg grid place-items-center font-mono text-sm font-bold text-violet-600 dark:text-violet-300 bg-violet-500/10",
                     },
                     props.n
                 ),
