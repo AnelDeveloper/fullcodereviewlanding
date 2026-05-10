@@ -4,12 +4,12 @@
             <a href="#" class="flex items-center gap-2.5 text-ink-900 dark:text-ink-100 min-w-0" @click="closeMenu">
                 <img
                     src="/logo.png"
-                    alt="Full Code Review"
+                    alt="Qodeshark"
                     class="w-9 h-9 rounded-[10px] object-cover shadow-md flex-shrink-0"
                     width="36"
                     height="36"
                 />
-                <span class="font-bold text-base sm:text-lg tracking-tight truncate">Full Code Review</span>
+                <span class="font-bold text-base sm:text-lg tracking-tight truncate">Qodeshark</span>
             </a>
 
             <!-- Desktop nav -->
@@ -23,10 +23,10 @@
             <!-- Right cluster -->
             <div class="flex items-center gap-2 sm:gap-3">
                 <ThemeToggle />
-                <a href="https://app.fullcodereview.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-200 hover:text-violet-600 dark:hover:text-violet-300 transition-colors">
+                <a href="https://app.qodeshark.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-200 hover:text-violet-600 dark:hover:text-violet-300 transition-colors">
                     Sign in
                 </a>
-                <a href="https://app.fullcodereview.com/register" class="hidden sm:inline-flex btn-vibe text-sm py-2.5 px-5">Get started</a>
+                <a href="https://app.qodeshark.com/register" class="hidden sm:inline-flex btn-vibe text-sm py-2.5 px-5">Get started</a>
 
                 <!-- Hamburger (mobile only) -->
                 <button
@@ -66,10 +66,10 @@
                         {{ link.label }}
                     </a>
                     <div class="my-2 h-px bg-ink-700/10 dark:bg-ink-100/10"></div>
-                    <a href="https://app.fullcodereview.com/login" class="px-3 py-3 rounded-lg text-base font-medium text-ink-800 dark:text-ink-100 hover:bg-violet-500/10 transition-colors">
+                    <a href="https://app.qodeshark.com/login" class="px-3 py-3 rounded-lg text-base font-medium text-ink-800 dark:text-ink-100 hover:bg-violet-500/10 transition-colors">
                         Sign in
                     </a>
-                    <a href="https://app.fullcodereview.com/register" class="btn-vibe w-full justify-center mt-2">
+                    <a href="https://app.qodeshark.com/register" class="btn-vibe w-full justify-center mt-2">
                         Get started
                     </a>
                 </nav>

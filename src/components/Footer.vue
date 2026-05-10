@@ -4,13 +4,13 @@
             <div class="flex items-center gap-3">
                 <img
                     src="/logo.png"
-                    alt="Full Code Review"
+                    alt="Qodeshark"
                     class="w-9 h-9 rounded-[10px] object-cover shadow-md"
                     width="36"
                     height="36"
                 />
                 <div>
-                    <div class="font-bold text-ink-900 dark:text-ink-100">Full Code Review</div>
+                    <div class="font-bold text-ink-900 dark:text-ink-100">Qodeshark</div>
                     <div class="text-xs text-ink-500 dark:text-ink-300/70">Helping vibe coders ship secure, proven apps.</div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                 <a href="#pricing" class="hover:text-violet-600 dark:hover:text-violet-300">Pricing</a>
                 <a href="#community" class="hover:text-violet-600 dark:hover:text-violet-300">Discord</a>
                 <a href="#faq" class="hover:text-violet-600 dark:hover:text-violet-300">FAQ</a>
-                <a href="https://app.fullcodereview.com/login" class="hover:text-violet-600 dark:hover:text-violet-300">Sign in</a>
+                <a href="https://app.qodeshark.com/login" class="hover:text-violet-600 dark:hover:text-violet-300">Sign in</a>
             </nav>
 
             <!-- Social icons -->
@@ -55,7 +55,7 @@
             </div>
 
             <div class="text-xs text-ink-500 dark:text-ink-300/70">
-                © {{ year }} Full Code Review · All rights reserved
+                © {{ year }} Qodeshark · All rights reserved
             </div>
         </div>
     </footer>

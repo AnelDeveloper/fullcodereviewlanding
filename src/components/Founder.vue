@@ -26,7 +26,7 @@
                             I'm a software engineer with <span class="font-bold">6+ years</span> shipping production apps — frontend, backend, databases, the whole stack.
                         </p>
                         <p class="text-ink-600 dark:text-ink-200/80 leading-relaxed mb-4">
-                            I built <span class="font-semibold text-ink-900 dark:text-ink-100">Full Code Review</span> after I kept seeing the same thing: people vibe-coding incredible apps with Claude, Cursor, and v0 — then shipping them with auth bugs, leaky queries, and silent data corruption that any senior engineer would catch in a 5-minute PR review.
+                            I built <span class="font-semibold text-ink-900 dark:text-ink-100">Qodeshark</span> after I kept seeing the same thing: people vibe-coding incredible apps with Claude, Cursor, and v0 — then shipping them with auth bugs, leaky queries, and silent data corruption that any senior engineer would catch in a 5-minute PR review.
                         </p>
                         <p class="text-ink-600 dark:text-ink-200/80 leading-relaxed mb-6">
                             So I built the senior engineer. The one I wish I'd had when I started. No gatekeeping, no enterprise pricing, no "consider refactoring." Just real findings, with real fixes, in 60 seconds.

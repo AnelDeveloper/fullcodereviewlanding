@@ -9,11 +9,11 @@
             </div>
 
             <div class="space-y-3">
-                <Item q="Can Full Code Review change my code?">
+                <Item q="Can Qodeshark change my code?">
                     No. We use read-only GitHub access. We cannot push commits, edit files, delete files, or change your repository in any way.
                 </Item>
                 <Item q="Can you access all my repositories?">
-                    No. During GitHub App installation, you choose exactly which repositories Full Code Review can access. You can grant access to a single repo and nothing else.
+                    No. During GitHub App installation, you choose exactly which repositories Qodeshark can access. You can grant access to a single repo and nothing else.
                 </Item>
                 <Item q="Can you see my GitHub Secrets?">
                     No. We do not request access to GitHub Secrets, environment variables stored in GitHub, or repository settings. We only request what's needed to read your code.

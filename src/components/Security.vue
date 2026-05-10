@@ -11,7 +11,7 @@
                     Secure <span class="gradient-text">GitHub access.</span>
                 </h2>
                 <p class="mt-5 text-lg text-ink-600 dark:text-ink-200/80 leading-relaxed">
-                    Full Code Review connects through a read-only GitHub App. You choose exactly which repository to review, and we only request the permissions needed to analyze your code. Your repository stays private. Your code is never used for AI training. You can revoke access in two clicks.
+                    Qodeshark connects through a read-only GitHub App. You choose exactly which repository to review, and we only request the permissions needed to analyze your code. Your repository stays private. Your code is never used for AI training. You can revoke access in two clicks.
                 </p>
             </div>
 
@@ -96,7 +96,7 @@
             <!-- GitHub connect CTA -->
             <div class="text-center">
                 <a
-                    href="https://app.fullcodereview.com/register"
+                    href="https://app.qodeshark.com/register"
                     class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full font-semibold text-white bg-ink-900 dark:bg-ink-100 dark:text-ink-900 hover:opacity-90 transition-opacity shadow-lg"
                 >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8 0 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.7-5.5 6 .5.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
