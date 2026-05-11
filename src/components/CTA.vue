@@ -66,7 +66,7 @@
                     </div>
                     <div class="font-bold text-ink-900 dark:text-ink-100 mb-1">Be the next reviewer</div>
                     <p class="text-sm text-ink-600 dark:text-ink-200/75 leading-relaxed mb-3">
-                        Used Qodeshark? Drop your honest review on Trustpilot — it shows up here automatically.
+                        Used Full Code Review? Drop your honest review on Trustpilot — it shows up here automatically.
                     </p>
                     <span class="inline-flex items-center gap-1 text-sm font-semibold text-violet-600 dark:text-violet-300">
                         Write a review
@@ -118,7 +118,7 @@ const reviews = [
         date: "May 5, 2026",
         rating: 5,
         title: "Definitely worth trying if you want to level up your coding skills",
-        body: "I've used Qodeshark.com and had a really positive experience. The platform is clean, easy to use, and focused on what actually matters → getting high-quality feedback on your code. The reviews are clear, concise, and genuinely useful, without unnecessary fluff. The suggestions are practical and easy to apply, helping you improve your code quickly while understanding the reasoning behind changes.",
+        body: "I've used FullCodeReview.com and had a really positive experience. The platform is clean, easy to use, and focused on what actually matters → getting high-quality feedback on your code. The reviews are clear, concise, and genuinely useful, without unnecessary fluff. The suggestions are practical and easy to apply, helping you improve your code quickly while understanding the reasoning behind changes.",
         verified: true,
     },
     {
@@ -145,7 +145,7 @@ const reviews = [
         date: "May 5, 2026",
         rating: 5,
         title: "Caught an SQL injection my team missed for 8 months",
-        body: "Ran our payments service through Qodeshark before a security audit. It found a critical SQL injection in a search endpoint we'd been shipping for months — with the exact line number and a one-line fix. Worth $1000, paid only $144.",
+        body: "Ran our payments service through Full Code Review before a security audit. It found a critical SQL injection in a search endpoint we'd been shipping for months — with the exact line number and a one-line fix. Worth $1000, paid only $144.",
         verified: true,
     },
     /* === Old fake reviews — kept commented for reference, swap back when more arrive ===
@@ -164,7 +164,7 @@ const reviews = [
         date: "March 9, 2026",
         rating: 5,
         title: "Replaced our pre-PR checklist",
-        body: "We used to have a 40-item PR checklist. Now we run Qodeshark on the branch and only escalate to a human review if the scorecard drops below 80. Saves us hours per week.",
+        body: "We used to have a 40-item PR checklist. Now we run Full Code Review on the branch and only escalate to a human review if the scorecard drops below 80. Saves us hours per week.",
         verified: true,
     },
     {

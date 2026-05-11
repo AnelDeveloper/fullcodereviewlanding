@@ -25,7 +25,7 @@
                     <div class="rounded-xl p-4 bg-emerald-500/5 dark:bg-emerald-500/10 border border-emerald-500/30">
                         <div class="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
                             <Check2 />
-                            Qodeshark
+                            Full Code Review
                         </div>
                         <p class="text-sm text-ink-700 dark:text-ink-100 leading-relaxed">
                             <span class="font-mono text-xs text-ink-500 dark:text-ink-300">auth.ts:42</span> — <span class="font-semibold">Missing role check</span> on admin route. Fix: wrap with <code class="font-mono text-xs">requireRole('admin')</code>.

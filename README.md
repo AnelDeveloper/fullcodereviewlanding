@@ -1,6 +1,6 @@
-# Qodeshark — Landing Page
+# Code Review — Landing Page
 
-Marketing site for [Qodeshark](https://app.qodeshark.com). Pairs with the app at `/Users/anelkujovic/Documents/Projects/codereview`.
+Marketing site for [Code Review](https://app.fullcodereview.com). Pairs with the app at `/Users/anelkujovic/Documents/Projects/codereview`.
 
 ## Stack
 
@@ -26,7 +26,7 @@ npm run build
 # upload dist/ to your host (Netlify / Vercel / Cloudflare Pages / etc.)
 ```
 
-All CTAs link to `https://app.qodeshark.com/{login,register}`. If your app domain changes, search and replace `app.qodeshark.com`.
+All CTAs link to `https://app.fullcodereview.com/{login,register}`. If your app domain changes, search and replace `app.fullcodereview.com`.
 
 ## Sections
 
