@@ -5,7 +5,7 @@
                 <img
                     src="/logos/Shark Logo Itself white.svg"
                     alt="QodeShark"
-                    class="h-auto object-contain flex-shrink-0 -translate-y-1 -ml-3"
+                    class="h-auto object-contain flex-shrink-0 translate-y-0 -ml-3"
                     style="width:120px"
                     width="36"
                     height="36"
