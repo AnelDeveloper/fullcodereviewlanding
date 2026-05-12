@@ -1,5 +1,5 @@
 <template>
-    <section class="py-24 overflow-hidden">
+    <section id="testimonials" class="py-24 overflow-hidden">
         <!-- Header -->
         <div class="px-6">
             <div class="max-w-6xl mx-auto text-center mb-12">

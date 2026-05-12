@@ -16,9 +16,9 @@
             <!-- Desktop nav -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-600 dark:text-ink-100/60">
                 <a href="#features" class="hover:text-white dark:hover:text-white transition-colors">Features</a>
-                <a href="#how" class="hover:text-white dark:hover:text-white transition-colors">How it works</a>
+                <a href="#how" class="hover:text-white dark:hover:text-white transition-colors">Process</a>
                 <a href="#pricing" class="hover:text-white dark:hover:text-white transition-colors">Pricing</a>
-                <a href="#faq" class="hover:text-white dark:hover:text-white transition-colors">FAQ</a>
+                <a href="#testimonials" class="hover:text-white dark:hover:text-white transition-colors">Testimonials</a>
             </nav>
 
             <!-- Right cluster -->
@@ -88,11 +88,11 @@ const closeMenu = () => (mobileMenuOpen.value = false)
 
 const links = [
     { href: "#features", label: "Audit dimensions" },
-    { href: "#how", label: "How it works" },
+    { href: "#how", label: "Process" },
     { href: "#security", label: "Security" },
     { href: "#pricing", label: "Pricing" },
     { href: "#community", label: "Discord" },
-    { href: "#faq", label: "FAQ" },
+    { href: "#testimonials", label: "Testimonials" },
 ]
 
 // Close on Escape, lock body scroll while open
