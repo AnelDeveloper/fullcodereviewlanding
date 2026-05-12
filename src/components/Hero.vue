@@ -7,8 +7,8 @@
             </div>
 
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6 animate-fade-in-up text-ink-900 dark:text-ink-100" style="animation-delay:.05s">
-                Production-ready code.
-                <span class="block gradient-text">Verified by real engineers.</span>
+                Good code is written.
+                <span class="block gradient-text">Great code is reviewed.</span>
             </h1>
 
             <p class="text-base sm:text-lg md:text-xl text-ink-600 dark:text-ink-100/60 max-w-2xl mx-auto leading-relaxed mb-8 animate-fade-in-up" style="animation-delay:.1s">
