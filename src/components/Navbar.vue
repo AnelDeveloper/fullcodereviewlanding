@@ -5,8 +5,7 @@
                 <img
                     src="/logos/Shark Logo Itself white.svg"
                     alt="QodeShark"
-                    class="h-auto object-contain flex-shrink-0 translate-y-2"
-                    style="width:150px"
+                    class="h-auto object-contain flex-shrink-0 translate-y-2 w-[150px] -ml-14 sm:ml-0"
                     width="36"
                     height="36"
                 />
@@ -87,11 +86,9 @@ const mobileMenuOpen = ref(false)
 const closeMenu = () => (mobileMenuOpen.value = false)
 
 const links = [
-    { href: "#features", label: "Audit dimensions" },
+    { href: "#features", label: "Features" },
     { href: "#how", label: "Process" },
-    { href: "#security", label: "Security" },
     { href: "#pricing", label: "Pricing" },
-    { href: "#community", label: "Discord" },
     { href: "#testimonials", label: "Testimonials" },
 ]
 
