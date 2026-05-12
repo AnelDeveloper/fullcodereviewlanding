@@ -1,29 +1,30 @@
 <template>
     <header class="sticky top-0 z-40 backdrop-blur-md bg-white/70 dark:bg-ink-950/70 border-b border-ink-700/10 dark:border-ink-100/5">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
-            <a href="#" class="flex items-center gap-2.5 text-ink-900 dark:text-ink-100 min-w-0" @click="closeMenu">
+            <a href="#" class="flex items-center gap-0 text-ink-900 dark:text-ink-100 min-w-0" @click="closeMenu">
                 <img
-                    src="/logo.png"
-                    alt="Full Code Review"
-                    class="w-9 h-9 rounded-[10px] object-cover shadow-md flex-shrink-0"
+                    src="/logos/Shark Logo Itself white.svg"
+                    alt="QodeShark"
+                    class="h-auto object-contain flex-shrink-0 translate-y-2"
+                    style="width:150px"
                     width="36"
                     height="36"
                 />
-                <span class="font-bold text-base sm:text-lg tracking-tight truncate">Full Code Review</span>
+                <span class="font-bold text-base sm:text-lg tracking-tight truncate -ml-10">QodeShark</span>
             </a>
 
             <!-- Desktop nav -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-600 dark:text-ink-200/80">
-                <a href="#features" class="hover:text-violet-600 dark:hover:text-violet-300 transition-colors">Features</a>
-                <a href="#how" class="hover:text-violet-600 dark:hover:text-violet-300 transition-colors">How it works</a>
-                <a href="#pricing" class="hover:text-violet-600 dark:hover:text-violet-300 transition-colors">Pricing</a>
-                <a href="#faq" class="hover:text-violet-600 dark:hover:text-violet-300 transition-colors">FAQ</a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-600 dark:text-ink-100/60">
+                <a href="#features" class="hover:text-white dark:hover:text-white transition-colors">Features</a>
+                <a href="#how" class="hover:text-white dark:hover:text-white transition-colors">How it works</a>
+                <a href="#pricing" class="hover:text-white dark:hover:text-white transition-colors">Pricing</a>
+                <a href="#faq" class="hover:text-white dark:hover:text-white transition-colors">FAQ</a>
             </nav>
 
             <!-- Right cluster -->
             <div class="flex items-center gap-2 sm:gap-3">
                 <ThemeToggle />
-                <a href="https://app.fullcodereview.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-200 hover:text-violet-600 dark:hover:text-violet-300 transition-colors">
+                <a href="https://app.fullcodereview.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-100/60 hover:text-white dark:hover:text-white transition-colors">
                     Sign in
                 </a>
                 <a href="https://app.fullcodereview.com/register" class="hidden sm:inline-flex btn-vibe text-sm py-2.5 px-5">Get started</a>
@@ -32,7 +33,7 @@
                 <button
                     @click="mobileMenuOpen = !mobileMenuOpen"
                     type="button"
-                    class="md:hidden w-10 h-10 grid place-items-center rounded-lg border border-ink-700/10 dark:border-ink-100/10 text-ink-800 dark:text-ink-100 hover:bg-violet-500/10 transition-colors"
+                    class="md:hidden w-10 h-10 grid place-items-center rounded-lg border border-ink-700/10 dark:border-ink-100/10 text-ink-800 dark:text-ink-100 hover:bg-white/10 transition-colors"
                     :aria-label="mobileMenuOpen ? 'Close menu' : 'Open menu'"
                     :aria-expanded="mobileMenuOpen"
                 >
@@ -62,11 +63,11 @@
                 class="md:hidden border-t border-ink-700/10 dark:border-ink-100/5 bg-white/95 dark:bg-ink-950/95 backdrop-blur-md"
             >
                 <nav class="px-4 py-4 flex flex-col gap-1 max-w-6xl mx-auto">
-                    <a v-for="link in links" :key="link.href" :href="link.href" @click="closeMenu" class="px-3 py-3 rounded-lg text-base font-medium text-ink-800 dark:text-ink-100 hover:bg-violet-500/10 transition-colors">
+                    <a v-for="link in links" :key="link.href" :href="link.href" @click="closeMenu" class="px-3 py-3 rounded-lg text-base font-medium text-ink-800 dark:text-ink-100 hover:bg-white/10 transition-colors">
                         {{ link.label }}
                     </a>
                     <div class="my-2 h-px bg-ink-700/10 dark:bg-ink-100/10"></div>
-                    <a href="https://app.fullcodereview.com/login" class="px-3 py-3 rounded-lg text-base font-medium text-ink-800 dark:text-ink-100 hover:bg-violet-500/10 transition-colors">
+                    <a href="https://app.fullcodereview.com/login" class="px-3 py-3 rounded-lg text-base font-medium text-ink-800 dark:text-ink-100 hover:bg-white/10 transition-colors">
                         Sign in
                     </a>
                     <a href="https://app.fullcodereview.com/register" class="btn-vibe w-full justify-center mt-2">

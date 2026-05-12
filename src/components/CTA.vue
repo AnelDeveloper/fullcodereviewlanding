@@ -3,7 +3,7 @@
         <!-- Header -->
         <div class="px-6">
             <div class="max-w-6xl mx-auto text-center mb-12">
-                <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300 mb-3">
+                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">
                     Reviews
                 </div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 mb-6">
@@ -15,7 +15,7 @@
                     href="https://www.trustpilot.com/review/fullcodereview.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-flex flex-col items-center gap-3 px-6 py-5 rounded-2xl border border-ink-700/10 dark:border-ink-100/10 bg-white/60 dark:bg-ink-900/50 backdrop-blur hover:border-violet-500/40 transition-colors"
+                    class="inline-flex flex-col items-center gap-3 px-6 py-5 rounded-2xl border border-ink-700/10 dark:border-ink-100/10 bg-white/60 dark:bg-ink-900/50 backdrop-blur hover:border-white/40 transition-colors"
                 >
                     <div class="flex items-center gap-3">
                         <span class="text-3xl font-extrabold text-ink-900 dark:text-ink-100 leading-none">5.0</span>
@@ -25,8 +25,8 @@
                     </div>
                     <div class="flex items-center gap-2 text-sm">
                         <span class="font-bold text-ink-900 dark:text-ink-100">Excellent</span>
-                        <span class="text-ink-500 dark:text-ink-300">·</span>
-                        <span class="text-ink-600 dark:text-ink-200/80">based on <span class="font-semibold">{{ reviews.length }} reviews</span></span>
+                        <span class="text-ink-500 dark:text-ink-100/60">·</span>
+                        <span class="text-ink-600 dark:text-ink-100/60">based on <span class="font-semibold">{{ reviews.length }} reviews</span></span>
                     </div>
                     <div class="flex items-center gap-2 mt-1">
                         <TrustpilotLogo />
@@ -59,16 +59,16 @@
                     href="https://www.trustpilot.com/evaluate/fullcodereview.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="rounded-2xl border-2 border-dashed border-violet-500/30 hover:border-violet-500/60 bg-violet-500/5 hover:bg-violet-500/10 p-6 flex flex-col items-center justify-center text-center transition-all min-h-[280px] group"
+                    class="rounded-2xl border-2 border-dashed border-white/30 hover:border-white/60 bg-white/5 hover:bg-white/10 p-6 flex flex-col items-center justify-center text-center transition-all min-h-[280px] group"
                 >
-                    <div class="w-10 h-10 rounded-lg grid place-items-center mb-4 text-violet-600 dark:text-violet-300 bg-violet-500/10 transition-transform group-hover:scale-105">
+                    <div class="w-10 h-10 rounded-lg grid place-items-center mb-4 text-white dark:text-white bg-white/10 transition-transform group-hover:scale-105">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
                     </div>
                     <div class="font-bold text-ink-900 dark:text-ink-100 mb-1">Be the next reviewer</div>
-                    <p class="text-sm text-ink-600 dark:text-ink-200/75 leading-relaxed mb-3">
-                        Used Full Code Review? Drop your honest review on Trustpilot — it shows up here automatically.
+                    <p class="text-sm text-ink-600 dark:text-ink-100/60 leading-relaxed mb-3">
+                        Used QodeShark? Drop your honest review on Trustpilot — it shows up here automatically.
                     </p>
-                    <span class="inline-flex items-center gap-1 text-sm font-semibold text-violet-600 dark:text-violet-300">
+                    <span class="inline-flex items-center gap-1 text-sm font-semibold text-white dark:text-white">
                         Write a review
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
                     </span>
@@ -78,7 +78,7 @@
 
         <!-- Footer note -->
         <div class="px-6 mt-10">
-            <div class="text-center text-sm text-ink-500 dark:text-ink-300 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+            <div class="text-center text-sm text-ink-500 dark:text-ink-100/60 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
                 <span class="inline-flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                     Live · Updates as new reviews come in
@@ -88,7 +88,7 @@
                     href="https://www.trustpilot.com/evaluate/fullcodereview.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="font-semibold text-violet-600 dark:text-violet-300 hover:underline inline-flex items-center gap-1"
+                    class="font-semibold text-white dark:text-white hover:underline inline-flex items-center gap-1"
                 >
                     Leave a review on Trustpilot
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
@@ -145,7 +145,7 @@ const reviews = [
         date: "May 5, 2026",
         rating: 5,
         title: "Caught an SQL injection my team missed for 8 months",
-        body: "Ran our payments service through Full Code Review before a security audit. It found a critical SQL injection in a search endpoint we'd been shipping for months — with the exact line number and a one-line fix. Worth $1000, paid only $144.",
+        body: "Ran our payments service through QodeShark before a security audit. It found a critical SQL injection in a search endpoint we'd been shipping for months — with the exact line number and a one-line fix. Worth $1000, paid only $144.",
         verified: true,
     },
     /* === Old fake reviews — kept commented for reference, swap back when more arrive ===
@@ -164,7 +164,7 @@ const reviews = [
         date: "March 9, 2026",
         rating: 5,
         title: "Replaced our pre-PR checklist",
-        body: "We used to have a 40-item PR checklist. Now we run Full Code Review on the branch and only escalate to a human review if the scorecard drops below 80. Saves us hours per week.",
+        body: "We used to have a 40-item PR checklist. Now we run QodeShark on the branch and only escalate to a human review if the scorecard drops below 80. Saves us hours per week.",
         verified: true,
     },
     {
@@ -319,7 +319,7 @@ const ReviewCard = {
                         ),
                         h(
                             "span",
-                            { class: "text-xs text-ink-500 dark:text-ink-300" },
+                            { class: "text-xs text-ink-500 dark:text-ink-100/60" },
                             props.date
                         ),
                     ]),
@@ -335,7 +335,7 @@ const ReviewCard = {
                         "p",
                         {
                             class:
-                                "text-sm text-ink-600 dark:text-ink-200/80 leading-relaxed mb-5 flex-1",
+                                "text-sm text-ink-600 dark:text-ink-100/60 leading-relaxed mb-5 flex-1",
                         },
                         props.body
                     ),
@@ -350,7 +350,7 @@ const ReviewCard = {
                                 "div",
                                 {
                                     class:
-                                        "w-9 h-9 rounded-full grid place-items-center text-xs font-bold text-white flex-shrink-0 bg-violet-600",
+                                        "w-9 h-9 rounded-full grid place-items-center text-xs font-bold text-black flex-shrink-0 bg-white",
                                 },
                                 initials
                             ),
@@ -367,7 +367,7 @@ const ReviewCard = {
                                     "div",
                                     {
                                         class:
-                                            "text-xs text-ink-500 dark:text-ink-300 truncate",
+                                            "text-xs text-ink-500 dark:text-ink-100/60 truncate",
                                     },
                                     props.role
                                 ),

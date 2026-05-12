@@ -21,8 +21,8 @@
                         <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 mb-2 leading-tight">
                             Stuck? Talk to a real engineer.
                         </h2>
-                        <p class="text-ink-600 dark:text-ink-200/80 leading-relaxed">
-                            Need help interpreting your scorecard or applying a fix? Drop into our Discord — actual software engineers (including the founder) are there to help, free.
+                        <p class="text-ink-600 dark:text-ink-100/60 leading-relaxed">
+                            Need help interpreting your scorecard or applying a fix? Drop into our Discord — real software engineers, including the founder, are there to help — for free.
                         </p>
                     </div>
 
@@ -40,7 +40,7 @@
                             </svg>
                             Join the Discord
                         </a>
-                        <span class="text-xs text-ink-500 dark:text-ink-300">Free · No invite required</span>
+                        <span class="text-xs text-ink-500 dark:text-ink-100/60">Free · No invite required</span>
                     </div>
                 </div>
             </div>

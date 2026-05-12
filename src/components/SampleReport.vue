@@ -3,11 +3,11 @@
         <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <!-- LEFT: copy -->
             <div class="lg:sticky lg:top-24">
-                <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300 mb-3">What you get</div>
+                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">What you get</div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 mb-6 leading-[1.1]">
                     A report your team will <span class="gradient-text">actually fix.</span>
                 </h2>
-                <p class="text-lg text-ink-600 dark:text-ink-200/80 mb-8 leading-relaxed">
+                <p class="text-lg text-ink-600 dark:text-ink-100/60 mb-8 leading-relaxed">
                     No "consider refactoring." No vague nitpicks. Every finding points at a real file and line, explains the risk in plain English, and ships with a copy-pasteable fix.
                 </p>
 
@@ -18,17 +18,17 @@
                             <X />
                             Lazy AI review
                         </div>
-                        <p class="text-sm text-ink-700 dark:text-ink-200/80 italic leading-relaxed">
+                        <p class="text-sm text-ink-700 dark:text-ink-100/60 italic leading-relaxed">
                             "Consider improving error handling and adding more comments for clarity."
                         </p>
                     </div>
                     <div class="rounded-xl p-4 bg-emerald-500/5 dark:bg-emerald-500/10 border border-emerald-500/30">
                         <div class="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
                             <Check2 />
-                            Full Code Review
+                            QodeShark
                         </div>
                         <p class="text-sm text-ink-700 dark:text-ink-100 leading-relaxed">
-                            <span class="font-mono text-xs text-ink-500 dark:text-ink-300">auth.ts:42</span> — <span class="font-semibold">Missing role check</span> on admin route. Fix: wrap with <code class="font-mono text-xs">requireRole('admin')</code>.
+                            <span class="font-mono text-xs text-ink-500 dark:text-ink-100/60">auth.ts:42</span> — <span class="font-semibold">Missing role check</span> on admin route. Fix: wrap with <code class="font-mono text-xs">requireRole('admin')</code>.
                         </p>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                         Exact file path and line number for every finding — no hunting.
                     </Benefit>
                     <Benefit n="02" title="4-tier severity">
-                        Critical, High, Medium, Low — so you fix what actually ships breaches first.
+                        Critical, High, Medium, Low — so you know exactly what to fix first.
                     </Benefit>
                     <Benefit n="03" title="A fix, not a feeling">
                         Each issue includes the suggested code change, not generic advice.
@@ -63,12 +63,12 @@
                     <!-- Report header -->
                     <div class="flex items-center justify-between mb-5 pb-4 border-b border-ink-700/10 dark:border-ink-100/10">
                         <div>
-                            <div class="text-xs uppercase tracking-widest text-ink-500 dark:text-ink-300 mb-1">Sample report</div>
+                            <div class="text-xs uppercase tracking-widest text-ink-500 dark:text-ink-100/60 mb-1">Sample report</div>
                             <div class="font-mono text-sm text-ink-900 dark:text-ink-100">acme-inc / payments-service</div>
                         </div>
                         <div class="text-right">
                             <div class="text-2xl font-extrabold text-orange-500 dark:text-orange-400">23</div>
-                            <div class="text-[10px] uppercase tracking-wider text-ink-500 dark:text-ink-300">issues found</div>
+                            <div class="text-[10px] uppercase tracking-wider text-ink-500 dark:text-ink-100/60">issues found</div>
                         </div>
                     </div>
 
@@ -101,7 +101,7 @@
                         file="app/Services/OrderService.php:112"
                     >
                         <template #desc>
-                            Looping over orders and calling <code>$order->items</code> fires a query per order. List pages will collapse at any real scale.
+                            Looping over orders and calling <code>$order->items</code> fires a query per order. List pages will break under any real load.
                         </template>
                         <template #fix>
                             Eager-load with <code class="font-mono">Order::with('items')->get()</code>.
@@ -124,8 +124,8 @@
 
                     <!-- "More" footer -->
                     <div class="mt-5 pt-4 border-t border-ink-700/10 dark:border-ink-100/10 flex items-center justify-between text-sm">
-                        <span class="text-ink-500 dark:text-ink-300">+ 20 more issues with fixes</span>
-                        <span class="inline-flex items-center gap-1.5 text-violet-600 dark:text-violet-300 font-semibold">
+                        <span class="text-ink-500 dark:text-ink-100/60">+ 20 more issues with fixes</span>
+                        <span class="inline-flex items-center gap-1.5 text-white dark:text-white font-semibold">
                             Full PDF in your inbox
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                         </span>
@@ -192,13 +192,13 @@ const Benefit = {
                 h(
                     "span",
                     {
-                        class: "flex-shrink-0 w-10 h-10 rounded-lg grid place-items-center font-mono text-sm font-bold text-violet-600 dark:text-violet-300 bg-violet-500/10",
+                        class: "flex-shrink-0 w-10 h-10 rounded-lg grid place-items-center font-mono text-sm font-bold text-white dark:text-white bg-white/10",
                     },
                     props.n
                 ),
                 h("div", {}, [
                     h("div", { class: "font-bold text-ink-900 dark:text-ink-100 mb-0.5" }, props.title),
-                    h("p", { class: "text-sm text-ink-600 dark:text-ink-200/75 leading-relaxed" }, slots.default?.()),
+                    h("p", { class: "text-sm text-ink-600 dark:text-ink-100/60 leading-relaxed" }, slots.default?.()),
                 ]),
             ])
     },
@@ -212,7 +212,7 @@ const Stat = {
                 h("div", { class: "text-2xl font-extrabold gradient-text leading-tight" }, props.value),
                 h(
                     "div",
-                    { class: "text-[10px] uppercase tracking-wider text-ink-500 dark:text-ink-300 mt-1 font-semibold" },
+                    { class: "text-[10px] uppercase tracking-wider text-ink-500 dark:text-ink-100/60 mt-1 font-semibold" },
                     props.label
                 ),
             ])
@@ -273,22 +273,22 @@ const IssueCard = {
                             },
                             [h("span", { class: ["w-1.5 h-1.5 rounded-full", s.dot] }), props.severity]
                         ),
-                        h("span", { class: "text-[11px] font-mono text-ink-500 dark:text-ink-300 truncate min-w-0 flex-1", title: props.file }, props.file),
+                        h("span", { class: "text-[11px] font-mono text-ink-500 dark:text-ink-100/60 truncate min-w-0 flex-1", title: props.file }, props.file),
                     ]),
                     h("div", { class: "font-bold text-ink-900 dark:text-ink-100 mb-2" }, props.title),
                     h(
                         "p",
-                        { class: "text-sm text-ink-600 dark:text-ink-200/80 mb-3 leading-relaxed" },
+                        { class: "text-sm text-ink-600 dark:text-ink-100/60 mb-3 leading-relaxed" },
                         slots.desc?.()
                     ),
                     h(
                         "div",
                         {
                             class:
-                                "rounded-lg bg-violet-500/8 dark:bg-violet-500/10 border border-violet-500/30 p-3 text-sm text-ink-800 dark:text-ink-100 leading-relaxed",
+                                "rounded-lg bg-white/8 dark:bg-white/10 border border-white/30 p-3 text-sm text-ink-800 dark:text-ink-100 leading-relaxed",
                         },
                         [
-                            h("span", { class: "text-violet-700 dark:text-violet-300 font-bold mr-1" }, "Fix:"),
+                            h("span", { class: "text-white dark:text-white font-bold mr-1" }, "Fix:"),
                             slots.fix?.(),
                         ]
                     ),
@@ -300,6 +300,6 @@ const IssueCard = {
 
 <style scoped>
 code {
-    @apply font-mono text-[0.85em] px-1 py-0.5 rounded bg-violet-500/10 text-violet-700 dark:text-violet-300;
+    @apply font-mono text-[0.85em] px-1 py-0.5 rounded bg-white/10 text-white dark:text-white;
 }
 </style>

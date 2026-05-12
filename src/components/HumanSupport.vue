@@ -4,16 +4,16 @@
             <div class="glass p-8 md:p-12">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300 mb-3">Need more than a report?</div>
+                        <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">Need more than a report?</div>
                         <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 leading-[1.15] mb-4">
                             Talk directly with a <span class="gradient-text">senior engineer.</span>
                         </h2>
-                        <p class="text-ink-600 dark:text-ink-200/80 leading-relaxed mb-6">
-                            For high-stakes launches, investor due diligence, or compliance audits — pair the automated report with a 1:1 review call. A senior engineer walks you through every Critical/High finding, helps prioritize fixes, and signs off on production readiness.
+                        <p class="text-ink-600 dark:text-ink-100/60 leading-relaxed mb-6">
+                            For high-stakes launches, investor due diligence, or compliance audits — pair the automated report with a one-on-one review call. A senior engineer walks you through every Critical/High finding, helps prioritize fixes, and signs off on production readiness.
                         </p>
 
                         <ul class="space-y-3 mb-8">
-                            <Item>30-min review call after every audit (free with any bundle)</Item>
+                            <Item>30-minute review call after every audit (free with any bundle)</Item>
                             <Item>Optional fix-pairing session — implement together</Item>
                             <Item>NDA available before sharing the repo</Item>
                             <Item>Compliance &amp; investor-ready summary on request</Item>
@@ -30,7 +30,7 @@
 
                     <!-- Right: stats card -->
                     <div class="rounded-2xl border border-ink-700/10 dark:border-ink-100/10 p-6 md:p-8">
-                        <div class="text-[11px] uppercase tracking-widest text-ink-500 dark:text-ink-300 font-semibold mb-4">Engineer profile</div>
+                        <div class="text-[11px] uppercase tracking-widest text-ink-500 dark:text-ink-100/60 font-semibold mb-4">Engineer profile</div>
                         <div class="grid grid-cols-2 gap-5 mb-6">
                             <Stat label="Avg experience" value="6+ yrs" />
                             <Stat label="Production releases" value="100+" />
@@ -39,10 +39,10 @@
                         </div>
                         <div class="pt-5 border-t border-ink-700/10 dark:border-ink-100/10">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full grid place-items-center text-white text-xs font-bold bg-violet-600 flex-shrink-0">AK</div>
+                                <div class="w-10 h-10 rounded-full grid place-items-center text-black text-xs font-bold bg-white flex-shrink-0">AK</div>
                                 <div class="min-w-0">
                                     <div class="text-sm font-bold text-ink-900 dark:text-ink-100">Anel Kujovic</div>
-                                    <div class="text-xs text-ink-500 dark:text-ink-300">Founder &amp; lead reviewer · 6+ yrs production engineering</div>
+                                    <div class="text-xs text-ink-500 dark:text-ink-100/60">Founder &amp; lead reviewer · 6+ yrs production engineering</div>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ const Stat = {
     props: ["label", "value", "small"],
     setup(props) {
         return () => h("div", {}, [
-            h("div", { class: "text-[10px] uppercase tracking-widest text-ink-500 dark:text-ink-300 font-semibold mb-1" }, props.label),
+            h("div", { class: "text-[10px] uppercase tracking-widest text-ink-500 dark:text-ink-100/60 font-semibold mb-1" }, props.label),
             h("div", { class: [props.small ? "text-sm font-mono" : "text-2xl font-extrabold", "text-ink-900 dark:text-ink-100 leading-none"] }, props.value),
         ])
     },

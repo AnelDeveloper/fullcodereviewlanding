@@ -19,16 +19,16 @@ export default {
                     500: "#06B6D4",
                 },
                 ink: {
-                    950: "#0B0817",
-                    900: "#110A24",
-                    800: "#15102B",
-                    700: "#211837",
-                    600: "#2A1F44",
-                    500: "#3B2E5A",
-                    400: "#56487B",
-                    300: "#9C8AC2",
-                    200: "#C4B5FD",
-                    100: "#EDE7F8",
+                    950: "#000000",
+                    900: "#080808",
+                    800: "#111111",
+                    700: "#1a1a1a",
+                    600: "#222222",
+                    500: "#333333",
+                    400: "#555555",
+                    300: "#888888",
+                    200: "#bbbbbb",
+                    100: "#f0f0f0",
                 },
             },
             fontFamily: {
@@ -43,6 +43,7 @@ export default {
                 "float-slow": "float 18s ease-in-out infinite",
                 "float-slower": "float 24s ease-in-out infinite",
                 "fade-in-up": "fadeInUp 0.7s ease-out both",
+                "marquee": "marquee 30s linear infinite",
             },
             keyframes: {
                 float: {
@@ -53,6 +54,10 @@ export default {
                 fadeInUp: {
                     from: { opacity: 0, transform: "translateY(20px)" },
                     to: { opacity: 1, transform: "translateY(0)" },
+                },
+                marquee: {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(-50%)" },
                 },
             },
         },

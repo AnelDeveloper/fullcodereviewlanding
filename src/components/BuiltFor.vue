@@ -2,18 +2,18 @@
     <section class="py-24 px-6 border-t border-ink-700/10 dark:border-ink-100/5">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-14">
-                <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300 mb-3">Built for</div>
+                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">Built for</div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 leading-[1.1]">
                     From solo builders to <span class="gradient-text">Series A.</span> Same depth.
                 </h2>
-                <p class="mt-5 text-lg text-ink-600 dark:text-ink-200/80 leading-relaxed">
-                    The same audit a Big-Four consultancy charges $30k for. Run it on your repo in 60 seconds.
+                <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60 leading-relaxed">
+                    What a Big-Four consultancy charges $30k for. Run it on your repo in 60 seconds.
                 </p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 <Audience :icon="iconRocket" title="SaaS founders" desc="Sleep better. Ship safer. Catch the auth gap before customers do." />
-                <Audience :icon="iconChip" title="CTOs &amp; tech leads" desc="Pre-launch sanity check. Pre-investor diligence. Pre-fire-drill." />
+                <Audience :icon="iconChip" title="CTOs &amp; tech leads" desc="Pre-launch sanity check. Pre-investor diligence. Incident prevention." />
                 <Audience :icon="iconUsers" title="Agencies &amp; consultancies" desc="Hand off code clients trust. Add a verified audit to every deliverable." />
                 <Audience :icon="iconChart" title="Investors &amp; VCs" desc="Technical due diligence on a target's stack — without the $30k consultancy bill." />
                 <Audience :icon="iconAI" title="AI-assisted dev teams" desc="Verify what Cursor, Claude, v0, Lovable, and Bolt actually shipped to production." />
@@ -44,10 +44,10 @@ const iconSpark = () => svg(`<path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.
 const Audience = {
     props: ["icon", "title", "desc"],
     setup(props) {
-        return () => h("div", { class: "glass p-6 transition-colors hover:border-violet-500/40" }, [
-            h("div", { class: "w-10 h-10 rounded-lg grid place-items-center text-violet-600 dark:text-violet-300 bg-violet-500/10 mb-4" }, [props.icon()]),
+        return () => h("div", { class: "glass p-6 transition-colors hover:border-white/40" }, [
+            h("div", { class: "w-10 h-10 rounded-lg grid place-items-center text-white dark:text-white bg-white/10 mb-4" }, [props.icon()]),
             h("h3", { class: "font-bold text-ink-900 dark:text-ink-100 mb-1" }, props.title),
-            h("p", { class: "text-sm text-ink-600 dark:text-ink-200/75 leading-relaxed" }, props.desc),
+            h("p", { class: "text-sm text-ink-600 dark:text-ink-100/60 leading-relaxed" }, props.desc),
         ])
     },
 }

@@ -2,18 +2,18 @@
     <section id="faq" class="py-24 px-6">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-12">
-                <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300 mb-3">FAQ</div>
+                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">FAQ</div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100">
                     Things people <span class="gradient-text">usually ask</span>
                 </h2>
             </div>
 
             <div class="space-y-3">
-                <Item q="Can Full Code Review change my code?">
+                <Item q="Can QodeShark change my code?">
                     No. We use read-only GitHub access. We cannot push commits, edit files, delete files, or change your repository in any way.
                 </Item>
                 <Item q="Can you access all my repositories?">
-                    No. During GitHub App installation, you choose exactly which repositories Full Code Review can access. You can grant access to a single repo and nothing else.
+                    No. During GitHub App installation, you choose exactly which repositories QodeShark can access. You can grant access to a single repo and nothing else.
                 </Item>
                 <Item q="Can you see my GitHub Secrets?">
                     No. We do not request access to GitHub Secrets, environment variables stored in GitHub, or repository settings. We only request what's needed to read your code.
@@ -22,7 +22,7 @@
                     Yes — anytime. From GitHub <span class="font-semibold">Settings → Applications → Installed GitHub Apps</span>, you can revoke our access in two clicks. We're also notified and stop scanning immediately.
                 </Item>
                 <Item q="Will it work on AI-generated code (Cursor, Claude, v0, Lovable, Bolt)?">
-                    That's literally what it's built for. Vibe-coded apps tend to have specific blind spots — missing auth checks on admin routes, unsafe DB queries, exposed env keys, hallucinated APIs. We're tuned to find them.
+                    That's exactly what it was built for. Vibe-coded apps tend to have specific blind spots — missing auth checks on admin routes, unsafe DB queries, exposed env keys, hallucinated APIs. We're tuned to find them.
                 </Item>
                 <Item q="Will the report make me feel bad?">
                     No. Findings are neutral, severity-tagged, and shipped with a fix. We don't critique your style, your variable names, or your coding ability. We just point at real issues and tell you the patch. That's it.
@@ -67,7 +67,7 @@ const Item = {
             }, [
                 h("span", { class: "font-semibold text-ink-900 dark:text-ink-100" }, props.q),
                 h("span", {
-                    class: ["w-7 h-7 rounded-full grid place-items-center transition-transform border border-ink-700/15 dark:border-ink-100/10", open.value ? "rotate-45 bg-violet-500/20 border-violet-500/40" : ""],
+                    class: ["w-7 h-7 rounded-full grid place-items-center transition-transform border border-ink-700/15 dark:border-ink-100/10", open.value ? "rotate-45 bg-white/20 border-white/40" : ""],
                 }, [
                     h("svg", { width: 14, height: 14, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": 2.5, "stroke-linecap": "round" }, [
                         h("path", { d: "M12 5v14M5 12h14" }),
@@ -75,7 +75,7 @@ const Item = {
                 ]),
             ]),
             open.value
-                ? h("div", { class: "px-5 pb-5 -mt-1 text-ink-600 dark:text-ink-200/80 text-sm leading-relaxed" }, slots.default?.())
+                ? h("div", { class: "px-5 pb-5 -mt-1 text-ink-600 dark:text-ink-100/60 text-sm leading-relaxed" }, slots.default?.())
                 : null,
         ])
     },

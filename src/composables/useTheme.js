@@ -4,17 +4,14 @@ const STORAGE_KEY = "codereview-theme"
 const theme = ref(getInitial())
 
 function getInitial() {
-    if (typeof window === "undefined") return "dark"
-    const stored = localStorage.getItem(STORAGE_KEY)
-    if (stored === "light" || stored === "dark") return stored
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+    return "dark"
 }
 
 function apply(mode) {
     const root = document.documentElement
     root.classList.toggle("dark", mode === "dark")
     const meta = document.getElementById("theme-color-meta")
-    if (meta) meta.setAttribute("content", mode === "dark" ? "#0B0817" : "#FAFAFF")
+    if (meta) meta.setAttribute("content", mode === "dark" ? "#000000" : "#FAFAFF")
 }
 
 watch(theme, (val) => {

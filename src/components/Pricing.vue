@@ -2,17 +2,17 @@
     <section id="pricing" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-10">
-                <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300 mb-3">Pricing</div>
+                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">Pricing</div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100">
                     Pick what to review. <span class="gradient-text">Bundle &amp; save up to 20%.</span>
                 </h2>
-                <p class="mt-5 text-lg text-ink-600 dark:text-ink-200/80">
+                <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60">
                     Starting from <span class="font-bold text-ink-900 dark:text-ink-100">$20</span> — choose any combination. The more you stack, the bigger the discount.
                 </p>
                 <!-- Founders' offer reminder -->
                 <div class="mt-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold border border-orange-500/30 bg-orange-500/10 text-orange-700 dark:text-orange-300">
                     <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
-                    Founders' offer · First 100 sign-ups stack an extra 25% on top → up to 40% off
+                    Founders' offer · First 100 sign-ups get an extra 25% off → up to 40% total
                 </div>
             </div>
 
@@ -43,10 +43,10 @@
                     <div class="glass p-7 lg:sticky lg:top-24">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300">Your review</div>
+                                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white">Your review</div>
                                 <span
                                     v-if="discountPct > 0"
-                                    class="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-violet-600 text-white"
+                                    class="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-white text-black"
                                 >Save {{ discountPct }}%</span>
                             </div>
 
@@ -54,15 +54,15 @@
                                 <span class="text-6xl font-extrabold text-ink-900 dark:text-ink-100">${{ totalAfter }}</span>
                                 <span
                                     v-if="discountPct > 0"
-                                    class="text-xl font-semibold line-through text-ink-500 dark:text-ink-300/60"
+                                    class="text-xl font-semibold line-through text-ink-500 dark:text-ink-100/60"
                                 >${{ subtotal }}</span>
                             </div>
-                            <p class="text-sm text-ink-600 dark:text-ink-200/80 mb-2">
+                            <p class="text-sm text-ink-600 dark:text-ink-100/60 mb-2">
                                 {{ summary }}
                             </p>
                             <p
                                 v-if="upsellHint"
-                                class="text-xs font-semibold text-violet-600 dark:text-violet-300 mb-4"
+                                class="text-xs font-semibold text-white dark:text-white mb-4"
                             >
                                 💡 {{ upsellHint }}
                             </p>
@@ -75,14 +75,14 @@
                                     class="flex items-center justify-between text-sm"
                                 >
                                     <span class="text-ink-800 dark:text-ink-100">{{ cat.title }}</span>
-                                    <span class="font-mono text-ink-600 dark:text-ink-200/80">${{ cat.price }}</span>
+                                    <span class="font-mono text-ink-600 dark:text-ink-100/60">${{ cat.price }}</span>
                                 </li>
                                 <li
                                     v-if="discountPct > 0"
-                                    class="flex items-center justify-between text-sm pt-2 border-t border-dashed border-violet-500/30"
+                                    class="flex items-center justify-between text-sm pt-2 border-t border-dashed border-white/30"
                                 >
-                                    <span class="text-violet-600 dark:text-violet-300 font-semibold">Bundle discount ({{ discountPct }}%)</span>
-                                    <span class="font-mono text-violet-600 dark:text-violet-300 font-semibold">-${{ savings }}</span>
+                                    <span class="text-white dark:text-white font-semibold">Bundle discount ({{ discountPct }}%)</span>
+                                    <span class="font-mono text-white dark:text-white font-semibold">-${{ savings }}</span>
                                 </li>
                             </ul>
 
@@ -99,7 +99,7 @@
                                 type="button"
                                 v-if="selected.length < categories.length"
                                 @click="selectAll"
-                                class="w-full mb-3 py-2.5 rounded-full text-sm font-semibold border border-violet-500/40 text-violet-600 dark:text-violet-300 hover:bg-violet-500/10 transition-colors"
+                                class="w-full mb-3 py-2.5 rounded-full text-sm font-semibold border border-white/40 text-white dark:text-white hover:bg-white/10 transition-colors"
                             >
                                 ✨ Select all 4 — save 20%
                             </button>
@@ -110,7 +110,7 @@
                             >
                                 {{ ctaLabel }}
                             </a>
-                            <p class="text-center text-xs text-ink-500 dark:text-ink-300/70 mt-4">
+                            <p class="text-center text-xs text-ink-500 dark:text-ink-100/60 mt-4">
                                 Secure checkout via Stripe · One-time payment
                             </p>
                         </div>
@@ -254,7 +254,7 @@ const checkoutUrl = computed(() => {
 const Feat = {
     setup(_, { slots }) {
         return () => h("li", { class: "flex items-start gap-3 text-ink-800 dark:text-ink-100" }, [
-            h("span", { class: "mt-1 w-5 h-5 rounded-full grid place-items-center bg-violet-500/15 text-violet-600 dark:text-violet-300 flex-shrink-0" }, [
+            h("span", { class: "mt-1 w-5 h-5 rounded-full grid place-items-center bg-white/15 text-white dark:text-white flex-shrink-0" }, [
                 h("svg", { width: 12, height: 12, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", "stroke-width": 3, "stroke-linecap": "round", "stroke-linejoin": "round" }, [
                     h("polyline", { points: "20 6 9 17 4 12" }),
                 ]),
@@ -274,10 +274,10 @@ const TierBadge = {
                     class: [
                         "flex-1 text-center px-3 py-2.5 rounded-xl transition-all",
                         props.highlight
-                            ? "bg-violet-600 text-white"
+                            ? "bg-white text-black"
                             : props.active
-                                ? "bg-violet-500/10 text-violet-700 dark:text-violet-200"
-                                : "text-ink-500 dark:text-ink-300/70",
+                                ? "bg-white/10 text-white dark:text-white"
+                                : "text-ink-500 dark:text-ink-100/60",
                     ],
                 },
                 [
@@ -312,7 +312,7 @@ const CategoryCard = {
                     class: [
                         "glass p-6 text-left transition-all hover:-translate-y-1 relative",
                         props.selected
-                            ? "ring-2 ring-violet-500/60 shadow-[0_0_0_4px_rgba(139,92,246,0.08)]"
+                            ? "ring-2 ring-white/60 shadow-[0_0_0_4px_rgba(255,255,255,0.08)]"
                             : "",
                     ],
                 },
@@ -321,11 +321,11 @@ const CategoryCard = {
                         h(
                             "div",
                             {
-                                class: "w-10 h-10 rounded-lg grid place-items-center flex-shrink-0 bg-violet-500/10",
+                                class: "w-10 h-10 rounded-lg grid place-items-center flex-shrink-0 bg-white/10",
                             },
                             [
                                 h("svg", {
-                                    class: "text-violet-600 dark:text-violet-300",
+                                    class: "text-white dark:text-white",
                                     width: 22,
                                     height: 22,
                                     viewBox: "0 0 24 24",
@@ -344,7 +344,7 @@ const CategoryCard = {
                                 class: [
                                     "w-6 h-6 rounded-md grid place-items-center border-2 transition-colors flex-shrink-0",
                                     props.selected
-                                        ? "bg-violet-500 border-violet-500 text-white"
+                                        ? "bg-white border-white text-black"
                                         : "border-ink-700/20 dark:border-ink-100/20",
                                 ],
                             },
@@ -370,9 +370,9 @@ const CategoryCard = {
                     ]),
                     h("div", { class: "flex items-baseline justify-between gap-2 mb-1" }, [
                         h("h3", { class: "text-lg font-bold text-ink-900 dark:text-ink-100" }, props.category.title),
-                        h("span", { class: "text-base font-extrabold text-violet-600 dark:text-violet-300" }, `+$${props.category.price}`),
+                        h("span", { class: "text-base font-extrabold text-white dark:text-white" }, `+$${props.category.price}`),
                     ]),
-                    h("p", { class: "text-sm text-ink-600 dark:text-ink-200/75 mb-4" }, props.category.desc),
+                    h("p", { class: "text-sm text-ink-600 dark:text-ink-100/60 mb-4" }, props.category.desc),
                     h(
                         "ul",
                         { class: "space-y-1.5" },
@@ -380,13 +380,13 @@ const CategoryCard = {
                             h(
                                 "li",
                                 {
-                                    class: "flex items-start gap-2 text-xs text-ink-700 dark:text-ink-200/80",
+                                    class: "flex items-start gap-2 text-xs text-ink-700 dark:text-ink-100/60",
                                 },
                                 [
                                     h(
                                         "span",
                                         {
-                                            class: "mt-1 w-1 h-1 rounded-full bg-violet-500 flex-shrink-0",
+                                            class: "mt-1 w-1 h-1 rounded-full bg-white flex-shrink-0",
                                         }
                                     ),
                                     h("span", {}, item),

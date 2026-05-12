@@ -3,15 +3,15 @@
         <div class="max-w-6xl mx-auto">
             <!-- Header -->
             <div class="text-center max-w-2xl mx-auto mb-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border border-violet-500/30 bg-violet-500/10 text-violet-700 dark:text-violet-200 mb-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border border-white/30 bg-white/10 text-white dark:text-white mb-4">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     Trust &amp; security
                 </div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 leading-[1.1]">
                     Secure <span class="gradient-text">GitHub access.</span>
                 </h2>
-                <p class="mt-5 text-lg text-ink-600 dark:text-ink-200/80 leading-relaxed">
-                    Full Code Review connects through a read-only GitHub App. You choose exactly which repository to review, and we only request the permissions needed to analyze your code. Your repository stays private. Your code is never used for AI training. You can revoke access in two clicks.
+                <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60 leading-relaxed">
+                    QodeShark connects through a read-only GitHub App. You choose exactly which repository to review, and we only request the permissions needed to analyze your code. Your repository stays private. Your code is never used for AI training. You can revoke access in two clicks.
                 </p>
             </div>
 
@@ -47,7 +47,7 @@
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <CheckIcon />
-                            <span>Generate a private, encrypted review report (you only)</span>
+                            <span>Generate a private, encrypted review report (visible only to you)</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <CheckIcon />
@@ -102,7 +102,7 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8 0 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.7-5.5 6 .5.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
                     Connect with GitHub
                 </a>
-                <p class="mt-3 text-xs text-ink-500 dark:text-ink-300/80">
+                <p class="mt-3 text-xs text-ink-500 dark:text-ink-100/60">
                     Read-only access. Selected repo only. No code changes. Revoke anytime.
                 </p>
             </div>
@@ -150,7 +150,7 @@ const Badge = {
                 [
                     h(
                         "span",
-                        { class: "text-violet-600 dark:text-violet-300" },
+                        { class: "text-white dark:text-white" },
                         [props.icon()]
                     ),
                     h("span", {}, slots.default?.()),

@@ -2,11 +2,11 @@
     <section id="how" class="py-24 px-6 relative">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-14">
-                <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300 mb-3">How it works</div>
+                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">How it works</div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100">
                     From repo to report in <span class="gradient-text">under 60 seconds.</span>
                 </h2>
-                <p class="mt-5 text-lg text-ink-600 dark:text-ink-200/80">
+                <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60">
                     No account setup, no CLI, no config file. Three clicks and you're done.
                 </p>
             </div>
@@ -100,7 +100,7 @@ const Step = {
                         "div",
                         {
                             class:
-                                "absolute -top-4 left-7 inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold tracking-wider uppercase text-white bg-violet-600",
+                                "absolute -top-4 left-7 inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold tracking-wider uppercase text-black bg-white",
                         },
                         [`Step ${props.number}`]
                     ),
@@ -110,7 +110,7 @@ const Step = {
                         "div",
                         {
                             class:
-                                "w-10 h-10 rounded-lg grid place-items-center mb-5 mt-2 text-violet-600 dark:text-violet-300 bg-violet-500/10",
+                                "w-10 h-10 rounded-lg grid place-items-center mb-5 mt-2 text-white dark:text-white bg-white/10",
                         },
                         [props.icon()]
                     ),
@@ -122,7 +122,7 @@ const Step = {
                             "span",
                             {
                                 class:
-                                    "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-violet-500/10 text-violet-700 dark:text-violet-300 border border-violet-500/20 whitespace-nowrap",
+                                    "text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white dark:text-white border border-white/20 whitespace-nowrap",
                             },
                             props.time
                         ),
@@ -131,7 +131,7 @@ const Step = {
                     // Description
                     h(
                         "p",
-                        { class: "text-sm text-ink-600 dark:text-ink-200/80 leading-relaxed" },
+                        { class: "text-sm text-ink-600 dark:text-ink-100/60 leading-relaxed" },
                         slots.default?.()
                     ),
 
@@ -141,7 +141,7 @@ const Step = {
                             "div",
                             {
                                 class:
-                                    "mt-5 pt-5 border-t border-ink-700/10 dark:border-ink-100/10 flex items-center gap-2 text-xs font-semibold text-violet-600 dark:text-violet-300",
+                                    "mt-5 pt-5 border-t border-ink-700/10 dark:border-ink-100/10 flex items-center gap-2 text-xs font-semibold text-white dark:text-white",
                             },
                             [
                                 h(
@@ -175,12 +175,12 @@ const TrustItem = {
                 "div",
                 {
                     class:
-                        "inline-flex items-center gap-2 text-ink-600 dark:text-ink-200/80",
+                        "inline-flex items-center gap-2 text-ink-600 dark:text-ink-100/60",
                 },
                 [
                     h(
                         "span",
-                        { class: "text-violet-600 dark:text-violet-300" },
+                        { class: "text-white dark:text-white" },
                         [props.icon()]
                     ),
                     h("span", {}, slots.default?.()),

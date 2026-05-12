@@ -2,14 +2,14 @@
     <section class="py-24 px-6 border-t border-ink-700/10 dark:border-ink-100/5">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-14">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border border-violet-500/30 bg-violet-500/10 text-violet-700 dark:text-violet-200 mb-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border border-white/30 bg-white/10 text-white dark:text-white mb-4">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     Trust &amp; verification
                 </div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 leading-[1.1]">
                     AI scans first. <span class="gradient-text">Senior engineers verify what matters.</span>
                 </h2>
-                <p class="mt-5 text-lg text-ink-600 dark:text-ink-200/80 leading-relaxed">
+                <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60 leading-relaxed">
                     We're not another AI wrapper. Every Critical and High-severity finding is double-checked by a real senior engineer before it lands in your report — so you never act on a false positive, and never miss what counts.
                 </p>
             </div>
@@ -28,7 +28,7 @@
                     :icon="iconCheck"
                     label="Engineer Review"
                     title="Critical &amp; High findings hand-verified"
-                    desc="A senior engineer (5+ years production experience) reviews every Critical/High issue. False positives killed. Real risks confirmed."
+                    desc="A senior engineer (5+ years production experience) reviews every Critical/High issue. False positives are eliminated. Real risks are confirmed."
                     highlight
                 />
                 <Step
@@ -76,21 +76,21 @@ const Step = {
         return () => h("div", {
             class: [
                 "glass p-6 md:p-7 transition-colors hover:border-ink-700/20 dark:hover:border-ink-100/20 relative",
-                props.highlight ? "border-violet-500/40 dark:border-violet-500/40" : "",
+                props.highlight ? "border-white/40 dark:border-white/40" : "",
             ],
         }, [
             props.highlight
-                ? h("span", { class: "absolute -top-2.5 right-6 inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-violet-600 text-white" }, "Human-verified")
+                ? h("span", { class: "absolute -top-2.5 right-6 inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-white text-black" }, "Human-verified")
                 : null,
             h("div", { class: "flex items-center gap-3 mb-4" }, [
-                h("div", { class: "w-10 h-10 rounded-lg grid place-items-center text-violet-600 dark:text-violet-300 bg-violet-500/10" }, [props.icon()]),
+                h("div", { class: "w-10 h-10 rounded-lg grid place-items-center text-white dark:text-white bg-white/10" }, [props.icon()]),
                 h("div", { class: "flex-1 min-w-0" }, [
-                    h("div", { class: "text-[11px] uppercase tracking-widest text-ink-500 dark:text-ink-300 font-semibold" }, `Step ${props.n}`),
+                    h("div", { class: "text-[11px] uppercase tracking-widest text-ink-500 dark:text-ink-100/60 font-semibold" }, `Step ${props.n}`),
                     h("div", { class: "text-sm font-bold text-ink-900 dark:text-ink-100" }, props.label),
                 ]),
             ]),
             h("h3", { class: "text-base font-bold text-ink-900 dark:text-ink-100 mb-2 leading-snug" }, props.title),
-            h("p", { class: "text-sm text-ink-600 dark:text-ink-200/80 leading-relaxed" }, props.desc),
+            h("p", { class: "text-sm text-ink-600 dark:text-ink-100/60 leading-relaxed" }, props.desc),
         ])
     },
 }
@@ -99,10 +99,10 @@ const TrustItem = {
     props: ["icon", "title", "desc"],
     setup(props) {
         return () => h("div", { class: "flex items-start gap-3 p-4 rounded-xl border border-ink-700/10 dark:border-ink-100/10" }, [
-            h("span", { class: "flex-shrink-0 w-8 h-8 rounded-md grid place-items-center text-violet-600 dark:text-violet-300 bg-violet-500/10" }, [props.icon()]),
+            h("span", { class: "flex-shrink-0 w-8 h-8 rounded-md grid place-items-center text-white dark:text-white bg-white/10" }, [props.icon()]),
             h("div", { class: "min-w-0" }, [
                 h("div", { class: "text-sm font-bold text-ink-900 dark:text-ink-100" }, props.title),
-                h("div", { class: "text-xs text-ink-600 dark:text-ink-200/75 leading-snug mt-0.5" }, props.desc),
+                h("div", { class: "text-xs text-ink-600 dark:text-ink-100/60 leading-snug mt-0.5" }, props.desc),
             ]),
         ])
     },

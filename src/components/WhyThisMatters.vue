@@ -2,11 +2,11 @@
     <section class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-14">
-                <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300 mb-3">The cost of shipping blind</div>
+                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">The cost of shipping blind</div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 leading-[1.1]">
                     What's actually <span class="gradient-text">at stake.</span>
                 </h2>
-                <p class="mt-5 text-lg text-ink-600 dark:text-ink-200/80 leading-relaxed">
+                <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60 leading-relaxed">
                     A code review isn't a vanity metric. The findings we surface are the same ones that take down launches, lose enterprise contracts, and turn into 3am incident calls.
                 </p>
             </div>
@@ -15,8 +15,8 @@
                 <RiskCard
                     :icon="iconBreach"
                     label="Security breach"
-                    title="One leaked .env. One unauthenticated /admin route."
-                    consequence="Lost enterprise contracts. SOC2 / ISO audits failed. Legal exposure. PR you can't unwind."
+                    title="A leaked .env file. An unauthenticated /admin route."
+                    consequence="Lost enterprise contracts. SOC2 / ISO audits failed. Legal exposure. Reputational damage you can't walk back."
                 />
                 <RiskCard
                     :icon="iconDown"
@@ -66,7 +66,7 @@ const RiskCard = {
                 h("span", { class: "text-[11px] font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400" }, props.label),
             ]),
             h("h3", { class: "text-lg md:text-xl font-bold text-ink-900 dark:text-ink-100 mb-3 leading-snug" }, props.title),
-            h("p", { class: "text-sm text-ink-600 dark:text-ink-200/80 leading-relaxed" }, [
+            h("p", { class: "text-sm text-ink-600 dark:text-ink-100/60 leading-relaxed" }, [
                 h("span", { class: "font-semibold text-ink-700 dark:text-ink-100/90" }, "What it costs: "),
                 props.consequence,
             ]),

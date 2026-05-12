@@ -2,17 +2,17 @@
     <section id="features" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-14">
-                <div class="text-sm font-semibold uppercase tracking-widest text-violet-600 dark:text-violet-300 mb-3">Production-readiness audit</div>
+                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">Production-readiness audit</div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 leading-[1.1]">
                     Seven dimensions of <span class="gradient-text">technical risk.</span>
                 </h2>
-                <p class="mt-5 text-lg text-ink-600 dark:text-ink-200/80">
-                    Not just "AI scans your code." A senior-engineer checklist across <span class="font-bold text-ink-900 dark:text-ink-100">100+ checks</span> — security, infrastructure, performance, scalability, technical debt, and AI-shipped clarity.
+                <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60">
+                    Not just "AI scans your code." A senior-engineer checklist across <span class="font-bold text-ink-900 dark:text-ink-100">100+ checks</span> — security, infrastructure, performance, scalability, technical debt, and AI-generated code quality.
                 </p>
             </div>
 
             <!-- Code-quality dimensions (4 cards) -->
-            <div class="text-xs font-semibold uppercase tracking-widest text-ink-500 dark:text-ink-300 mb-4 px-1">Code-quality dimensions</div>
+            <div class="text-xs font-semibold uppercase tracking-widest text-ink-500 dark:text-ink-100/60 mb-4 px-1">Code-quality dimensions</div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
                 <div
                     v-for="cat in codeCats"
@@ -21,18 +21,17 @@
                 >
                     <div class="flex items-start justify-between mb-5">
                         <div
-                            class="w-10 h-10 rounded-lg grid place-items-center text-violet-600 dark:text-violet-300 bg-violet-500/10"
+                            class="w-10 h-10 rounded-lg grid place-items-center text-white dark:text-white bg-white/10"
                             v-html="iconSvg[cat.icon]"
                         ></div>
-                        <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 py-1 rounded-full bg-violet-500/10 text-violet-700 dark:text-violet-300 border border-violet-500/20">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white dark:text-white border border-white/20">
                             {{ cat.count }} checks
                         </span>
                     </div>
                     <h3 class="text-lg font-bold text-ink-900 dark:text-ink-100 mb-1">{{ cat.title }}</h3>
-                    <p class="text-sm text-ink-600 dark:text-ink-200/75 mb-4 leading-relaxed">{{ cat.tagline }}</p>
                     <ul class="space-y-2 mt-auto pt-4 border-t border-ink-700/10 dark:border-ink-100/10">
-                        <li v-for="ex in cat.examples" :key="ex" class="flex items-start gap-2 text-xs text-ink-700 dark:text-ink-200/80 leading-snug">
-                            <span class="mt-1 w-1 h-1 rounded-full bg-violet-500 flex-shrink-0"></span>
+                        <li v-for="ex in cat.examples" :key="ex" class="flex items-start gap-2 text-xs text-ink-700 dark:text-ink-100/60 leading-snug">
+                            <span class="mt-1 w-1 h-1 rounded-full bg-white flex-shrink-0"></span>
                             <span>{{ ex }}</span>
                         </li>
                     </ul>
@@ -40,7 +39,7 @@
             </div>
 
             <!-- Production-readiness dimensions (3 cards) -->
-            <div class="text-xs font-semibold uppercase tracking-widest text-ink-500 dark:text-ink-300 mb-4 px-1">Production-readiness dimensions</div>
+            <div class="text-xs font-semibold uppercase tracking-widest text-ink-500 dark:text-ink-100/60 mb-4 px-1">Production-readiness dimensions</div>
             <div class="grid md:grid-cols-3 gap-5 mb-10">
                 <div
                     v-for="cat in prodCats"
@@ -49,18 +48,18 @@
                 >
                     <div class="flex items-start justify-between mb-5">
                         <div
-                            class="w-10 h-10 rounded-lg grid place-items-center text-violet-600 dark:text-violet-300 bg-violet-500/10"
+                            class="w-10 h-10 rounded-lg grid place-items-center text-white dark:text-white bg-white/10"
                             v-html="iconSvg[cat.icon]"
                         ></div>
-                        <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 py-1 rounded-full bg-violet-500/10 text-violet-700 dark:text-violet-300 border border-violet-500/20">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white dark:text-white border border-white/20">
                             {{ cat.count }}
                         </span>
                     </div>
                     <h3 class="text-lg font-bold text-ink-900 dark:text-ink-100 mb-1">{{ cat.title }}</h3>
-                    <p class="text-sm text-ink-600 dark:text-ink-200/75 mb-4 leading-relaxed">{{ cat.tagline }}</p>
+                    <p class="text-sm text-ink-600 dark:text-ink-100/60 mb-4 leading-relaxed">{{ cat.tagline }}</p>
                     <ul class="space-y-2 mt-auto pt-4 border-t border-ink-700/10 dark:border-ink-100/10">
-                        <li v-for="ex in cat.examples" :key="ex" class="flex items-start gap-2 text-xs text-ink-700 dark:text-ink-200/80 leading-snug">
-                            <span class="mt-1 w-1 h-1 rounded-full bg-violet-500 flex-shrink-0"></span>
+                        <li v-for="ex in cat.examples" :key="ex" class="flex items-start gap-2 text-xs text-ink-700 dark:text-ink-100/60 leading-snug">
+                            <span class="mt-1 w-1 h-1 rounded-full bg-white flex-shrink-0"></span>
                             <span>{{ ex }}</span>
                         </li>
                     </ul>
@@ -74,7 +73,7 @@
                 </span>
                 <div>
                     <div class="font-bold text-ink-900 dark:text-ink-100 mb-1">What we won't waste your time on</div>
-                    <p class="text-sm text-ink-600 dark:text-ink-200/80 leading-relaxed">
+                    <p class="text-sm text-ink-600 dark:text-ink-100/60 leading-relaxed">
                         No style preferences. No "consider renaming this variable." No "add more comments." No "consider refactoring." If a finding hits your report, it's a real risk with a senior-engineer-verified fix.
                     </p>
                 </div>
@@ -162,11 +161,11 @@ const prodCats = [
     },
     {
         icon: "compass",
-        title: "AI-shipped clarity",
+        title: "AI code quality",
         count: "AI-aware",
-        tagline: "What Cursor, Claude, and v0 actually shipped.",
+        tagline: "What Cursor, Claude, and v0 actually produced.",
         examples: [
-            "Hallucinated APIs & non-existent fns",
+            "Hallucinated APIs and non-existent functions",
             "Plausible-looking but unsafe patterns",
             "Inconsistent error handling across files",
             "Semantic ambiguity in generated code",
