@@ -26,6 +26,6 @@ export function initTheme() {
 export function useTheme() {
     return {
         theme,
-        toggle: () => { theme.value = theme.value === "dark" ? "light" : "dark" },
+        toggle: () => {},
     }
 }

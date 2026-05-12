@@ -248,7 +248,7 @@ const ctaLabel = computed(() => {
 const checkoutUrl = computed(() => {
     if (!selected.value.length) return "#"
     const params = new URLSearchParams({ scope: selected.value.join(",") })
-    return `https://app.fullcodereview.com/register?${params.toString()}`
+    return `https://app.qodeshark.com/register?${params.toString()}`
 })
 
 const Feat = {

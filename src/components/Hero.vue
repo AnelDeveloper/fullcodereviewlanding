@@ -57,7 +57,7 @@
             </div>
 
             <div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center gap-3 animate-fade-in-up max-w-sm sm:max-w-none mx-auto" style="animation-delay:.15s">
-                <a href="https://app.fullcodereview.com/register" class="btn-vibe text-base justify-center">
+                <a href="https://app.qodeshark.com/register" class="btn-vibe text-base justify-center">
                     Register &amp; get 25% off
                 </a>
                 <a href="#how" class="btn-ghost justify-center">See how it works</a>

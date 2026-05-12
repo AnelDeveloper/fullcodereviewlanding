@@ -21,12 +21,11 @@
             </nav>
 
             <!-- Right cluster -->
-            <div class="flex items-center gap-2 sm:gap-3">
-                <ThemeToggle />
-                <a href="https://app.fullcodereview.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-100/60 hover:text-white dark:hover:text-white transition-colors">
+            <div class="flex items-center gap-2 sm:gap-7">
+                <a href="https://app.qodeshark.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-100/60 hover:text-white dark:hover:text-white transition-colors">
                     Sign in
                 </a>
-                <a href="https://app.fullcodereview.com/register" class="hidden sm:inline-flex btn-vibe text-sm py-2.5 px-5">Get started</a>
+                <a href="https://app.qodeshark.com/register" class="hidden sm:inline-flex btn-vibe text-sm py-2.5 px-5">Get started</a>
 
                 <!-- Hamburger (mobile only) -->
                 <button
@@ -66,10 +65,10 @@
                         {{ link.label }}
                     </a>
                     <div class="my-2 h-px bg-ink-700/10 dark:bg-ink-100/10"></div>
-                    <a href="https://app.fullcodereview.com/login" class="px-3 py-3 rounded-lg text-base font-medium text-ink-800 dark:text-ink-100 hover:bg-white/10 transition-colors">
+                    <a href="https://app.qodeshark.com/login" class="px-3 py-3 rounded-lg text-base font-medium text-ink-800 dark:text-ink-100 hover:bg-white/10 transition-colors">
                         Sign in
                     </a>
-                    <a href="https://app.fullcodereview.com/register" class="btn-vibe w-full justify-center mt-2">
+                    <a href="https://app.qodeshark.com/register" class="btn-vibe w-full justify-center mt-2">
                         Get started
                     </a>
                 </nav>
@@ -80,7 +79,6 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, watch } from "vue"
-import ThemeToggle from "./ThemeToggle.vue"
 
 const mobileMenuOpen = ref(false)
 const closeMenu = () => (mobileMenuOpen.value = false)

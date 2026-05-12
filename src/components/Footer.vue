@@ -21,7 +21,7 @@
                 <a href="#pricing" class="hover:text-white dark:hover:text-white">Pricing</a>
                 <a href="#community" class="hover:text-white dark:hover:text-white">Discord</a>
                 <a href="#faq" class="hover:text-white dark:hover:text-white">FAQ</a>
-                <a href="https://app.fullcodereview.com/login" class="hover:text-white dark:hover:text-white">Sign in</a>
+                <a href="https://app.qodeshark.com/login" class="hover:text-white dark:hover:text-white">Sign in</a>
             </nav>
 
             <!-- Social icons -->
