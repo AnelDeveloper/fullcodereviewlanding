@@ -12,7 +12,7 @@
             </h1>
 
             <p class="text-base sm:text-lg md:text-xl text-ink-600 dark:text-ink-100/60 max-w-2xl mx-auto leading-relaxed mb-8 animate-fade-in-up" style="animation-delay:.1s">
-                Identify security, scalability, and infrastructure risks <span class="font-semibold text-ink-800 dark:text-ink-100">before they impact production.</span> Every audit combines AI-powered analysis with senior-engineer verification — built for SaaS founders, vibe coders, CTOs, and AI-assisted dev teams.
+                Identify risks across security, performance, scalability, and technical debt <span class="font-semibold text-ink-800 dark:text-ink-100">before they impact production.</span> Every audit combines AI-powered analysis with senior-engineer verification — built for SaaS founders, vibe coders, CTOs, and AI-assisted dev teams.
             </p>
 
             <!-- Social proof badge -->
