@@ -20,7 +20,7 @@
                     <!-- CTA -->
                     <div class="flex flex-col items-center md:items-end gap-2">
                         <a
-                            href="https://discord.gg/VHbdPqEV"
+                            href="https://discord.gg/8u5H8Qhczg"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-semibold text-white whitespace-nowrap hover:opacity-90 transition-opacity"
