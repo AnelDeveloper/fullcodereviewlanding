@@ -9,7 +9,7 @@
                     width="36"
                     height="36"
                 />
-                <span class="font-bold text-base sm:text-lg tracking-tight truncate -ml-10">QodeShark</span>
+                <span class="font-bold text-base sm:text-lg tracking-tight truncate -ml-9 sm:-ml-10">QodeShark</span>
             </a>
 
             <!-- Desktop nav -->
