@@ -11,7 +11,7 @@
                     Secure <span class="gradient-text">GitHub access.</span>
                 </h2>
                 <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60 leading-relaxed">
-                    QodeShark connects through a read-only GitHub App. You choose exactly which repository to review, and we only request the permissions needed to analyze your code. Your repository stays private. Your code is never used for AI training. You can revoke access in two clicks.
+                    QodeShark connects through a read-only GitHub App. You choose exactly which repository to audit, and we only request the permissions needed to analyze your code. Your repository stays private. Your code is never used for AI training. You can revoke access in two clicks.
                 </p>
             </div>
 
@@ -39,7 +39,7 @@
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <CheckIcon />
-                            <span>Read selected repository files for review</span>
+                            <span>Read selected repository files for auditing</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <CheckIcon />
@@ -47,7 +47,7 @@
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <CheckIcon />
-                            <span>Generate a private, encrypted review report (visible only to you)</span>
+                            <span>Generate a private, encrypted audit report (visible only to you)</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
                             <CheckIcon />

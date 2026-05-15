@@ -22,7 +22,7 @@
                         time="~30 sec"
                         :icon="iconCart"
                     >
-                        Choose what to review — security, database, backend, frontend. <strong>Bundle &amp; save up to 20%.</strong> A redeem code lands in your inbox instantly.
+                        Choose what to audit — security, database, backend, frontend. <strong>Bundle &amp; save up to 20%.</strong> A redeem code lands in your inbox instantly.
                     </Step>
 
                     <Step

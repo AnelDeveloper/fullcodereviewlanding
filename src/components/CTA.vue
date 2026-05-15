@@ -190,7 +190,7 @@ const reviews = [
         role: "Vibe coder · eng manager",
         date: "February 14, 2026",
         rating: 5,
-        title: "Exactly what 'AI code review' should be",
+        title: "Exactly what 'AI code audit' should be",
         body: "I've tried four other AI review tools and they all spit out generic suggestions like \"add comments\" or \"use better variable names.\" This one actually reads the code, finds real bugs, and tells you exactly how to fix them. Bought codes for the whole team.",
         verified: true,
     },

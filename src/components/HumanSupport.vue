@@ -34,7 +34,7 @@
                         <div class="grid grid-cols-2 gap-5 mb-6">
                             <Stat label="Avg experience" value="6+ yrs" />
                             <Stat label="Production releases" value="100+" />
-                            <Stat label="Languages reviewed" value="12+" />
+                            <Stat label="Languages audited" value="12+" />
                             <Stat label="Stacks covered" value="JS · TS · PHP · Py · Go · Rust" small />
                         </div>
                     </div>

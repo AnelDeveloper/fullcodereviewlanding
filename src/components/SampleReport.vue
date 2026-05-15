@@ -16,7 +16,7 @@
                     <div class="rounded-xl p-4 bg-red-500/5 dark:bg-red-500/10 border border-red-500/20">
                         <div class="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400">
                             <X />
-                            Generic AI review
+                            Generic AI code review
                         </div>
                         <p class="text-sm text-ink-700 dark:text-ink-100/60 italic leading-relaxed">
                             "Consider improving error handling and adding more comments for clarity."

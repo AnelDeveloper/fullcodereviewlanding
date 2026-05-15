@@ -43,7 +43,7 @@
                     <div class="glass p-7 lg:sticky lg:top-24">
                         <div>
                             <div class="flex items-center justify-between mb-2">
-                                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white">Your review</div>
+                                <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white">Your audit</div>
                                 <span
                                     v-if="discountPct > 0"
                                     class="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-white text-black"
@@ -242,7 +242,7 @@ const upsellHint = computed(() => {
 
 const ctaLabel = computed(() => {
     if (selected.value.length === 0) return "Select categories"
-    return `Get my review · $${totalAfter.value}`
+    return `Get my audit · $${totalAfter.value}`
 })
 
 const checkoutUrl = computed(() => {

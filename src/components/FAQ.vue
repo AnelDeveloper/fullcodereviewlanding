@@ -28,10 +28,10 @@
                     No. Findings are neutral, severity-tagged, and shipped with a fix. We don't critique your style, your variable names, or your coding ability. We just point at real issues and tell you the patch. That's it.
                 </Item>
                 <Item q="My repo is messy / unfinished / a weekend hack — does that matter?">
-                    Nope. We review what's there. If you've got 12 routes and 3 of them have auth bugs, that's what the report says. No setup, no config, no judgment.
+                    Nope. We audit what's there. If you've got 12 routes and 3 of them have auth bugs, that's what the report says. No setup, no config, no judgment.
                 </Item>
                 <Item q="Can I scan the same repo again after fixing things?">
-                    Yes — just buy another code. Vibe coders typically run a review, fix what matters, ship, then run another a week later. Each code is single-use, valid for 30 days.
+                    Yes — just buy another code. Vibe coders typically run an audit, fix what matters, ship, then run another a week later. Each code is single-use, valid for 30 days.
                 </Item>
                 <Item q="Can you scan private repos?">
                     Yes. Sign in with GitHub once and we'll scan your private repos. Read-only access, and the token is deleted the moment your scan finishes.
