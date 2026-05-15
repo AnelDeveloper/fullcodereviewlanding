@@ -7,17 +7,17 @@
                     From solo builders to <span class="gradient-text">Series A.</span> Same depth.
                 </h2>
                 <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60 leading-relaxed">
-                    What a Big-Four consultancy charges $30k for. Run it on your repo in 60 seconds.
+                    What a Big-Four consultancy charges $30k for — done in minutes, not weeks.
                 </p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 <Audience :icon="iconRocket" title="SaaS founders" desc="Sleep better. Ship safer. Catch the auth gap before customers do." />
                 <Audience :icon="iconChip" title="CTOs &amp; tech leads" desc="Pre-launch sanity check. Pre-investor diligence. Incident prevention." />
-                <Audience :icon="iconUsers" title="Agencies &amp; consultancies" desc="Hand off code clients trust. Add a verified audit to every deliverable." />
+                <Audience :icon="iconUsers" title="Vibe coders" desc="Ship what you built with confidence. Know exactly what's broken before your users do." />
                 <Audience :icon="iconChart" title="Investors &amp; VCs" desc="Technical due diligence on a target's stack — without the $30k consultancy bill." />
-                <Audience :icon="iconAI" title="AI-assisted dev teams" desc="Verify what Cursor, Claude, v0, Lovable, and Bolt actually shipped to production." />
-                <Audience :icon="iconSpark" title="Startups &amp; indie hackers" desc="Ship like a senior engineer reviewed it — without hiring one." />
+                <Audience :icon="iconAI" title="AI-assisted dev teams" desc="Audit every line your AI wrote before it becomes someone else's problem." />
+                <Audience :icon="iconSpark" title="Startups &amp; indie hackers" desc="Senior-engineer quality. No senior-engineer salary." />
             </div>
         </div>
     </section>

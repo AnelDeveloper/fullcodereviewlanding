@@ -4,7 +4,7 @@
             <div class="glass p-8 md:p-12">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">Need more than a report?</div>
+                        <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">Need more than auditing?</div>
                         <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 leading-[1.15] mb-4">
                             Talk directly with a <span class="gradient-text">senior engineer.</span>
                         </h2>
@@ -36,15 +36,6 @@
                             <Stat label="Production releases" value="100+" />
                             <Stat label="Languages reviewed" value="12+" />
                             <Stat label="Stacks covered" value="JS · TS · PHP · Py · Go · Rust" small />
-                        </div>
-                        <div class="pt-5 border-t border-ink-700/10 dark:border-ink-100/10">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full grid place-items-center text-black text-xs font-bold bg-white flex-shrink-0">AK</div>
-                                <div class="min-w-0">
-                                    <div class="text-sm font-bold text-ink-900 dark:text-ink-100">Anel Kujovic</div>
-                                    <div class="text-xs text-ink-500 dark:text-ink-100/60">Founder &amp; lead reviewer · 6+ yrs production engineering</div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@
             <div class="lg:sticky lg:top-24">
                 <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">What you get</div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 mb-6 leading-[1.1]">
-                    A report your team will <span class="gradient-text">actually fix.</span>
+                    A report that tells you <span class="gradient-text">exactly what to fix.</span>
                 </h2>
                 <p class="text-lg text-ink-600 dark:text-ink-100/60 mb-8 leading-relaxed">
                     No "consider refactoring." No vague nitpicks. Every finding points at a real file and line, explains the risk in plain English, and ships with a copy-pasteable fix.
@@ -16,7 +16,7 @@
                     <div class="rounded-xl p-4 bg-red-500/5 dark:bg-red-500/10 border border-red-500/20">
                         <div class="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400">
                             <X />
-                            Lazy AI review
+                            Generic AI review
                         </div>
                         <p class="text-sm text-ink-700 dark:text-ink-100/60 italic leading-relaxed">
                             "Consider improving error handling and adding more comments for clarity."
@@ -51,7 +51,7 @@
 
                 <!-- Stats strip -->
                 <div class="grid grid-cols-3 gap-4 p-5 rounded-2xl border border-ink-700/10 dark:border-ink-100/10 bg-white/40 dark:bg-ink-900/40">
-                    <Stat value="~60s" label="Avg turnaround" />
+                    <Stat value="Minutes" label="Avg turnaround" />
                     <Stat value="20–80" label="Issues per repo" />
                     <Stat value="100%" label="With a fix" />
                 </div>

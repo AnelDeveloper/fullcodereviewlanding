@@ -4,7 +4,7 @@
             <div class="text-center max-w-2xl mx-auto mb-14">
                 <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">How it works</div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100">
-                    From repo to report in <span class="gradient-text">under 60 seconds.</span>
+                    Your repo. A full audit. <span class="gradient-text">Done in minutes.</span>
                 </h2>
                 <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60">
                     No account setup, no CLI, no config file. Three clicks and you're done.
@@ -18,7 +18,7 @@
                 <div class="grid md:grid-cols-3 gap-5 relative">
                     <Step
                         number="01"
-                        title="Pick scope & pay"
+                        title="Choose & checkout"
                         time="~30 sec"
                         :icon="iconCart"
                     >

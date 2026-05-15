@@ -11,7 +11,6 @@
             <SampleReport />
             <BuiltFor />
             <Security />
-            <Founder />
             <HumanSupport />
             <Pricing />
             <FAQ />
@@ -34,7 +33,6 @@ import HowItWorks from "./components/HowItWorks.vue"
 import SampleReport from "./components/SampleReport.vue"
 import BuiltFor from "./components/BuiltFor.vue"
 import Security from "./components/Security.vue"
-import Founder from "./components/Founder.vue"
 import HumanSupport from "./components/HumanSupport.vue"
 import Pricing from "./components/Pricing.vue"
 import FAQ from "./components/FAQ.vue"

@@ -34,7 +34,7 @@
                         <span class="w-10 h-10 rounded-xl grid place-items-center bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                         </span>
-                        <h3 class="text-lg font-bold text-ink-900 dark:text-ink-100">What we can do</h3>
+                        <h3 class="text-lg font-bold text-ink-900 dark:text-ink-100">What QodeShark will do</h3>
                     </div>
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">
@@ -62,7 +62,7 @@
                         <span class="w-10 h-10 rounded-xl grid place-items-center bg-rose-500/15 text-rose-600 dark:text-rose-400">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
                         </span>
-                        <h3 class="text-lg font-bold text-ink-900 dark:text-ink-100">What we cannot do</h3>
+                        <h3 class="text-lg font-bold text-ink-900 dark:text-ink-100">What QodeShark will never do</h3>
                     </div>
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-sm text-ink-700 dark:text-ink-100/90 leading-relaxed">

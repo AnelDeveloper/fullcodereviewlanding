@@ -7,7 +7,7 @@
                     What's actually <span class="gradient-text">at stake.</span>
                 </h2>
                 <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60 leading-relaxed">
-                    A code review isn't a vanity metric. The findings we surface are the same ones that take down launches, lose enterprise contracts, and turn into 3am incident calls.
+                    A code audit isn't a vanity metric. The findings we surface are the same ones that take down launches, lose enterprise contracts, and turn into 3am incident calls.
                 </p>
             </div>
 
@@ -16,25 +16,25 @@
                     :icon="iconBreach"
                     label="Security breach"
                     title="A leaked .env file. An unauthenticated /admin route."
-                    consequence="Lost enterprise contracts. SOC2 / ISO audits failed. Legal exposure. Reputational damage you can't walk back."
+                    consequence="Lost enterprise contracts. Failed SOC2 / ISO audits. Legal liability. Reputational damage that follows you for years."
                 />
                 <RiskCard
                     :icon="iconDown"
                     label="Production downtime"
                     title="The N+1 query that worked in dev, not at 1k users."
-                    consequence="Lost revenue per minute. Lost user trust permanently. Pager calls instead of feature shipping."
+                    consequence="Revenue lost by the minute. User trust gone overnight. Your team firefighting instead of shipping."
                 />
                 <RiskCard
                     :icon="iconScale"
                     label="Scalability collapse"
                     title="Your launch goes viral. Your database doesn't."
-                    consequence="The growth event you waited for becomes the outage that defined your reputation."
+                    consequence="The launch you waited months for becomes the outage everyone remembers."
                 />
                 <RiskCard
                     :icon="iconAI"
-                    label="AI-generated mistakes"
-                    title="Cursor doesn't run your tests. Claude doesn't review yours."
-                    consequence="AI-built apps ship with subtle, plausible-looking bugs. Things compile. Things don't pass an audit."
+                    label="AI-generated bugs"
+                    title="AI writes the code. Nobody checks if it's safe."
+                    consequence="Code that looks right, compiles fine, and silently fails in production."
                 />
             </div>
         </div>

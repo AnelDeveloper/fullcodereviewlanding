@@ -7,7 +7,7 @@
                     Reviews
                 </div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 mb-6">
-                    What vibe coders <span class="gradient-text">are saying</span>
+                    What developers <span class="gradient-text">are saying.</span>
                 </h2>
 
                 <!-- Rating block -->

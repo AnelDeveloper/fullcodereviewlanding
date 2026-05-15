@@ -4,10 +4,10 @@
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <div class="text-sm font-semibold uppercase tracking-widest text-white dark:text-white mb-3">Pricing</div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100">
-                    Pick what to review. <span class="gradient-text">Bundle &amp; save up to 20%.</span>
+                    Pick what to audit. <span class="gradient-text">Save up to 20%.</span>
                 </h2>
                 <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60">
-                    Starting from <span class="font-bold text-ink-900 dark:text-ink-100">$20</span> — choose any combination. The more you stack, the bigger the discount.
+                    Start from <span class="font-bold text-ink-900 dark:text-ink-100">$20</span>. Add categories, unlock bigger discounts.
                 </p>
                 <!-- Founders' offer reminder -->
                 <div class="mt-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold border border-orange-500/30 bg-orange-500/10 text-orange-700 dark:text-orange-300">

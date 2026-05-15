@@ -7,7 +7,7 @@
                     Trust &amp; verification
                 </div>
                 <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-ink-900 dark:text-ink-100 leading-[1.1]">
-                    AI scans first. <span class="gradient-text">Senior engineers verify what matters.</span>
+                    AI scans first. <span class="gradient-text">Senior engineers verify afterwards.</span>
                 </h2>
                 <p class="mt-5 text-lg text-ink-600 dark:text-ink-100/60 leading-relaxed">
                     We're not another AI wrapper. Every Critical and High-severity finding is double-checked by a real senior engineer before it lands in your report — so you never act on a false positive, and never miss what counts.
