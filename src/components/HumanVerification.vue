@@ -26,7 +26,7 @@
                 <Step
                     n="02"
                     :icon="iconCheck"
-                    label="Engineer Review"
+                    label="Engineer Verification"
                     title="Critical &amp; High findings hand-verified"
                     desc="A senior engineer (5+ years production experience) reviews every Critical/High issue. False positives are eliminated. Real risks are confirmed."
                     highlight
