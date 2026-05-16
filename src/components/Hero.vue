@@ -15,6 +15,19 @@
                 Identify risks across security, performance, scalability, and technical debt <span class="font-semibold text-ink-800 dark:text-ink-100">before they impact production.</span> Every audit combines AI-powered analysis with senior-engineer verification — built for SaaS founders, vibe coders, CTOs, and AI-assisted dev teams.
             </p>
 
+            <!-- Demo video -->
+            <!-- Demo video -->
+            <div class="w-full mb-8 animate-fade-in-up overflow-hidden rounded-2xl bg-black" style="animation-delay:.11s;">
+                <video
+                    src="/demo%20videos/QodeShark%20Demo.mp4"
+                    class="w-full block"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                ></video>
+            </div>
+
             <!-- Social proof badge -->
             <a
                 href="https://www.trustpilot.com/review/fullcodereview.com"
