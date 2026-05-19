@@ -2,7 +2,7 @@
     <div class="relative min-h-screen overflow-x-clip">
         <Navbar />
 
-        <main>
+        <main class="pt-16">
             <Hero />
             <HumanVerification />
             <Features />

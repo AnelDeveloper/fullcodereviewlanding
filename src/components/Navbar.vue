@@ -1,5 +1,5 @@
 <template>
-    <header class="sticky top-0 z-40 backdrop-blur-md bg-white/70 dark:bg-ink-950/70 border-b border-ink-700/10 dark:border-ink-100/5">
+    <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-white/70 dark:bg-ink-950/70 border-b border-ink-700/10 dark:border-ink-100/5">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
             <a href="#" class="flex items-center gap-0 text-ink-900 dark:text-ink-100 min-w-0" @click="closeMenu">
                 <img

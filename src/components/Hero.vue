@@ -46,7 +46,7 @@
                 </span>
             </a>
 
-            <!-- Founders' offer promo banner -->
+            <!-- Free security audit banner -->
             <div class="max-w-2xl mx-auto mb-8 animate-fade-in-up px-1" style="animation-delay:.13s">
                 <div class="glass p-3 sm:p-4 md:p-5 text-left" style="border-color:rgba(249,115,22,0.35);">
                     <div class="flex items-center gap-3 md:gap-4">
@@ -54,15 +54,15 @@
                             <div class="flex items-center gap-2 mb-1 flex-wrap">
                                 <span class="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-orange-500/15 text-orange-600 dark:text-orange-400 border border-orange-500/30">
                                     <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
-                                    Founders' offer
+                                    Free offer
                                 </span>
-                                <span class="text-[11px] text-ink-500 dark:text-ink-100/60 hidden sm:inline">First 100 sign-ups only</span>
+                                <span class="text-[11px] text-ink-500 dark:text-ink-100/60 hidden sm:inline">Every new sign-up</span>
                             </div>
                             <div class="text-sm md:text-base font-bold text-ink-900 dark:text-ink-100 leading-snug">
-                                Save an <span class="gradient-text">extra 25%</span> — stacks with bundle for up to <span class="gradient-text">40% off</span>
+                                Sign up to get your first <span class="gradient-text">security audit for free.</span>
                             </div>
                             <div class="text-xs text-ink-600 dark:text-ink-100/60 mt-1">
-                                Just register — discount code emailed instantly.
+                                No credit card required. Access granted instantly.
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
 
             <div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center gap-3 animate-fade-in-up max-w-sm sm:max-w-none mx-auto" style="animation-delay:.15s">
                 <a href="https://app.qodeshark.com/register" class="btn-vibe text-base justify-center">
-                    Register &amp; get 25% off
+                    Register
                 </a>
                 <a href="#how" class="btn-ghost justify-center">See how it works</a>
             </div>
