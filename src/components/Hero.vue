@@ -19,7 +19,7 @@
             <!-- Demo video -->
             <div class="w-full mb-8 animate-fade-in-up overflow-hidden rounded-2xl bg-black" style="animation-delay:.11s;">
                 <video
-                    src="/demo%20videos/QodeShark%20Demo.mp4"
+                    src="/demo%20videos/QodeShark%20Demo2.mp4"
                     class="w-full block"
                     autoplay
                     muted
