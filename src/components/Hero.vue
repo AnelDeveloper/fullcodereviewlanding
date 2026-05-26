@@ -6,7 +6,7 @@
                 AI-assisted audits · Verified by senior engineers
             </div>
 
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6 animate-fade-in-up text-ink-900 dark:text-ink-100" style="animation-delay:.05s">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6 animate-fade-in-up text-ink-900 dark:text-ink-100" style="animation-delay:.05s">
                 Good code is written.
                 <span class="block gradient-text">Great code is audited.</span>
             </h1>
