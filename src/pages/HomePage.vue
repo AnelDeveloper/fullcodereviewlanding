@@ -3,7 +3,7 @@
         <Navbar />
 
         <!-- ─── HERO ─── -->
-        <section class="relative flex flex-col items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
+        <section class="relative flex flex-col items-center justify-center pt-36 pb-12 px-6 overflow-hidden">
 
             <!-- Subtle white glow -->
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -20,7 +20,7 @@
 
                 <!-- Headline -->
                 <h1 class="font-extrabold tracking-tight leading-[1.03] mb-7 animate-fade-in-up text-white"
-                    style="font-size:clamp(2.8rem,8vw,5.5rem);animation-delay:.06s">
+                    style="font-size:clamp(1.6rem,4vw,3rem);animation-delay:.06s">
                     Your AI got you 80%.<br>
                     <span class="text-white/60">We handle the rest.</span>
                 </h1>
@@ -29,7 +29,7 @@
                 <p class="text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10 animate-fade-in-up text-white/40"
                     style="animation-delay:.12s">
                     Vibe coded project in production? Get instant help from senior software engineers.
-                    Auth systems, payments, API integrations, database migrations, code audits, customized service, and more.
+                    Code audit, API integration, code optimization, database migration, customized service & more.
                 </p>
 
                 <!-- CTAs -->
