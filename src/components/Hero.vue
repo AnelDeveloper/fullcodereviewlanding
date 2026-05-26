@@ -83,20 +83,6 @@
                 <span class="inline-flex items-center gap-1.5"><Dot/>Senior-engineer verified</span>
             </div>
 
-            <!-- Platform logos marquee -->
-            <div class="mt-12 animate-fade-in-up" style="animation-delay:.25s">
-                <p class="text-xs font-semibold uppercase tracking-widest text-ink-500 dark:text-ink-100/60 text-center mb-5">Works with code from any AI platform</p>
-                <div class="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-                    <div class="flex items-center w-max animate-marquee">
-                        <div v-for="(logo, i) in [...platforms, ...platforms]" :key="logo.name + i" class="flex items-center justify-center w-28 h-10 mx-6 flex-shrink-0">
-                            <img :src="logo.src" :alt="logo.name" class="max-w-full max-h-full object-contain" :style="{
-                                filter: ['Manus', 'Gamma', 'Claude'].includes(logo.name) ? 'brightness(0) invert(1)' : '',
-                                transform: ['Cursor', 'Gamma', 'base44'].includes(logo.name) ? 'scale(1.6)' : '',
-                            }" />
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Hero card preview: live scorecard mockup -->

@@ -1,7 +1,7 @@
 <template>
     <!-- Promo banner -->
     <div class="fixed top-0 left-0 right-0 z-50 bg-white text-black text-xs sm:text-sm font-semibold text-center py-2.5 px-4">
-        New! <RouterLink to="/codeaudit" class="hover:opacity-70 transition-opacity">CodeAudit</RouterLink>: AI-powered code audit verified by senior engineers.
+        Introducing <RouterLink to="/codeaudit" class="hover:opacity-70 transition-opacity">CodeAudit</RouterLink>: AI-powered code audit verified by senior engineers.
         <RouterLink to="/codeaudit" class="ml-2 inline-flex items-center gap-1 font-bold hover:opacity-70 transition-opacity">Try it free</RouterLink>
     </div>
 
