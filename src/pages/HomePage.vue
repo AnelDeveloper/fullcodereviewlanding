@@ -19,8 +19,8 @@
             <div class="relative z-10 w-full max-w-5xl mx-auto text-center">
 
                 <!-- Headline -->
-                <h1 class="font-extrabold tracking-tight leading-[1.03] mb-7 animate-fade-in-up text-white"
-                    style="font-size:clamp(1.6rem,4vw,3rem);animation-delay:.06s">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] mb-7 animate-fade-in-up text-white"
+                    style="animation-delay:.06s">
                     Your AI got you 80%.<br>
                     <span class="text-white/60">We handle the rest.</span>
                 </h1>
