@@ -38,7 +38,6 @@
                     <a href="https://app.qodeshark.com/book"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book free consultation
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </a>
                     <RouterLink to="/codeaudit"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white/70 text-base transition-all hover:text-white hover:border-white/30"
@@ -165,7 +164,6 @@
                     <a href="https://app.qodeshark.com/book"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book free consultation
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </a>
                     <span class="text-sm text-white/30">First session free · No commitment</span>
                 </div>
@@ -437,7 +435,6 @@
                     <a href="https://app.qodeshark.com/book"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book free consultation
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </a>
                     <RouterLink to="/codeaudit"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white/60 text-base transition-all hover:text-white"
@@ -505,7 +502,6 @@
                     <a href="https://app.qodeshark.com/book"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book a free consultation
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </a>
                 </div>
 

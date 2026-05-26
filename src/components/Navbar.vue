@@ -6,7 +6,7 @@
                 <img
                     src="/logos/Shark Logo Itself white.svg"
                     alt="QodeShark"
-                    class="h-auto object-contain flex-shrink-0 translate-y-2 w-[150px] -ml-14 sm:ml-0"
+                    class="h-auto object-contain flex-shrink-0 translate-y-2 w-[150px] -ml-14 sm:-ml-12"
                     width="36"
                     height="36"
                 />
@@ -22,11 +22,11 @@
             </nav>
 
             <!-- Right: Sign in + CTA -->
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4 mr-8">
                 <a href="https://app.qodeshark.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-100/60 hover:text-white dark:hover:text-white transition-colors">
                     Sign in
                 </a>
-                <RouterLink to="/codeaudit" class="hidden sm:inline-flex btn-vibe text-sm py-2.5 px-5">
+                <RouterLink to="/codeaudit" class="hidden sm:inline-flex btn-vibe text-xs py-2 px-4">
                     Get started
                 </RouterLink>
             </div>
