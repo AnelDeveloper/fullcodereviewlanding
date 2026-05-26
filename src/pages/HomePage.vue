@@ -1,9 +1,9 @@
 <template>
-    <div class="relative min-h-screen overflow-x-clip bg-black">
+    <div class="relative min-h-screen overflow-x-hidden bg-black">
         <Navbar />
 
         <!-- ─── HERO ─── -->
-        <section class="relative flex flex-col items-center justify-center pt-36 pb-12 px-6 overflow-hidden">
+        <section class="relative flex flex-col items-center justify-center pt-24 md:pt-36 pb-12 px-6 overflow-hidden">
 
             <!-- Subtle white glow -->
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -16,7 +16,7 @@
                 style="background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:72px 72px;"></div>
 
             <!-- Content -->
-            <div class="relative z-10 max-w-5xl mx-auto text-center">
+            <div class="relative z-10 w-full max-w-5xl mx-auto text-center">
 
                 <!-- Headline -->
                 <h1 class="font-extrabold tracking-tight leading-[1.03] mb-7 animate-fade-in-up text-white"
@@ -26,14 +26,14 @@
                 </h1>
 
                 <!-- Sub -->
-                <p class="text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10 animate-fade-in-up text-white/40"
+                <p class="text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10 animate-fade-in-up text-white/40"
                     style="animation-delay:.12s">
                     Vibe coded project in production? Get instant help from senior software engineers.
                     Code audit, API integration, code optimization, database migration, customized service & more.
                 </p>
 
                 <!-- CTAs -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 animate-fade-in-up"
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 md:mb-20 animate-fade-in-up"
                     style="animation-delay:.18s">
                     <a href="https://app.qodeshark.com/book"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
@@ -48,7 +48,7 @@
 
                 <!-- Engineering dashboard card -->
                 <div class="animate-fade-in-up" style="animation-delay:.24s">
-                    <div class="relative max-w-3xl mx-auto rounded-2xl overflow-hidden"
+                    <div class="relative max-w-5xl mx-auto rounded-2xl overflow-hidden"
                         style="background:#0a0a0a;border:1px solid rgba(255,255,255,0.1);box-shadow:0 32px 64px rgba(0,0,0,0.5)">
 
                         <!-- Window chrome -->
@@ -65,12 +65,12 @@
                         </div>
 
                         <!-- Column headers -->
-                        <div class="grid grid-cols-12 gap-3 px-5 py-2.5 text-[10px] font-semibold uppercase tracking-widest text-white/20"
+                        <div class="grid grid-cols-12 gap-3 px-3 sm:px-5 py-2.5 text-[10px] font-semibold uppercase tracking-widest text-white/20"
                             style="border-bottom:1px solid rgba(255,255,255,0.04)">
-                            <div class="col-span-5">Service</div>
+                            <div class="col-span-8 sm:col-span-5">Service</div>
                             <div class="col-span-4">Progress</div>
-                            <div class="col-span-2 text-center">Status</div>
-                            <div class="col-span-1 text-right">Eng</div>
+                            <div class="hidden sm:block col-span-2 text-center">Status</div>
+                            <div class="hidden sm:block col-span-1 text-right">Eng</div>
                         </div>
 
                         <div style="height:420px;overflow:hidden">
@@ -97,7 +97,7 @@
                     <p class="text-xs font-semibold uppercase tracking-widest text-white/20 mb-5">
                         Works with code from any AI platform
                     </p>
-                    <div class="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+                    <div class="overflow-hidden w-full [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
                         <div class="flex items-center w-max animate-marquee">
                             <div v-for="(logo, i) in [...platforms, ...platforms]" :key="logo.name + i"
                                 class="flex items-center justify-center w-28 h-10 mx-6 flex-shrink-0">
@@ -126,17 +126,17 @@
         </section>
 
         <!-- ─── SERVICES TEASER ─── -->
-        <section class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
+        <section class="py-12 md:py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
             <div class="max-w-6xl mx-auto">
 
                 <!-- Header row -->
                 <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-4 text-white/50"
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4 text-white/50"
                             style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1)">
                             What we do
                         </div>
-                        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
+                        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
                             Fix it. Build it. Ship it.<br>
                             <span class="text-white/40">For vibe-coded projects.</span>
                         </h2>
@@ -171,14 +171,14 @@
         </section>
 
         <!-- ─── HOW IT WORKS ─── -->
-        <section class="py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
+        <section class="py-14 md:py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
             <div class="max-w-5xl mx-auto">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-5 text-white/50"
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-5 text-white/50"
                         style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1)">
                         How it works
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
                         From booking to clean code<br><span class="text-white/40">in three steps.</span>
                     </h2>
                 </div>
@@ -203,17 +203,17 @@
         </section>
 
         <!-- ─── TEAM TEASER ─── -->
-        <section class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
+        <section class="py-12 md:py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
             <div class="max-w-6xl mx-auto">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-8">
 
                     <!-- Left: copy -->
                     <div class="max-w-lg">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-4 text-white/50"
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-4 text-white/50"
                             style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1)">
                             Our team
                         </div>
-                        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4 leading-[1.08]">
+                        <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4 leading-[1.08]">
                             The engineers<br>
                             <span class="text-white/40">behind the work.</span>
                         </h2>
@@ -251,14 +251,14 @@
         </section>
 
         <!-- ─── GUARANTEE ─── -->
-        <section class="py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
+        <section class="py-14 md:py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
             <div class="max-w-5xl mx-auto">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-5 text-white/50"
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-5 text-white/50"
                         style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1)">
                         Our promise
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
                         Built on trust.<br><span class="text-white/40">Backed by guarantees.</span>
                     </h2>
                 </div>
@@ -283,14 +283,14 @@
         </section>
 
         <!-- ─── CASE STUDIES ─── -->
-        <section class="py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
+        <section class="py-14 md:py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
             <div class="max-w-5xl mx-auto">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-5 text-white/50"
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-5 text-white/50"
                         style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1)">
                         Case studies
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
                         Real projects.<br><span class="text-white/40">Real results.</span>
                     </h2>
                 </div>
@@ -323,14 +323,14 @@
         </section>
 
         <!-- ─── COMPARISON ─── -->
-        <section class="py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
+        <section class="py-14 md:py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
             <div class="max-w-4xl mx-auto">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-5 text-white/50"
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-5 text-white/50"
                         style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1)">
                         Why QodeShark
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
                         The smarter choice<br><span class="text-white/40">for vibe coded projects.</span>
                     </h2>
                 </div>
@@ -338,7 +338,7 @@
                 <!-- Table -->
                 <div class="rounded-2xl overflow-hidden" style="border:1px solid rgba(255,255,255,0.08)">
                     <!-- Header -->
-                    <div class="grid grid-cols-3 text-xs font-bold uppercase tracking-widest px-6 py-4"
+                    <div class="grid grid-cols-3 text-xs font-bold uppercase tracking-widest px-3 sm:px-6 py-4"
                         style="background:#1c1c1c;border-bottom:1px solid rgba(255,255,255,0.08)">
                         <div class="col-span-1 text-white/30">Feature</div>
                         <div class="text-center text-white">QodeShark</div>
@@ -346,7 +346,7 @@
                     </div>
                     <!-- Rows -->
                     <div v-for="(row, i) in comparisonRows" :key="row.feature"
-                        class="grid grid-cols-3 items-center px-6 py-4 text-sm"
+                        class="grid grid-cols-3 items-center px-3 sm:px-6 py-4 text-sm"
                         :style="i % 2 === 0 ? 'background:#181818' : 'background:#1c1c1c'">
                         <div class="col-span-1 font-medium" style="color:rgba(255,255,255,0.55)">{{ row.feature }}</div>
                         <div class="flex justify-center">
@@ -368,12 +368,12 @@
             <div class="max-w-6xl mx-auto">
 
                 <!-- Header -->
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-5 text-white/50"
+                <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-5 text-white/50"
                         style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1)">
                         Client stories
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-5 leading-[1.08]">
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-5 leading-[1.08]">
                         What our clients say.
                     </h2>
                     <div class="flex items-center justify-center gap-2">
@@ -417,14 +417,14 @@
         </section>
 
         <!-- ─── FINAL CTA ─── -->
-        <section class="py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
+        <section class="py-14 md:py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
             <div class="max-w-3xl mx-auto text-center">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-8 text-white/50"
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-8 text-white/50"
                     style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1)">
                     <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse flex-shrink-0"></span>
                     Engineers available now
                 </div>
-                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08] mb-6">
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08] mb-6">
                     Your project deserves<br>proper engineering.
                 </h2>
                 <p class="text-lg text-white/40 leading-relaxed mb-10 max-w-xl mx-auto">
@@ -445,16 +445,16 @@
         </section>
 
         <!-- ─── FAQ ─── -->
-        <section class="py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
+        <section class="py-14 md:py-28 px-6" style="border-top:1px solid rgba(255,255,255,0.06)">
             <div class="max-w-3xl mx-auto">
 
                 <!-- Header -->
                 <div class="text-center mb-16">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-5 text-white/50"
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold mb-5 text-white/50"
                         style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1)">
                         FAQ
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08]">
                         Common questions.
                     </h2>
                 </div>
@@ -703,7 +703,7 @@ const services = [
 // ── Stats bar ──────────────────────────────────────────────────────────────
 
 const statsBar = [
-    { value: "500+",   label: "Projects delivered" },
+    { value: "1200+",  label: "Projects delivered" },
     { value: "4.9★",  label: "Trustpilot rating" },
     { value: "48hr",   label: "Avg turnaround" },
     { value: "30-day", label: "Money-back guarantee" },
@@ -1160,10 +1160,10 @@ const ServiceRow = {
         return () => {
             const isActive = props.status === "in-progress"
             return h("div", {
-                class: `grid grid-cols-12 gap-3 items-center px-5 py-3.5 transition-colors hover:bg-white/[0.02] row-enter${isActive ? " row-active" : ""}`,
+                class: `grid grid-cols-12 gap-3 items-center px-3 sm:px-5 py-3.5 transition-colors hover:bg-white/[0.02] row-enter${isActive ? " row-active" : ""}`,
                 style: `border-bottom:1px solid rgba(255,255,255,0.04);animation-delay:${props.delay || "0s"}`,
             }, [
-                h("div", { class: "col-span-5 min-w-0", style: "display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:center" }, [
+                h("div", { class: "col-span-8 sm:col-span-5 min-w-0", style: "display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:center" }, [
                     h("span", { style: "font-size:13px;line-height:1;text-align:center;overflow:hidden" }, props.emoji),
                     h("div", { class: "min-w-0", style: "text-align:left" }, [
                         h("div", { class: "text-sm font-semibold text-white truncate" }, props.name),
@@ -1187,13 +1187,13 @@ const ServiceRow = {
                             ),
                         ]),
                 ]),
-                h("div", { class: "col-span-2 flex justify-center" }, [
+                h("div", { class: "hidden sm:flex col-span-2 justify-center" }, [
                     h("span", {
                         class: `inline-flex items-center text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full whitespace-nowrap${isActive ? " badge-pulse" : ""}`,
                         style: `color:${cfg.color};background:${cfg.bg};border:1px solid ${cfg.border}`,
                     }, cfg.label),
                 ]),
-                h("div", { class: "col-span-1 flex justify-end" }, [
+                h("div", { class: "hidden sm:flex col-span-1 justify-end" }, [
                     props.engPhoto
                         ? h("img", {
                             src: props.engPhoto,
