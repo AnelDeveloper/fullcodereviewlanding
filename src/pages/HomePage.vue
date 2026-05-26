@@ -189,7 +189,7 @@
 
                     <div v-for="step in howItWorks" :key="step.step"
                         class="relative flex flex-col rounded-2xl p-7"
-                        style="background:#0a0a0a;border:1px solid rgba(255,255,255,0.08)">
+                        style="background:#1c1c1c;border:1px solid rgba(255,255,255,0.08)">
                         <!-- Step number -->
                         <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-extrabold mb-6 flex-shrink-0"
                             style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.6)">
@@ -265,7 +265,7 @@
                 <div class="grid sm:grid-cols-2 gap-5">
                     <div v-for="g in guarantees" :key="g.title"
                         class="flex items-start gap-5 rounded-2xl p-7"
-                        style="background:#0a0a0a;border:1px solid rgba(255,255,255,0.08)">
+                        style="background:#1c1c1c;border:1px solid rgba(255,255,255,0.08)">
                         <div class="text-2xl flex-shrink-0 mt-0.5">{{ g.icon }}</div>
                         <div>
                             <h3 class="text-base font-bold text-white mb-2">{{ g.title }}</h3>
@@ -297,7 +297,7 @@
                 <div class="grid md:grid-cols-3 gap-5">
                     <div v-for="cs in caseStudies" :key="cs.title"
                         class="flex flex-col rounded-2xl overflow-hidden"
-                        style="background:#0a0a0a;border:1px solid rgba(255,255,255,0.08)">
+                        style="background:#1c1c1c;border:1px solid rgba(255,255,255,0.08)">
                         <!-- Top bar -->
                         <div class="px-6 pt-6 pb-4" style="border-bottom:1px solid rgba(255,255,255,0.06)">
                             <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider mb-3"
@@ -339,7 +339,7 @@
                 <div class="rounded-2xl overflow-hidden" style="border:1px solid rgba(255,255,255,0.08)">
                     <!-- Header -->
                     <div class="grid grid-cols-3 text-xs font-bold uppercase tracking-widest px-6 py-4"
-                        style="background:#111111;border-bottom:1px solid rgba(255,255,255,0.08)">
+                        style="background:#1c1c1c;border-bottom:1px solid rgba(255,255,255,0.08)">
                         <div class="col-span-1 text-white/30">Feature</div>
                         <div class="text-center text-white">QodeShark</div>
                         <div class="text-center text-white/30">Freelancer</div>
@@ -347,7 +347,7 @@
                     <!-- Rows -->
                     <div v-for="(row, i) in comparisonRows" :key="row.feature"
                         class="grid grid-cols-3 items-center px-6 py-4 text-sm"
-                        :style="i % 2 === 0 ? 'background:#0a0a0a' : 'background:#0d0d0d'">
+                        :style="i % 2 === 0 ? 'background:#181818' : 'background:#1c1c1c'">
                         <div class="col-span-1 font-medium" style="color:rgba(255,255,255,0.55)">{{ row.feature }}</div>
                         <div class="flex justify-center">
                             <span v-if="row.qs === true" class="text-white text-base">✓</span>
@@ -424,8 +424,7 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse flex-shrink-0"></span>
                     Engineers available now
                 </div>
-                <h2 class="font-extrabold tracking-tight text-white leading-[1.05] mb-6"
-                    style="font-size:clamp(2.4rem,6vw,4rem)">
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.08] mb-6">
                     Your project deserves<br>proper engineering.
                 </h2>
                 <p class="text-lg text-white/40 leading-relaxed mb-10 max-w-xl mx-auto">
@@ -1085,7 +1084,7 @@ const TestimonialCard = {
     setup(props) {
         return () => h("div", {
             class: "flex flex-col rounded-2xl p-5 mb-4 flex-shrink-0",
-            style: "background:#0a0a0a;border:1px solid rgba(255,255,255,0.08)",
+            style: "background:#1c1c1c;border:1px solid rgba(255,255,255,0.08)",
         }, [
             // Stars + service tag
             h("div", { class: "flex items-center justify-between mb-3" }, [
