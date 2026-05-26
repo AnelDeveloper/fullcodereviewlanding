@@ -22,7 +22,7 @@
             </nav>
 
             <!-- Right: Sign in + CTA (desktop) + Hamburger (mobile) -->
-            <div class="flex items-center gap-4 mr-8">
+            <div class="flex items-center gap-4 md:mr-8">
                 <a href="https://app.qodeshark.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-100/60 hover:text-white dark:hover:text-white transition-colors">
                     Sign in
                 </a>
