@@ -544,8 +544,8 @@ const dashboardRows = [
     { emoji: "📋", name: "Code Audit",            detail: "Security · backend · database · PDF report", progress: 100, status: "delivered",   engPhoto: "/Team Profiles/Anel Kujovic.jpeg" },
     { emoji: "💳", name: "Payment Integration",  detail: "Stripe + webhooks + retry logic",           progress: 72,  status: "in-progress", engPhoto: "/Team Profiles/Toretto Young.png", animated: true },
     { emoji: "🛠️", name: "Code Optimization",    detail: "N+1 queries fixed · 8s → 400ms",            progress: 100, status: "complete",    engPhoto: "/Team Profiles/Thomas Wright.jpg" },
-    { emoji: "🗃️", name: "Database Migration",   detail: "Supabase → PostgreSQL · zero data loss",    progress: 38,  status: "in-progress", engPhoto: "https://randomuser.me/api/portraits/men/50.jpg", animated: true },
-    { emoji: "🔌", name: "API Implementation",   detail: "REST endpoints · third-party integrations", progress: 20,  status: "in-progress", engPhoto: "https://randomuser.me/api/portraits/men/60.jpg", animated: true },
+    { emoji: "🗃️", name: "Database Migration",   detail: "Supabase → PostgreSQL · zero data loss",    progress: 56,  status: "in-progress", engPhoto: "https://randomuser.me/api/portraits/men/50.jpg", animated: true },
+    { emoji: "🔌", name: "API Implementation",   detail: "REST endpoints · third-party integrations", progress: 39,  status: "in-progress", engPhoto: "https://randomuser.me/api/portraits/men/60.jpg", animated: true },
     { emoji: "☁️", name: "Codebase Migration",    detail: "Replit → Vercel · configs + CI/CD setup",   progress: 0,  status: "queued",      engPhoto: "https://randomuser.me/api/portraits/men/10.jpg" },
 ]
 
