@@ -91,6 +91,18 @@ const services = [
         cta: "Start",
     },
     {
+        img: "/Service images/Auth Implementation.png",
+        title: "Auth Implementation",
+        desc: "Secure authentication systems including OAuth, JWT, and session management.",
+        price: "From $200",
+    },
+    {
+        img: "/Service images/API Implementation.png",
+        title: "API Implementation",
+        desc: "Robust and maintainable API developments, third-party integrations, and webhooks.",
+        price: "From $250",
+    },
+    {
         img: "/Service images/Code Cleaning.png",
         title: "Code Optimization",
         desc: "Clean up messy codebases — fix security vulnerabilities, improve performance, resolve race conditions, and reduce technical debt.",
@@ -103,18 +115,6 @@ const services = [
         price: "From $300",
     },
     {
-        img: "/Service images/Auth Implementation.png",
-        title: "Auth Implementation",
-        desc: "Secure authentication systems including OAuth, JWT, and session management.",
-        price: "From $300",
-    },
-    {
-        img: "/Service images/Codebase Migration.png",
-        title: "Codebase Migration",
-        desc: "Seamlessly migrate your codebase between platforms or host servers.",
-        price: "From $350",
-    },
-    {
         img: "/Service images/Payment Implementation.png",
         title: "Payment Implementation",
         desc: "Stripe, PayPal, and custom payment gateway integrations for your application.",
@@ -122,9 +122,9 @@ const services = [
         badge: "Popular",
     },
     {
-        img: "/Service images/API Implementation.png",
-        title: "API Implementation",
-        desc: "Robust and maintainable API developments, third-party integrations, and webhooks.",
+        img: "/Service images/Codebase Migration.png",
+        title: "Codebase Migration",
+        desc: "Seamlessly migrate your codebase between platforms or host servers.",
         price: "From $350",
     },
     {

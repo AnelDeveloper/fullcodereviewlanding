@@ -632,11 +632,11 @@ const platforms = [
 const servicesList = [
     { emoji: "🎙️", name: "Technical Consultation", price: "$20 / session" },
     { emoji: "🔍", name: "Code Audit",              price: "From $20"     },
+    { emoji: "🔒", name: "Auth Implementation",      price: "From $200"    },
+    { emoji: "🔌", name: "API Implementation",       price: "From $250"    },
     { emoji: "🧹", name: "Code Optimization",       price: "From $300"    },
-    { emoji: "🔒", name: "Auth Implementation",      price: "From $300"    },
-    { emoji: "💳", name: "Payment Implementation",   price: "From $350"    },
-    { emoji: "🔌", name: "API Implementation",       price: "From $350"    },
     { emoji: "⚙️", name: "Complex Feature Building", price: "From $300"    },
+    { emoji: "💳", name: "Payment Implementation",   price: "From $350"    },
     { emoji: "☁️", name: "Codebase Migration",       price: "From $350"    },
     { emoji: "🗃️", name: "Database Migration",       price: "From $400"    },
     { emoji: "🛢️", name: "Database Implementation",  price: "From $450"    },
@@ -670,7 +670,7 @@ const services = [
         img: "/Service images/Auth Implementation.png",
         title: "Auth Implementation",
         desc: "Secure authentication systems including OAuth, JWT, and session management.",
-        price: "From $300",
+        price: "From $200",
     },
     {
         img: "/Service images/Codebase Migration.png",
@@ -689,7 +689,7 @@ const services = [
         img: "/Service images/API Implementation.png",
         title: "API Implementation",
         desc: "Robust and maintainable API developments, third-party integrations, and webhooks.",
-        price: "From $350",
+        price: "From $250",
     },
     {
         img: "/Service images/Database Migration.png",
