@@ -4,65 +4,65 @@
             style="background:rgba(0,0,0,0.75)"
             @click.self="$emit('close')">
 
-            <div class="relative w-full max-w-sm rounded-2xl overflow-hidden"
+            <div class="relative w-full max-w-lg rounded-2xl overflow-hidden"
                 style="background:#111;border:1px solid rgba(255,255,255,0.1);box-shadow:0 24px 60px rgba(0,0,0,0.7)">
 
                 <!-- ── Header ── -->
-                <div class="flex items-center justify-between px-5 py-4"
+                <div class="flex items-center justify-between px-7 py-5"
                     style="border-bottom:1px solid rgba(255,255,255,0.07)">
                     <div>
-                        <h2 class="text-sm font-bold text-white">Book a free 30-min call</h2>
-                        <p class="text-[11px] text-white/55 mt-0.5">Senior QodeShark engineer · PST</p>
+                        <h2 class="text-base font-bold text-white">Book a free 30-min call</h2>
+                        <p class="text-xs text-white/55 mt-0.5">Senior QodeShark engineer</p>
                     </div>
                     <button @click="$emit('close')"
-                        class="w-7 h-7 flex items-center justify-center rounded-full text-white/40 hover:text-white hover:bg-white/10 transition-colors text-xs font-bold">
+                        class="w-8 h-8 flex items-center justify-center rounded-full text-white/40 hover:text-white hover:bg-white/10 transition-colors text-sm font-bold">
                         ✕
                     </button>
                 </div>
 
                 <!-- ── Booking form ── -->
                 <template v-if="step === 'form'">
-                    <div class="px-5 py-4 space-y-3">
+                    <div class="px-7 py-5 space-y-4">
 
                         <!-- Date with week navigation -->
                         <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <label class="text-[9px] font-bold uppercase tracking-widest text-white/60">Select a date</label>
-                                <div class="flex items-center gap-1">
+                            <div class="flex items-center justify-between mb-2.5">
+                                <label class="text-[11px] font-bold uppercase tracking-widest text-white/60">Select a date</label>
+                                <div class="flex items-center gap-1.5">
                                     <button @click="prevWeek" :disabled="!canGoPrev"
-                                        class="w-6 h-6 flex items-center justify-center rounded-md text-xs font-bold transition-all"
+                                        class="w-7 h-7 flex items-center justify-center rounded-md text-sm font-bold transition-all"
                                         :style="canGoPrev ? 'color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.07);cursor:pointer' : 'color:rgba(255,255,255,0.15);background:rgba(255,255,255,0.03);cursor:not-allowed'">‹</button>
                                     <button @click="nextWeek" :disabled="!canGoNext"
-                                        class="w-6 h-6 flex items-center justify-center rounded-md text-xs font-bold transition-all"
+                                        class="w-7 h-7 flex items-center justify-center rounded-md text-sm font-bold transition-all"
                                         :style="canGoNext ? 'color:rgba(255,255,255,0.6);background:rgba(255,255,255,0.07);cursor:pointer' : 'color:rgba(255,255,255,0.15);background:rgba(255,255,255,0.03);cursor:not-allowed'">›</button>
                                 </div>
                             </div>
-                            <div class="grid grid-cols-5 gap-1.5">
+                            <div class="grid grid-cols-5 gap-2">
                                 <button v-for="d in weekDates" :key="d.iso"
                                     @click="!d.isPast && (selectedDate = d.iso, selectedTime = '')"
-                                    class="flex flex-col items-center py-2 rounded-lg text-xs font-semibold transition-all"
+                                    class="flex flex-col items-center py-2.5 rounded-lg font-semibold transition-all"
                                     :style="d.isPast
                                         ? 'background:rgba(255,255,255,0.02);color:rgba(255,255,255,0.15);cursor:not-allowed;border:1px solid rgba(255,255,255,0.04)'
                                         : selectedDate === d.iso
                                             ? 'background:#fff;color:#000'
                                             : 'background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.15);cursor:pointer'">
-                                    <span class="text-[8px] uppercase tracking-wide opacity-70">{{ d.day }}</span>
-                                    <span class="text-sm font-extrabold leading-none">{{ d.date }}</span>
-                                    <span class="text-[8px] opacity-50">{{ d.month }}</span>
+                                    <span class="text-[10px] uppercase tracking-wide opacity-70">{{ d.day }}</span>
+                                    <span class="text-base font-extrabold leading-none">{{ d.date }}</span>
+                                    <span class="text-[10px] opacity-50">{{ d.month }}</span>
                                 </button>
                             </div>
                         </div>
 
                         <!-- Time -->
                         <div>
-                            <label class="block text-[9px] font-bold uppercase tracking-widest text-white/60 mb-2">
-                                Select a time <span class="normal-case font-normal text-white/45">(PST)</span>
+                            <label class="block text-[11px] font-bold uppercase tracking-widest text-white/60 mb-2.5">
+                                Select a time <span class="normal-case font-normal text-white/45">(Pacific Time · California, USA)</span>
                             </label>
-                            <div class="grid grid-cols-4 gap-1">
+                            <div class="grid grid-cols-4 gap-1.5">
                                 <button v-for="slot in timeSlots" :key="slot"
                                     @click="selectedTime = slot"
                                     :disabled="!selectedDate"
-                                    class="py-1.5 rounded-lg text-[10px] font-semibold transition-all"
+                                    class="py-2 rounded-lg text-xs font-semibold transition-all"
                                     :style="selectedTime === slot
                                         ? 'background:#fff;color:#000'
                                         : !selectedDate
@@ -78,12 +78,12 @@
 
                         <!-- Email -->
                         <div>
-                            <label class="block text-[9px] font-bold uppercase tracking-widest text-white/60 mb-1">
+                            <label class="block text-[11px] font-bold uppercase tracking-widest text-white/60 mb-1.5">
                                 Email <span class="text-red-400 normal-case font-normal">*</span>
                             </label>
                             <div class="relative">
                                 <input v-model="form.email" type="email" placeholder="you@example.com" required
-                                    class="w-full rounded-xl px-3.5 py-1.5 text-xs text-white placeholder-white/35 outline-none transition-all pr-8"
+                                    class="w-full rounded-xl px-4 py-2.5 text-sm text-white placeholder-white/35 outline-none transition-all pr-9"
                                     :style="`background:rgba(255,255,255,0.08);border:1px solid ${emailTouched && !emailValid ? 'rgba(248,113,113,0.6)' : emailVerified ? 'rgba(74,222,128,0.5)' : 'rgba(255,255,255,0.2)'}`"
                                     :disabled="emailVerified"
                                     @focus="e => e.target.style.borderColor='rgba(255,255,255,0.3)'"
@@ -91,20 +91,20 @@
                                     @input="onEmailInput" />
                                 <!-- Verified checkmark -->
                                 <div v-if="emailVerified" class="absolute right-3 top-1/2 -translate-y-1/2">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(74,222,128,1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(74,222,128,1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                         <polyline points="20 6 9 17 4 12" />
                                     </svg>
                                 </div>
                                 <!-- Sending spinner -->
                                 <div v-else-if="otpSending" class="absolute right-3 top-1/2 -translate-y-1/2">
-                                    <svg class="animate-spin" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5">
+                                    <svg class="animate-spin" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5">
                                         <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
                                     </svg>
                                 </div>
                             </div>
-                            <p v-if="emailTouched && !emailValid" class="text-red-400 text-[10px] mt-1">Enter a valid email address</p>
-                            <p v-else-if="emailVerified" class="text-green-400 text-[10px] mt-1">Email verified ✓</p>
-                            <p v-else-if="otpSent && !emailVerified" class="text-white/40 text-[10px] mt-1">
+                            <p v-if="emailTouched && !emailValid" class="text-red-400 text-xs mt-1">Enter a valid email address</p>
+                            <p v-else-if="emailVerified" class="text-green-400 text-xs mt-1">Email verified ✓</p>
+                            <p v-else-if="otpSent && !emailVerified" class="text-white/40 text-xs mt-1">
                                 Code sent ·
                                 <button @click="resetEmail" class="text-white/60 hover:text-white underline transition-colors">wrong email?</button>
                             </p>
@@ -112,48 +112,48 @@
 
                         <!-- Inline OTP input -->
                         <div v-if="otpSent && !emailVerified">
-                            <label class="block text-[9px] font-bold uppercase tracking-widest text-white/60 mb-1">
+                            <label class="block text-[11px] font-bold uppercase tracking-widest text-white/60 mb-1.5">
                                 Verification code <span class="text-red-400 normal-case font-normal">*</span>
                             </label>
                             <div class="flex gap-2">
                                 <input v-model="otpInput" type="text" inputmode="numeric" maxlength="6"
                                     placeholder="000000" autofocus
-                                    class="w-[88px] rounded-xl px-2 py-1.5 text-xs text-white placeholder-white/35 outline-none transition-all tracking-widest font-bold text-center"
+                                    class="w-[108px] rounded-xl px-3 py-2.5 text-sm text-white placeholder-white/35 outline-none transition-all tracking-widest font-bold text-center"
                                     :style="`background:rgba(255,255,255,0.08);border:1px solid ${otpError ? 'rgba(248,113,113,0.6)' : 'rgba(255,255,255,0.2)'}`"
                                     @focus="e => e.target.style.borderColor='rgba(255,255,255,0.3)'"
                                     @blur="e => e.target.style.borderColor = otpError ? 'rgba(248,113,113,0.6)' : 'rgba(255,255,255,0.2)'"
                                     @input="otpInput = otpInput.replace(/\D/g, ''); if(otpInput.length === 6) verifyOtp()" />
                                 <button @click="resendOtp" :disabled="resendCooldown > 0"
-                                    class="w-16 flex-shrink-0 rounded-xl text-xs font-bold transition-all text-center"
+                                    class="w-20 flex-shrink-0 rounded-xl text-sm font-bold transition-all text-center"
                                     :style="resendCooldown > 0
                                         ? 'background:rgba(255,255,255,0.06);color:rgba(255,255,255,1);cursor:not-allowed'
                                         : 'background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);cursor:pointer'">
                                     {{ resendCooldown > 0 ? `${resendCooldown}s` : 'Resend' }}
                                 </button>
                             </div>
-                            <p v-if="otpError" class="text-red-400 text-[10px] mt-1">{{ otpError }}</p>
+                            <p v-if="otpError" class="text-red-400 text-xs mt-1">{{ otpError }}</p>
                         </div>
 
                         <!-- Phone -->
                         <div>
-                            <label class="block text-[9px] font-bold uppercase tracking-widest text-white/60 mb-1">
+                            <label class="block text-[11px] font-bold uppercase tracking-widest text-white/60 mb-1.5">
                                 Phone <span class="normal-case font-normal text-white/45">(optional)</span>
                             </label>
                             <input v-model="form.phone" type="tel" placeholder="+1 (555) 000-0000"
-                                class="w-full rounded-xl px-3.5 py-1.5 text-xs text-white placeholder-white/35 outline-none transition-all"
+                                class="w-full rounded-xl px-4 py-2.5 text-sm text-white placeholder-white/35 outline-none transition-all"
                                 :style="`background:rgba(255,255,255,0.08);border:1px solid ${phoneTouched && !phoneValid ? 'rgba(248,113,113,0.6)' : 'rgba(255,255,255,0.2)'}`"
                                 @focus="e => e.target.style.borderColor='rgba(255,255,255,0.3)'"
                                 @blur="phoneTouched = true; $event.target.style.borderColor = phoneTouched && !phoneValid ? 'rgba(248,113,113,0.6)' : 'rgba(255,255,255,0.1)'" />
-                            <p v-if="phoneTouched && !phoneValid" class="text-red-400 text-[10px] mt-1">Enter a valid phone number</p>
+                            <p v-if="phoneTouched && !phoneValid" class="text-red-400 text-xs mt-1">Enter a valid phone number</p>
                         </div>
 
                         <!-- Service -->
                         <div>
-                            <label class="block text-[9px] font-bold uppercase tracking-widest text-white/60 mb-1">
+                            <label class="block text-[11px] font-bold uppercase tracking-widest text-white/60 mb-1.5">
                                 Service <span class="text-red-400 normal-case font-normal">*</span>
                             </label>
                             <select v-model="form.service" required
-                                class="w-full rounded-xl px-3.5 py-1.5 text-xs outline-none appearance-none cursor-pointer transition-all"
+                                class="w-full rounded-xl px-4 py-2.5 text-sm outline-none appearance-none cursor-pointer transition-all"
                                 style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.9)">
                                 <option value="" disabled style="background:#111;color:rgba(255,255,255,0.4)">Select a service…</option>
                                 <option v-for="s in services" :key="s" :value="s" style="background:#111;color:#fff">{{ s }}</option>
@@ -162,47 +162,47 @@
 
                         <!-- Notes -->
                         <div>
-                            <label class="block text-[9px] font-bold uppercase tracking-widest text-white/60 mb-1">
+                            <label class="block text-[11px] font-bold uppercase tracking-widest text-white/60 mb-1.5">
                                 Additional notes <span class="normal-case font-normal text-white/45">(optional)</span>
                             </label>
                             <textarea v-model="form.notes" rows="2"
                                 placeholder="Tell us about your project or where you're stuck…"
-                                class="w-full rounded-xl px-3.5 py-1.5 text-xs text-white placeholder-white/35 outline-none resize-none transition-all"
+                                class="w-full rounded-xl px-4 py-2.5 text-sm text-white placeholder-white/35 outline-none resize-none transition-all"
                                 style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2)"
                                 @focus="e => e.target.style.borderColor='rgba(255,255,255,0.3)'"
                                 @blur="e => e.target.style.borderColor='rgba(255,255,255,0.1)'" />
                         </div>
 
-                        <p v-if="error" class="text-red-400 text-xs text-center">{{ error }}</p>
+                        <p v-if="error" class="text-red-400 text-sm text-center">{{ error }}</p>
                     </div>
 
-                    <div class="px-5 pb-5 pt-1">
+                    <div class="px-7 pb-6 pt-1">
                         <button @click="submitBooking"
                             :disabled="!canSubmit || submitting"
-                            class="w-full py-3 rounded-xl font-bold text-sm transition-all"
+                            class="w-full py-3.5 rounded-xl font-bold text-base transition-all"
                             :style="canSubmit && !submitting
                                 ? 'background:#fff;color:#000;cursor:pointer'
                                 : 'background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.2);cursor:not-allowed'">
                             {{ submitting ? 'Confirming…' : 'Confirm Booking' }}
                         </button>
-                        <p class="text-center text-[10px] text-white/20 mt-2">No commitment · First session is free</p>
+                        <p class="text-center text-xs text-white/20 mt-2">No commitment · First session is free</p>
                     </div>
                 </template>
 
                 <!-- ── Success ── -->
                 <template v-else-if="step === 'success'">
-                    <div class="p-8 text-center">
-                        <div class="flex items-center justify-center w-16 h-16 rounded-full mx-auto mb-4"
+                    <div class="p-10 text-center">
+                        <div class="flex items-center justify-center w-20 h-20 rounded-full mx-auto mb-5"
                             style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2)">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
                         </div>
-                        <h3 class="text-base font-bold text-white mb-1">Booking confirmed!</h3>
-                        <p class="text-xs text-white/40 mb-1">We'll be in touch at <span class="text-white/70">{{ form.email }}</span>.</p>
-                        <p class="text-xs text-white/30 mb-6">{{ selectedDate }} · {{ selectedTime }} PST</p>
+                        <h3 class="text-lg font-bold text-white mb-1.5">Booking confirmed!</h3>
+                        <p class="text-sm text-white/40 mb-1">We'll be in touch at <span class="text-white/70">{{ form.email }}</span>.</p>
+                        <p class="text-sm text-white/30 mb-8">{{ selectedDate }} · {{ selectedTime }} Pacific Time (California, USA)</p>
                         <button @click="$emit('close')"
-                            class="px-6 py-2.5 rounded-full font-bold text-black text-sm bg-white hover:bg-white/90 transition-all">
+                            class="px-8 py-3 rounded-full font-bold text-black text-base bg-white hover:bg-white/90 transition-all">
                             Close
                         </button>
                     </div>
@@ -401,14 +401,14 @@ async function submitBooking() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 access_key: import.meta.env.VITE_WEB3FORMS_KEY,
-                subject: `New Booking — ${form.value.service} on ${selectedDate.value} at ${selectedTime.value} PST`,
+                subject: `New Booking — ${form.value.service} on ${selectedDate.value} at ${selectedTime.value} PT`,
                 from_name: "QodeShark Booking",
                 reply_to: form.value.email,
                 Email: form.value.email,
                 Phone: form.value.phone || "Not provided",
                 Service: form.value.service,
                 Date: selectedDate.value,
-                Time: `${selectedTime.value} PST`,
+                Time: `${selectedTime.value} Pacific Time (California, USA)`,
                 Notes: form.value.notes || "None",
             }),
         })
