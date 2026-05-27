@@ -21,7 +21,7 @@
                 <!-- Headline -->
                 <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-7 animate-fade-in-up text-white"
                     style="animation-delay:.06s">
-                    Your AI got you 80%.<br>
+                    Your AI got you 70%.<br>
                     <span class="text-white/60">We handle the rest.</span>
                 </h1>
 
