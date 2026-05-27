@@ -59,15 +59,17 @@
                                 Select a time <span class="normal-case font-normal text-white/45">(Pacific Time · California, USA)</span>
                             </label>
                             <div class="grid grid-cols-4 gap-1.5">
-                                <button v-for="slot in timeSlots" :key="slot"
-                                    @click="selectedTime = slot"
-                                    :disabled="!selectedDate"
-                                    class="py-2 rounded-lg text-xs font-semibold transition-all"
+                                <button v-for="(slot, idx) in timeSlots" :key="slot"
+                                    @click="!isUnavailable(selectedDate, idx) && selectedDate && (selectedTime = slot)"
+                                    :disabled="!selectedDate || isUnavailable(selectedDate, idx)"
+                                    class="py-2 rounded-lg text-xs font-semibold transition-all relative"
                                     :style="selectedTime === slot
                                         ? 'background:#fff;color:#000'
                                         : !selectedDate
                                             ? 'background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.04);cursor:not-allowed'
-                                            : 'background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.15)'">
+                                            : isUnavailable(selectedDate, idx)
+                                                ? 'background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.05);cursor:not-allowed;text-decoration:line-through'
+                                                : 'background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.15)'">
                                     {{ slot }}
                                 </button>
                             </div>
@@ -262,6 +264,38 @@ const canGoPrev = computed(() => weekOffset.value > 0)
 const canGoNext = computed(() => weekOffset.value < MAX_WEEKS)
 function prevWeek() { if (canGoPrev.value) { weekOffset.value--; selectedDate.value = ""; selectedTime.value = "" } }
 function nextWeek() { if (canGoNext.value) { weekOffset.value++; selectedDate.value = ""; selectedTime.value = "" } }
+
+// ── Seeded RNG for consistent per-day unavailability ──────────────────────
+function seededRng(seed) {
+    let h = 2166136261
+    for (let i = 0; i < seed.length; i++) {
+        h ^= seed.charCodeAt(i)
+        h = Math.imul(h, 16777619) >>> 0
+    }
+    return function () {
+        h ^= h << 13; h ^= h >> 17; h ^= h << 5
+        return (h >>> 0) / 4294967296
+    }
+}
+
+const unavailableCache = {}
+function getUnavailableSet(dateIso) {
+    if (!dateIso) return new Set()
+    if (unavailableCache[dateIso]) return unavailableCache[dateIso]
+    const rng = seededRng(dateIso)
+    const count = 3 + Math.floor(rng() * 6) // 3–8 slots
+    const total = 19 // number of time slots
+    const indices = new Set()
+    while (indices.size < count) {
+        indices.add(Math.floor(rng() * total))
+    }
+    unavailableCache[dateIso] = indices
+    return indices
+}
+
+function isUnavailable(dateIso, idx) {
+    return getUnavailableSet(dateIso).has(idx)
+}
 
 // ── Time slots 7am–4pm PST ─────────────────────────────────────────────────
 const timeSlots = [
