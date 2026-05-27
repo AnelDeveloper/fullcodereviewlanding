@@ -65,12 +65,12 @@
                         </div>
 
                         <!-- Column headers -->
-                        <div class="grid grid-cols-12 gap-3 px-3 sm:px-5 py-2.5 text-[10px] font-semibold uppercase tracking-widest text-white/20"
+                        <div class="grid grid-cols-12 gap-2 px-3 sm:px-5 py-2.5 text-[10px] font-semibold uppercase tracking-widest text-white/20"
                             style="border-bottom:1px solid rgba(255,255,255,0.04)">
-                            <div class="col-span-8 sm:col-span-5">Service</div>
-                            <div class="col-span-4">Progress</div>
-                            <div class="hidden sm:block col-span-2 text-center">Status</div>
-                            <div class="hidden sm:block col-span-1 text-right">Eng</div>
+                            <div class="col-span-5">Service</div>
+                            <div class="col-span-3 sm:col-span-4">Progress</div>
+                            <div class="col-span-3 sm:col-span-2 text-center">Status</div>
+                            <div class="col-span-1 text-right">Eng</div>
                         </div>
 
                         <div style="height:420px;overflow:hidden">
@@ -1178,17 +1178,17 @@ const ServiceRow = {
         return () => {
             const isActive = props.status === "in-progress"
             return h("div", {
-                class: `grid grid-cols-12 gap-3 items-center px-3 sm:px-5 py-3.5 transition-colors hover:bg-white/[0.02] row-enter${isActive ? " row-active" : ""}`,
+                class: `grid grid-cols-12 gap-2 items-center px-3 sm:px-5 py-3.5 transition-colors hover:bg-white/[0.02] row-enter${isActive ? " row-active" : ""}`,
                 style: `border-bottom:1px solid rgba(255,255,255,0.04);animation-delay:${props.delay || "0s"}`,
             }, [
-                h("div", { class: "col-span-8 sm:col-span-5 min-w-0", style: "display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:center" }, [
+                h("div", { class: "col-span-5 min-w-0", style: "display:grid;grid-template-columns:18px 1fr;gap:6px;align-items:center" }, [
                     h("span", { style: "font-size:13px;line-height:1;text-align:center;overflow:hidden" }, props.emoji),
                     h("div", { class: "min-w-0", style: "text-align:left" }, [
                         h("div", { class: "text-sm font-semibold text-white truncate" }, props.name),
                         h("div", { class: "text-[11px] text-white/30 mt-0.5 font-mono truncate overflow-hidden" }, props.detail),
                     ]),
                 ]),
-                h("div", { class: "col-span-4" }, [
+                h("div", { class: "col-span-3 sm:col-span-4" }, [
                     props.status === "queued"
                         ? h("span", { class: "text-xs text-white/20 font-mono" }, "—")
                         : h("div", { class: "flex items-center gap-2" }, [
@@ -1205,19 +1205,23 @@ const ServiceRow = {
                             ),
                         ]),
                 ]),
-                h("div", { class: "hidden sm:flex col-span-2 justify-center" }, [
+                h("div", { class: "col-span-3 sm:col-span-2 flex justify-center" }, [
                     h("span", {
-                        class: `inline-flex items-center text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full whitespace-nowrap${isActive ? " badge-pulse" : ""}`,
+                        class: `inline-flex items-center text-[7px] sm:text-[10px] font-bold uppercase tracking-wider px-1 sm:px-2 py-0.5 rounded-full whitespace-nowrap${isActive ? " badge-pulse" : ""}`,
                         style: `color:${cfg.color};background:${cfg.bg};border:1px solid ${cfg.border}`,
                     }, cfg.label),
                 ]),
-                h("div", { class: "hidden sm:flex col-span-1 justify-end" }, [
+                h("div", { class: "col-span-1 flex justify-end" }, [
                     props.engPhoto
-                        ? h("img", {
-                            src: props.engPhoto,
-                            class: "w-7 h-7 rounded-full object-cover flex-shrink-0",
+                        ? h("div", {
+                            class: "w-7 h-7 rounded-full overflow-hidden flex-shrink-0",
                             style: "border:1px solid rgba(255,255,255,0.15)",
-                        })
+                        }, [
+                            h("img", {
+                                src: props.engPhoto,
+                                class: "w-full h-full object-cover",
+                            })
+                        ])
                         : h("span", { class: "text-xs text-white/20 font-mono" }, "—"),
                 ]),
             ])
