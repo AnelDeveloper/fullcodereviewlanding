@@ -35,10 +35,10 @@
                 <!-- CTAs -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 md:mb-20 animate-fade-in-up"
                     style="animation-delay:.18s">
-                    <a href="https://app.qodeshark.com/book"
+                    <button @click="showBooking = true"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book free consultation
-                    </a>
+                    </button>
                     <RouterLink to="/codeaudit"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white/70 text-base transition-all hover:text-white hover:border-white/30"
                         style="border:1px solid rgba(255,255,255,0.15)">
@@ -83,11 +83,11 @@
                         <div class="flex items-center justify-between px-5 py-3.5 text-xs"
                             style="border-top:1px solid rgba(255,255,255,0.05);background:#111">
                             <span class="text-white/25 font-mono">{{ secondsAgo === 0 ? 'Updated just now' : `Updated ${secondsAgo}s ago` }}</span>
-                            <a href="https://app.qodeshark.com/book"
+                            <button @click="showBooking = true"
                                 class="inline-flex items-center gap-1 font-semibold text-white/60 hover:text-white transition-colors">
                                 Start a project
                                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -161,10 +161,10 @@
 
                 <!-- CTA strip -->
                 <div class="mt-12 flex flex-col sm:flex-row items-center gap-4">
-                    <a href="https://app.qodeshark.com/book"
+                    <button @click="showBooking = true"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book free consultation
-                    </a>
+                    </button>
                     <span class="text-sm text-white/30">First session free · No commitment</span>
                 </div>
             </div>
@@ -431,10 +431,10 @@
                     Book a free 30-minute consultation. No commitment, no pressure — just a senior engineer who tells you exactly what your project needs.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="https://app.qodeshark.com/book"
+                    <button @click="showBooking = true"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book free consultation
-                    </a>
+                    </button>
                     <RouterLink to="/codeaudit"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white/60 text-base transition-all hover:text-white"
                         style="border:1px solid rgba(255,255,255,0.12)">
@@ -498,16 +498,19 @@
                 <!-- Bottom CTA -->
                 <div class="mt-16 text-center">
                     <p class="text-white/30 mb-6 text-sm">Still have questions? We're happy to answer them on the call.</p>
-                    <a href="https://app.qodeshark.com/book"
+                    <button @click="showBooking = true"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book a free consultation
-                    </a>
+                    </button>
                 </div>
 
             </div>
         </section>
 
         <Footer />
+
+        <!-- Booking modal -->
+        <BookingModal v-if="showBooking" @close="showBooking = false" />
 
         <!-- Floating help button -->
         <div class="fixed bottom-6 right-6 z-50 group">
@@ -516,15 +519,13 @@
                 <p class="text-xs text-ink-100/70">Book a free call with one of our senior engineers.</p>
                 <div class="absolute -bottom-1.5 right-8 w-3 h-3 bg-ink-900 border-r border-b border-white/10 rotate-45"></div>
             </div>
-            <a
-                href="https://app.qodeshark.com/book"
-                target="_blank"
-                rel="noopener noreferrer"
+            <button
+                @click="showBooking = true"
                 class="flex items-center gap-2 px-5 py-3.5 rounded-full shadow-2xl bg-white text-ink-900 font-bold hover:scale-105 transition-transform"
             >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                 <span class="text-sm font-semibold">Need help?</span>
-            </a>
+            </button>
         </div>
 
     </div>
@@ -534,7 +535,10 @@
 import { h, ref, onMounted } from "vue"
 import Navbar from "../components/Navbar.vue"
 import Footer from "../components/Footer.vue"
+import BookingModal from "../components/BookingModal.vue"
 import { initTheme } from "../composables/useTheme.js"
+
+const showBooking = ref(false)
 
 const secondsAgo = ref(0)
 const visibleCount = ref(0)
