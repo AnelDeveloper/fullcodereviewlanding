@@ -38,10 +38,10 @@
                         </div>
                         <div class="flex items-center gap-4 flex-shrink-0">
                             <span class="text-xl font-extrabold text-white">$20<span class="text-sm font-normal text-white/40"> / session</span></span>
-                            <a href="https://app.qodeshark.com/book"
+                            <button @click="showBooking = true"
                                 class="inline-flex items-center px-5 py-2 rounded-full text-sm font-bold text-black bg-white hover:opacity-90 transition-opacity whitespace-nowrap">
                                 Book free
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -84,10 +84,10 @@
 
                         <!-- CTA -->
                         <div class="col-span-1 flex justify-end">
-                            <a href="https://app.qodeshark.com/book"
+                            <button @click="showBooking = true"
                                 class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold text-black bg-white hover:opacity-90 transition-opacity whitespace-nowrap">
                                 {{ svc.cta || "Book" }}
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -120,23 +120,26 @@
             <div class="max-w-2xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Not sure which service you need?</h2>
                 <p class="text-white/40 mb-8">Book the free consultation first — we'll tell you exactly what your project needs.</p>
-                <a href="https://app.qodeshark.com/book"
+                <button @click="showBooking = true"
                     class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                     Book free consultation
-                </a>
+                </button>
             </div>
         </section>
 
+        <BookingModal v-if="showBooking" @close="showBooking = false" />
         <Footer />
     </div>
 </template>
 
 <script setup>
-import { onMounted } from "vue"
+import { ref, onMounted } from "vue"
 import Navbar from "../components/Navbar.vue"
 import Footer from "../components/Footer.vue"
+import BookingModal from "../components/BookingModal.vue"
 import { initTheme } from "../composables/useTheme.js"
 
+const showBooking = ref(false)
 onMounted(() => initTheme())
 
 const pricingServices = [

@@ -60,24 +60,27 @@
                 <!-- CTA -->
                 <div class="mt-16 text-center">
                     <p class="text-white/30 mb-5 text-sm">Ready to work with our team?</p>
-                    <a href="https://app.qodeshark.com/book"
+                    <button @click="showBooking = true"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book a free consultation
-                    </a>
+                    </button>
                 </div>
             </div>
         </section>
 
+        <BookingModal v-if="showBooking" @close="showBooking = false" />
         <Footer />
     </div>
 </template>
 
 <script setup>
-import { onMounted } from "vue"
+import { ref, onMounted } from "vue"
 import Navbar from "../components/Navbar.vue"
 import Footer from "../components/Footer.vue"
+import BookingModal from "../components/BookingModal.vue"
 import { initTheme } from "../composables/useTheme.js"
 
+const showBooking = ref(false)
 onMounted(() => initTheme())
 
 const team = [

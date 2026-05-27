@@ -32,9 +32,9 @@
                 <a href="https://app.qodeshark.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-100/60 hover:text-white dark:hover:text-white transition-colors">
                     Sign in
                 </a>
-                <RouterLink to="/codeaudit" class="hidden md:inline-flex btn-vibe text-xs py-2 px-4">
+                <a href="https://app.qodeshark.com/login" class="hidden md:inline-flex btn-vibe text-xs py-2 px-4">
                     Get started
-                </RouterLink>
+                </a>
 
                 <!-- Hamburger button (mobile only) -->
                 <button
@@ -77,10 +77,10 @@
                         class="text-sm font-medium text-white/50 hover:text-white transition-colors text-center py-2">
                         Sign in
                     </a>
-                    <RouterLink to="/codeaudit" @click="mobileOpen = false"
+                    <a href="https://app.qodeshark.com/login"
                         class="btn-vibe text-sm py-3 px-5 text-center">
                         Get started
-                    </RouterLink>
+                    </a>
                 </div>
             </nav>
         </div>
