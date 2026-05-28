@@ -5,7 +5,7 @@
         <RouterLink to="/codeaudit" class="ml-2 inline-flex items-center gap-1 font-bold hover:opacity-70 transition-opacity">Try it free</RouterLink>
     </div>
 
-    <header class="fixed top-10 left-0 right-0 z-40 backdrop-blur-md bg-white/70 dark:bg-ink-950/70 border-b border-ink-700/10 dark:border-ink-100/5">
+    <header class="fixed top-[52px] sm:top-10 left-0 right-0 z-40 backdrop-blur-md bg-white/70 dark:bg-ink-950/70 border-b border-ink-700/10 dark:border-ink-100/5">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
             <!-- Left: Logo -->
             <RouterLink to="/" class="flex items-center gap-0 text-ink-900 dark:text-ink-100 min-w-0" @click="mobileOpen = false">
