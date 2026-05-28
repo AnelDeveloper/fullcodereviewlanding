@@ -31,7 +31,7 @@
                             <div>
                                 <div class="flex items-center gap-2 mb-0.5">
                                     <span class="text-base font-bold text-white">Technical Consultation</span>
-                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-black bg-white">Start here · 1st free</span>
+                                    <span class="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-black bg-white whitespace-nowrap flex-shrink-0">Start here · 1st free</span>
                                 </div>
                                 <p class="text-sm" style="color:rgba(255,255,255,0.4)">30-minute one-on-one expert video call to discuss your project and get a clear plan.</p>
                             </div>
@@ -59,35 +59,35 @@
 
                     <!-- Rows -->
                     <div v-for="(svc, i) in pricingServices" :key="svc.title"
-                        class="grid grid-cols-12 items-center px-7 py-4 gap-3 transition-colors hover:bg-white/[0.02]"
+                        class="flex items-baseline justify-between sm:grid sm:items-center sm:grid-cols-12 px-4 sm:px-7 py-3 sm:py-4 gap-2 sm:gap-3 transition-colors hover:bg-white/[0.02]"
                         :style="i < pricingServices.length - 1 ? 'border-bottom:1px solid rgba(255,255,255,0.05)' : ''">
 
                         <!-- Name + desc -->
-                        <div class="col-span-9 flex items-center gap-3 min-w-0">
-                            <div class="min-w-0">
-                                <div class="flex items-center gap-2">
-                                    <span class="text-sm font-semibold text-white">{{ svc.title }}</span>
-                                    <span v-if="svc.badge"
-                                        class="hidden sm:inline px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider"
-                                        style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.5)">
-                                        {{ svc.badge }}
-                                    </span>
-                                </div>
-                                <p class="text-xs truncate mt-0.5" style="color:rgba(255,255,255,0.3)">{{ svc.desc }}</p>
+                        <div class="flex-1 sm:col-span-9 min-w-0 pr-3 sm:pr-0">
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm font-semibold text-white">{{ svc.title }}</span>
+                                <span v-if="svc.badge"
+                                    class="hidden sm:inline px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider"
+                                    style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.5)">
+                                    {{ svc.badge }}
+                                </span>
                             </div>
+                            <p class="text-xs truncate mt-0.5" style="color:rgba(255,255,255,0.3)">{{ svc.desc }}</p>
                         </div>
 
-                        <!-- Price -->
-                        <div class="col-span-2 text-right">
-                            <span class="text-sm font-extrabold text-white">{{ svc.price }}</span>
-                        </div>
-
-                        <!-- CTA -->
-                        <div class="col-span-1 flex justify-end">
-                            <button @click="showBooking = true"
-                                class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold text-black bg-white hover:opacity-90 transition-opacity whitespace-nowrap">
-                                {{ svc.cta || "Book" }}
-                            </button>
+                        <!-- Price + Button (mobile: stacked, desktop: separate columns) -->
+                        <div class="flex flex-col items-end gap-1 sm:contents">
+                            <!-- Price -->
+                            <div class="sm:col-span-2 sm:text-right">
+                                <span class="text-sm font-extrabold text-white whitespace-nowrap">{{ svc.price }}</span>
+                            </div>
+                            <!-- CTA -->
+                            <div class="sm:col-span-1 sm:flex sm:justify-end">
+                                <button @click="showBooking = true"
+                                    class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold text-black bg-white hover:opacity-90 transition-opacity whitespace-nowrap">
+                                    {{ svc.cta || "Book" }}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
