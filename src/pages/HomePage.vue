@@ -233,7 +233,7 @@
                         <div v-for="member in teamPreview" :key="member.name" class="relative group">
                             <img :src="member.photo" :alt="member.name"
                                 class="w-14 h-14 rounded-full object-cover transition-transform group-hover:scale-110"
-                                style="border:2px solid rgba(255,255,255,0.12)" />
+                                :style="`border:2px solid rgba(255,255,255,0.12);object-position:${member.photoPosition || 'center'}`" />
                             <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 rounded-lg text-[10px] font-semibold text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
                                 style="background:#111;border:1px solid rgba(255,255,255,0.12)">
                                 {{ member.name }}
@@ -816,12 +816,12 @@ const comparisonRows = [
 // ── Team teaser (first 6 for avatar cluster on home page) ─────────────────
 
 const teamPreview = [
-    { name: "Anel Kujovic",  photo: "/Team Profiles/Anel Kujovic.jpeg" },
-    { name: "Toretto Young", photo: "/Team Profiles/Toretto Young.png" },
-    { name: "Alex Madera",   photo: "/Team Profiles/Alex Madera.png" },
-    { name: "Sky Li",        photo: "/Team Profiles/Sky Li.PNG" },
-    { name: "Thomas Wright", photo: "/Team Profiles/Thomas Wright.jpg" },
-    { name: "Andy West",     photo: "/Team Profiles/Andy West.jpg" },
+    { name: "Anel Kujovic",     photo: "/Team Profiles/Anel Kujovic.jpeg" },
+    { name: "Toretto Young",    photo: "/Team Profiles/Toretto Young.png" },
+    { name: "Mahmut Imsirovic", photo: "/Team Profiles/Mahmut Imsirovic.png", photoPosition: "center 20%" },
+    { name: "Alex Madera",      photo: "/Team Profiles/Alex Madera.png" },
+    { name: "Sky Li",           photo: "/Team Profiles/Sky Li.PNG" },
+    { name: "Thomas Wright",    photo: "/Team Profiles/Thomas Wright.jpg" },
 ]
 
 // ── Team ───────────────────────────────────────────────────────────────────

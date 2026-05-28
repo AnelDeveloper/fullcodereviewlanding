@@ -31,7 +31,7 @@
                         <div class="mb-5 flex-shrink-0">
                             <img :src="member.photo" :alt="member.name"
                                 class="w-20 h-20 rounded-full object-cover"
-                                style="border:2px solid rgba(255,255,255,0.12)" />
+                                :style="`border:2px solid rgba(255,255,255,0.12);object-position:${member.photoPosition || 'center'}`" />
                         </div>
 
                         <!-- Name & role -->
@@ -101,11 +101,21 @@ const team = [
         linkedin: "https://www.linkedin.com/in/toretto-young-376b141b5/",
     },
     {
+        name: "Mahmut Imsirovic",
+        role: "QA Engineer",
+        specialty: "Manual & Automated Testing",
+        photo: "/Team Profiles/Mahmut Imsirovic.png",
+        tags: ["Cypress", "Playwright", "Jest", "Postman"],
+        linkedin: "https://www.linkedin.com/in/mahmut-imsirovic-2ab43721b/",
+        photoPosition: "center 20%",
+    },
+    {
         name: "Alex Madera",
         role: "Android Full-Stack Engineer",
         specialty: "Android App Development",
         photo: "/Team Profiles/Alex Madera.png",
         tags: ["Android", "Kotlin", "Java", "Firebase"],
+        linkedin: "https://www.linkedin.com/in/alex-m-894398130/",
     },
     {
         name: "Sky Li",
