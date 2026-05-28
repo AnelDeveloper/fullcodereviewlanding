@@ -118,6 +118,14 @@ const team = [
         linkedin: "https://www.linkedin.com/in/alex-m-894398130/",
     },
     {
+        name: "Junjun Mobad",
+        role: "Senior Data & AI Engineer",
+        specialty: "Data Pipelines, AI/ML Backend & Python Development",
+        photo: "/Team Profiles/Junjun Mobad.png",
+        tags: ["Python", "FastAPI", "AI/ML", "Data Engineering"],
+        linkedin: "https://www.linkedin.com/in/junjun1996203/",
+    },
+    {
         name: "Sky Li",
         role: "Backend Engineer",
         specialty: "Python & Backend Development",

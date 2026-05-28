@@ -820,6 +820,7 @@ const teamPreview = [
     { name: "Toretto Young",    photo: "/Team Profiles/Toretto Young.png" },
     { name: "Mahmut Imsirovic", photo: "/Team Profiles/Mahmut Imsirovic.png", photoPosition: "center 20%" },
     { name: "Alex Madera",      photo: "/Team Profiles/Alex Madera.png" },
+    { name: "Junjun Mobad",     photo: "/Team Profiles/Junjun Mobad.png" },
     { name: "Sky Li",           photo: "/Team Profiles/Sky Li.PNG" },
     { name: "Thomas Wright",    photo: "/Team Profiles/Thomas Wright.jpg" },
 ]
