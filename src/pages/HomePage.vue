@@ -3,7 +3,7 @@
         <Navbar />
 
         <!-- ─── HERO ─── -->
-        <section class="relative flex flex-col items-center justify-center pt-[104px] md:pt-[176px] pb-12 px-6 overflow-hidden">
+        <section class="relative flex flex-col items-center justify-center pt-[132px] md:pt-[176px] pb-12 px-6 overflow-hidden">
 
             <!-- Subtle white glow -->
             <div class="absolute inset-0 pointer-events-none overflow-hidden">
