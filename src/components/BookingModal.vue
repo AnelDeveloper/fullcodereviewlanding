@@ -8,7 +8,7 @@
                 style="background:#111;border:1px solid rgba(255,255,255,0.1);box-shadow:0 24px 60px rgba(0,0,0,0.7)">
 
                 <!-- ── Header ── -->
-                <div class="flex items-center justify-between px-5 py-3 md:px-7 md:py-5"
+                <div class="flex items-center justify-between px-4 py-2 md:px-7 md:py-5"
                     style="border-bottom:1px solid rgba(255,255,255,0.07)">
                     <div>
                         <h2 class="text-sm md:text-base font-bold text-white">Book a free 30-min call</h2>
@@ -22,11 +22,11 @@
 
                 <!-- ── Booking form ── -->
                 <template v-if="step === 'form'">
-                    <div class="px-5 py-3 space-y-2.5 md:px-7 md:py-5 md:space-y-4">
+                    <div class="px-4 py-2 space-y-2 md:px-7 md:py-5 md:space-y-4">
 
                         <!-- Date with week navigation -->
                         <div>
-                            <div class="flex items-center justify-between mb-1.5 md:mb-2.5">
+                            <div class="flex items-center justify-between mb-1 md:mb-2.5">
                                 <label class="text-[9px] md:text-[11px] font-bold uppercase tracking-widest text-white/60">Select a date</label>
                                 <div class="flex items-center gap-1 md:gap-1.5">
                                     <button @click="prevWeek" :disabled="!canGoPrev"
@@ -40,7 +40,7 @@
                             <div class="grid grid-cols-5 gap-1.5 md:gap-2">
                                 <button v-for="d in weekDates" :key="d.iso"
                                     @click="!d.isPast && (selectedDate = d.iso, selectedTime = '')"
-                                    class="flex flex-col items-center py-1.5 md:py-2.5 rounded-lg font-semibold transition-all"
+                                    class="flex flex-col items-center py-1 md:py-2.5 rounded-lg font-semibold transition-all"
                                     :style="d.isPast
                                         ? 'background:rgba(255,255,255,0.02);color:rgba(255,255,255,0.15);cursor:not-allowed;border:1px solid rgba(255,255,255,0.04)'
                                         : selectedDate === d.iso
@@ -55,14 +55,14 @@
 
                         <!-- Time -->
                         <div>
-                            <label class="block text-[9px] md:text-[11px] font-bold uppercase tracking-widest text-white/60 mb-1.5 md:mb-2.5">
+                            <label class="block text-[9px] md:text-[11px] font-bold uppercase tracking-widest text-white/60 mb-1 md:mb-2.5">
                                 Select a time <span class="normal-case font-normal text-white/45">(Pacific Time · California, USA)</span>
                             </label>
                             <div class="grid grid-cols-4 gap-1 md:gap-1.5">
                                 <button v-for="(slot, idx) in timeSlots" :key="slot"
                                     @click="!isUnavailable(selectedDate, idx) && !isTooSoon(selectedDate, idx) && selectedDate && (selectedTime = slot)"
                                     :disabled="!selectedDate || isUnavailable(selectedDate, idx) || isTooSoon(selectedDate, idx)"
-                                    class="py-1.5 md:py-2 rounded-lg text-[10px] md:text-xs font-semibold transition-all relative"
+                                    class="py-1 md:py-2 rounded-lg text-[10px] md:text-xs font-semibold transition-all relative"
                                     :style="selectedTime === slot
                                         ? 'background:#fff;color:#000'
                                         : !selectedDate
@@ -176,7 +176,7 @@
                         <p v-if="error" class="text-red-400 text-xs text-center">{{ error }}</p>
                     </div>
 
-                    <div class="px-5 pb-4 pt-1 md:px-7 md:pb-6">
+                    <div class="px-4 pb-3 pt-1 md:px-7 md:pb-6">
                         <button @click="submitBooking"
                             :disabled="!canSubmit || submitting"
                             class="w-full py-2.5 md:py-3.5 rounded-xl font-bold text-sm md:text-base transition-all"
