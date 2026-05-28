@@ -60,14 +60,14 @@
                             </label>
                             <div class="grid grid-cols-4 gap-1 md:gap-1.5">
                                 <button v-for="(slot, idx) in timeSlots" :key="slot"
-                                    @click="!isUnavailable(selectedDate, idx) && selectedDate && (selectedTime = slot)"
-                                    :disabled="!selectedDate || isUnavailable(selectedDate, idx)"
+                                    @click="!isUnavailable(selectedDate, idx) && !isTooSoon(selectedDate, idx) && selectedDate && (selectedTime = slot)"
+                                    :disabled="!selectedDate || isUnavailable(selectedDate, idx) || isTooSoon(selectedDate, idx)"
                                     class="py-1.5 md:py-2 rounded-lg text-[10px] md:text-xs font-semibold transition-all relative"
                                     :style="selectedTime === slot
                                         ? 'background:#fff;color:#000'
                                         : !selectedDate
                                             ? 'background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.04);cursor:not-allowed'
-                                            : isUnavailable(selectedDate, idx)
+                                            : isUnavailable(selectedDate, idx) || isTooSoon(selectedDate, idx)
                                                 ? 'background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.05);cursor:not-allowed;text-decoration:line-through'
                                                 : 'background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.15)'">
                                     {{ slot }}
@@ -235,8 +235,6 @@ const weekDates = computed(() => {
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     const today = new Date()
     today.setHours(0, 0, 0, 0)
-    const tomorrow = new Date(today)
-    tomorrow.setDate(today.getDate() + 1)
     const dow = today.getDay()
     const daysToMonday = dow === 0 ? -6 : 1 - dow
     const baseMonday = new Date(today)
@@ -252,7 +250,7 @@ const weekDates = computed(() => {
             day: dayNames[d.getDay()],
             date: d.getDate(),
             month: monthNames[d.getMonth()],
-            isPast: d < tomorrow,
+            isPast: d < today,
         })
     }
     return dates
@@ -293,6 +291,29 @@ function getUnavailableSet(dateIso) {
 
 function isUnavailable(dateIso, idx) {
     return getUnavailableSet(dateIso).has(idx)
+}
+
+// ── 3-hour notice check (Pacific Time) ────────────────────────────────────
+function getPTTodayStr() {
+    return new Date().toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' })
+}
+
+function getPTNowMinutes() {
+    const pt = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }))
+    return pt.getHours() * 60 + pt.getMinutes()
+}
+
+function parseSlotMinutes(slotStr) {
+    const [time, period] = slotStr.split(' ')
+    let [h, m] = time.split(':').map(Number)
+    if (period === 'PM' && h !== 12) h += 12
+    if (period === 'AM' && h === 12) h = 0
+    return h * 60 + m
+}
+
+function isTooSoon(dateIso, idx) {
+    if (dateIso !== getPTTodayStr()) return false // only applies to today
+    return parseSlotMinutes(timeSlots[idx]) < getPTNowMinutes() + 180 // 3 hours
 }
 
 // ── Time slots 7am–4pm PST ─────────────────────────────────────────────────
