@@ -59,7 +59,7 @@
 
                 <!-- Bottom CTA -->
                 <div class="mt-16 text-center">
-                    <p class="text-white/30 mb-5 text-sm">Not sure which service fits your project?</p>
+                    <p class="text-white/50 mb-5 text-sm">Not sure which service fits your project?</p>
                     <button @click="showBooking = true"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book a free consultation

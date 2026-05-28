@@ -51,7 +51,7 @@
 
                     <!-- Table header -->
                     <div class="grid grid-cols-12 px-7 py-3 text-[10px] font-bold uppercase tracking-widest"
-                        style="background:#111111;border-bottom:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.3)">
+                        style="background:#111111;border-bottom:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.6)">
                         <div class="col-span-9">Service</div>
                         <div class="col-span-2 text-right">Price</div>
                         <div class="col-span-1"></div>

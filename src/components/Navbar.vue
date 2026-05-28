@@ -20,7 +20,7 @@
             </RouterLink>
 
             <!-- Middle: Nav links (desktop) -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-600 dark:text-ink-100/60">
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-600 dark:text-ink-100/80">
                 <RouterLink to="/codeaudit" class="hover:text-white dark:hover:text-white transition-colors">CodeAudit</RouterLink>
                 <RouterLink to="/services" class="hover:text-white dark:hover:text-white transition-colors">Services</RouterLink>
                 <RouterLink to="/pricing" class="hover:text-white dark:hover:text-white transition-colors">Pricing</RouterLink>
@@ -29,7 +29,7 @@
 
             <!-- Right: Sign in + CTA (desktop) + Hamburger (mobile) -->
             <div class="flex items-center gap-4 md:mr-8">
-                <a href="https://app.qodeshark.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-100/60 hover:text-white dark:hover:text-white transition-colors">
+                <a href="https://app.qodeshark.com/login" class="hidden md:inline-flex text-sm font-medium text-ink-700 dark:text-ink-100/80 hover:text-white dark:hover:text-white transition-colors">
                     Sign in
                 </a>
                 <a href="https://app.qodeshark.com/login" class="hidden md:inline-flex btn-vibe text-xs py-2 px-4">

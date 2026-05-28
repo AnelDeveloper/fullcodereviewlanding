@@ -57,7 +57,7 @@
                             <span class="w-3 h-3 rounded-full bg-white/20"></span>
                             <span class="w-3 h-3 rounded-full bg-white/20"></span>
                             <span class="w-3 h-3 rounded-full bg-white/20"></span>
-                            <span class="flex-1 text-center text-xs text-white/25 font-mono">QodeShark Engineering</span>
+                            <span class="flex-1 text-center text-xs text-white/30 font-mono">QodeShark Engineering</span>
                             <span class="flex items-center gap-1.5 text-xs text-white/60 font-semibold">
                                 <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                                 {{ visibleCount }} active
@@ -65,7 +65,7 @@
                         </div>
 
                         <!-- Column headers -->
-                        <div class="grid grid-cols-12 gap-2 px-3 sm:px-5 py-2.5 text-[10px] font-semibold uppercase tracking-widest text-white/20"
+                        <div class="grid grid-cols-12 gap-2 px-3 sm:px-5 py-2.5 text-[10px] font-semibold uppercase tracking-widest text-white/50"
                             style="border-bottom:1px solid rgba(255,255,255,0.04)">
                             <div class="col-span-5">Service</div>
                             <div class="col-span-3 sm:col-span-4">Progress</div>
@@ -94,7 +94,7 @@
 
                 <!-- Platform logos -->
                 <div class="mt-16 animate-fade-in-up" style="animation-delay:.35s">
-                    <p class="text-xs font-semibold uppercase tracking-widest text-white/20 mb-5">
+                    <p class="text-xs font-semibold uppercase tracking-widest text-white/50 mb-5">
                         Works with code from any AI platform
                     </p>
                     <div class="overflow-hidden w-full [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
@@ -155,7 +155,7 @@
                         class="flex items-center gap-3 py-3.5"
                         :style="i < servicesList.length - 2 || servicesList.length % 2 === 1 && i < servicesList.length - 1 ? 'border-bottom:1px solid rgba(255,255,255,0.06)' : ''">
                         <span class="text-sm font-semibold text-white/80">{{ svc.name }}</span>
-                        <span class="ml-auto text-xs flex-shrink-0" style="color:rgba(255,255,255,0.25)">{{ svc.price }}</span>
+                        <span class="ml-auto text-xs font-semibold flex-shrink-0" style="color:rgba(255,255,255,0.6)">{{ svc.price }}</span>
                     </div>
                 </div>
 
@@ -165,7 +165,7 @@
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book free consultation
                     </button>
-                    <span class="text-sm text-white/30">First session free · No commitment</span>
+                    <span class="text-sm text-white/60">First session free · No commitment</span>
                 </div>
             </div>
         </section>
@@ -340,9 +340,9 @@
                     <!-- Header -->
                     <div class="grid grid-cols-3 text-xs font-bold uppercase tracking-widest px-3 sm:px-6 py-4"
                         style="background:#1c1c1c;border-bottom:1px solid rgba(255,255,255,0.08)">
-                        <div class="col-span-1 text-white/30">Feature</div>
+                        <div class="col-span-1 text-white/60">Feature</div>
                         <div class="text-center text-white">QodeShark</div>
-                        <div class="text-center text-white/30">Freelancer</div>
+                        <div class="text-center text-white/60">Freelancer</div>
                     </div>
                     <!-- Rows -->
                     <div v-for="(row, i) in comparisonRows" :key="row.feature"
@@ -354,9 +354,9 @@
                             <span v-else class="text-xs font-semibold text-white">{{ row.qs }}</span>
                         </div>
                         <div class="flex justify-center">
-                            <span v-if="row.fl === true" class="text-white/40 text-base">✓</span>
-                            <span v-else-if="row.fl === false" style="color:rgba(255,255,255,0.2)">✕</span>
-                            <span v-else class="text-xs" style="color:rgba(255,255,255,0.35)">{{ row.fl }}</span>
+                            <span v-if="row.fl === true" class="text-white/60 text-base">✓</span>
+                            <span v-else-if="row.fl === false" style="color:rgba(255,255,255,0.45)">✕</span>
+                            <span v-else class="text-xs font-semibold" style="color:rgba(255,255,255,0.6)">{{ row.fl }}</span>
                         </div>
                     </div>
                 </div>
@@ -406,8 +406,8 @@
 
                 <!-- Trustpilot CTA -->
                 <div class="mt-12 text-center">
-                    <a href="https://www.trustpilot.com/evaluate/fullcodereview.com" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2 text-sm text-white/30 hover:text-white/60 transition-colors">
+                    <a href="https://www.trustpilot.com/review/qodeshark.com" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
                         Leave a review on Trustpilot
                     </a>
@@ -497,7 +497,7 @@
 
                 <!-- Bottom CTA -->
                 <div class="mt-16 text-center">
-                    <p class="text-white/30 mb-6 text-sm">Still have questions? We're happy to answer them on the call.</p>
+                    <p class="text-white/60 mb-6 text-sm">Still have questions? We're happy to answer them on the call.</p>
                     <button @click="showBooking = true"
                         class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-black text-base bg-white transition-all hover:bg-white/90 hover:scale-[1.02]">
                         Book a free consultation
