@@ -218,7 +218,7 @@
                             <span class="text-white/40">behind the work.</span>
                         </h2>
                         <p class="text-white/35 text-base leading-relaxed mb-6">
-                            Real senior engineers — not outsourced, not AI. 20 specialists across full-stack, mobile, database, DevOps, and more.
+                            Real senior engineers — not outsourced, not AI. 20+ specialists across full-stack, mobile, database, DevOps, and more.
                         </p>
                         <RouterLink to="/team"
                             class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white/60 hover:text-white transition-colors"
